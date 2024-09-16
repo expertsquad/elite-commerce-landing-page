@@ -1,3 +1,146 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Root Color  */
+:root {
+  --primary: #01904d;
+  --primary-light: #0ce47f;
+  --secondary: #ff1810;
+  --secondary-light: #ff9153;
+  --positive: #119f5b;
+  --positive-light: #24b290;
+  --danger: #ff3838;
+  --danger-light: #ffe5e5;
+  --warning: #ef8144;
+  --purple: #a270ff;
+  --blue: #5b9ef2;
+  --creem: #d9d9d9;
+  --transparent: transparent;
+  --white: white;
+  --white-15: #ffffff26;
+  --white-transparent: #ffffffd0;
+  --black: black;
+  --black-10: #e6e6e6;
+  --black-15: #d9d9d9;
+  --black-30: #b3b3b3;
+  --black-50: #7f7f7f;
+  --black-70: #4c4c4c;
+  --black-80: #333333;
+  --black-transparent: #7f7f7f63;
+  --frame-bg: #f3f3f9;
+
+  /* All Gradient colors */
+  --gradient-primary: linear-gradient(
+    90deg,
+    var(--primary),
+    var(--primary-light)
+  );
+  --gradient-primary-reverse: linear-gradient(
+    90deg,
+    var(--primary-light),
+    var(--primary)
+  );
+
+  --gradient-primary-light: linear-gradient(
+    90deg,
+    rgba(41, 67, 147, 0.1) 0.32%,
+    rgba(4, 164, 230, 0.1) 102.21%
+  );
+
+  --gradient-secondary: linear-gradient(
+    90deg,
+    var(--secondary),
+    var(--secondary-light)
+  );
+
+  --gradient-secondary-light: linear-gradient(
+    270deg,
+    rgba(251, 142, 72, 0.1) 0%,
+    rgba(203, 56, 15, 0.1) 100%
+  );
+
+  --gradient-positive: linear-gradient(
+    270deg,
+    rgba(17, 159, 91, 0.1) 0%,
+    rgba(17, 159, 91, 0.2) 100%
+  );
+
+  --gradient-positive-light: linear-gradient(
+    270deg,
+    rgba(36, 178, 144, 0.1) 0%,
+    rgba(36, 178, 144, 0.2) 100%
+  );
+
+  --gradient-danger-light: linear-gradient(
+    270deg,
+    rgba(255, 56, 56, 0.1) 0%,
+    rgba(255, 56, 56, 0.2) 100%
+  );
+
+  --gradient-warning-light: linear-gradient(
+    270deg,
+    rgba(239, 129, 68, 0.1) 0%,
+    rgba(239, 129, 68, 0.2) 100%
+  );
+
+  --gradient-purple-light: linear-gradient(
+    270deg,
+    rgba(162, 112, 255, 0.1) 0%,
+    rgba(162, 112, 255, 0.2) 100%
+  );
+
+  --gradient-blue-light: linear-gradient(
+    270deg,
+    rgba(91, 158, 242, 0.1) 0%,
+    rgba(91, 158, 242, 0.2) 100%
+  );
+}
+
+/* Layer component text gradient and main container */
+@layer components {
+  .main-container {
+    @apply md:mt-3 md:mx-3;
+    /* @apply md:mt-3 md:mx-3 bg-white; */
+  }
+
+  .text-gradient-primary {
+    @apply bg-gradient-primary bg-clip-text text-transparent;
+  }
+  .text-gradient-secondary {
+    @apply bg-gradient-secondary bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  .border-gradient-primary {
+    background-image: linear-gradient(white, white),
+      linear-gradient(90deg, var(--primary), var(--primary-light));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+  }
+}
+
+/* scroll bar */
+.scrollbar-x-remove::-webkit-scrollbar:horizontal {
+  @apply hidden;
+}
+.scrollbar-y-remove::-webkit-scrollbar:vertical {
+  @apply hidden;
+}
+
+::-webkit-scrollbar {
+  @apply w-1;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gradient-primary-light;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gradient-primary;
+}
+
+/* * {
+  outline: 1px solid red;
+} */
