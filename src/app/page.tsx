@@ -1,16 +1,16 @@
-import AllFeature from "@/components/AllFeature";
-import ExploreSoftwareCarousel from "@/components/ExploreSoftwareCarousel";
-import Footer from "@/components/Footer";
-import GetHelp from "@/components/GetHelp";
-import Hero from "@/components/Hero";
-import MobileOptimized from "@/components/MobileOptimized";
-import PricingTable from "@/components/PricingTable";
-import ServiceCarousel from "@/components/ServiceCarousel";
-import ShowResponsive from "@/components/ShowResponsive";
-import Technology from "@/components/Technology";
-import Testimonial from "@/components/Testimonial";
-import TopFeature from "@/components/TopFeature";
-import WhyChooseElite from "@/components/WhyChooseElite";
+import AllFeature from "@/components/main/AllFeature";
+import ExploreSoftwareCarousel from "@/components/main/ExploreSoftwareCarousel";
+import Footer from "@/components/main/Footer";
+import GetHelp from "@/components/main/GetHelp";
+import Hero from "@/components/main/Hero";
+import MobileOptimized from "@/components/main/MobileOptimized";
+import PricingTable from "@/components/main/PricingTable";
+import ServiceCarousel from "@/components/main/ServiceCarousel";
+import ShowResponsive from "@/components/main/ShowResponsive";
+import Technology from "@/components/main/Technology";
+import Testimonial from "@/components/main/Testimonial";
+import TopFeature from "@/components/main/TopFeature";
+import WhyChooseElite from "@/components/main/WhyChooseElite";
 
 export default function Home() {
   return (
