@@ -16,12 +16,6 @@ const config: Config = {
         light: "var(--secondary-light)",
         DEFAULT: "var(--secondary)",
       },
-      positive: { DEFAULT: "var(--positive)", light: "var(--positive-light)" },
-      danger: {
-        DEFAULT: "var(--danger)",
-        light: "var(--danger-light)",
-      },
-      warning: "var(--warning)",
       white: {
         transparent: "var(--white-transparent)",
         15: "var(--white-15)",
@@ -38,8 +32,6 @@ const config: Config = {
         DEFAULT: "var(--black)",
       },
       transparent: "var(--transparent)",
-      purple: "var(--purple)",
-      blue: "var(--blue)",
       frame: "var(--frame-bg)",
     },
 

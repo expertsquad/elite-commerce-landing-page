@@ -8,14 +8,6 @@
   --primary-light: #0ce47f;
   --secondary: #ff1810;
   --secondary-light: #ff9153;
-  --positive: #119f5b;
-  --positive-light: #24b290;
-  --danger: #ff3838;
-  --danger-light: #ffe5e5;
-  --warning: #ef8144;
-  --purple: #a270ff;
-  --blue: #5b9ef2;
-  --creem: #d9d9d9;
   --transparent: transparent;
   --white: white;
   --white-15: #ffffff26;
@@ -100,8 +92,7 @@
 /* Layer component text gradient and main container */
 @layer components {
   .main-container {
-    @apply md:mt-3 md:mx-3;
-    /* @apply md:mt-3 md:mx-3 bg-white; */
+    @apply max-w-7xl mx-auto px-5 lg:px-10 md:px-8;
   }
 
   .text-gradient-primary {
