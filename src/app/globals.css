@@ -36,8 +36,8 @@
 
   --gradient-primary-light: linear-gradient(
     90deg,
-    rgba(41, 67, 147, 0.1) 0.32%,
-    rgba(4, 164, 230, 0.1) 102.21%
+    rgba(1, 144, 77, 0.1) 0.32%,
+    rgba(12, 228, 127, 0.1) 102.21%
   );
 
   --gradient-secondary: linear-gradient(
@@ -48,8 +48,8 @@
 
   --gradient-secondary-light: linear-gradient(
     270deg,
-    rgba(251, 142, 72, 0.1) 0%,
-    rgba(203, 56, 15, 0.1) 100%
+    rgba(255, 145, 83, 0.1) 0%,
+    rgba(255, 24, 16, 0.1) 100%
   );
 
   --gradient-positive: linear-gradient(
