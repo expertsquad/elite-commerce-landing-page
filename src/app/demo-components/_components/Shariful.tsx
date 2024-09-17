@@ -24,6 +24,8 @@ import SatisfiedEmoji from "@/assets/icons/SatisfiedEmoji";
 import SupportIcon from "@/assets/icons/SupportIcon";
 import UnboxIcon from "@/assets/icons/UnboxIcon";
 import UniqueDesignIcon from "@/assets/icons/UniqueDesignIcon";
+import Circle from "@/components/Shared/Circle";
+import HighlightText from "@/components/Shared/HighlightText";
 import React from "react";
 
 const Shariful = () => {
@@ -33,7 +35,7 @@ const Shariful = () => {
       <div className="w-36 h-12 bg-gradient-secondary-light rounded-md"></div>
       <div className="w-36 h-12 bg-gradient-secondary rounded-md"></div>
       <div className="w-36 h-12 bg-gradient-primary-light rounded-md"></div>
-      <div className="flex items-center justify-center gap-5 flex-wrap">
+      {/* <div className="flex items-center justify-center gap-5 flex-wrap">
         <BagFileIcon />
         <ComputerIcon />
         <KnowledgePowerIcon />
@@ -62,7 +64,15 @@ const Shariful = () => {
         <SupportIcon />
         <LoveIcon />
         <SatisfiedEmoji />
+      </div> */}
+      <div className=" flex items-center justify-center">
+        <Circle
+          className="bg-gradient-primary w-[170px] h-[170px] flex items-center justify-center "
+          icon={<RightArrow />}
+          spinText="Expert Squad| Web design"
+        />
       </div>
+      <HighlightText text="Shariful Islam" />
     </div>
   );
 };

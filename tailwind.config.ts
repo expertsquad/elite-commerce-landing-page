@@ -41,6 +41,7 @@ const config: Config = {
       "gradient-primary-reverse": "var(--gradient-primary-reverse)",
       "gradient-primary-light": "var(--gradient-primary-light)",
       "gradient-secondary": "var(--gradient-secondary)",
+      "gradient-secondary-reverse": "var(--gradient-secondary-reverse)",
       "gradient-secondary-light": "var(--gradient-secondary-light)",
       "gradient-positive": "var(--gradient-positive)",
       "gradient-positive-light": "var(--gradient-positive-light)",
