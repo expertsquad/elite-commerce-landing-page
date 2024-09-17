@@ -38,23 +38,23 @@ const BgNionLine = () => {
       drop.classList.add("neon-drop-horizontal");
 
       // Align the drop with the grid lines (multiples of 50px)
-      const gridHeight = 50;
+      const gridHeight = 100;
       const randomTopPosition =
         Math.floor(Math.random() * (window.innerHeight / gridHeight)) *
         gridHeight;
       drop.style.top = `${randomTopPosition}px`;
 
       drop.style.animationDuration = `20s`;
-      const heroContainer = document.querySelector(".hero-container");
-      if (heroContainer) {
-        heroContainer.appendChild(drop);
-        currentHorizontalDrops += 1;
+      //   const heroContainer = document.querySelector(".hero-container");
+      //   if (heroContainer) {
+      //     heroContainer.appendChild(drop);
+      //     currentHorizontalDrops += 1;
 
-        setTimeout(() => {
-          drop.remove();
-          currentHorizontalDrops -= 1;
-        }, 20000);
-      }
+      //     setTimeout(() => {
+      //       drop.remove();
+      //       currentHorizontalDrops -= 1;
+      //     }, 20000);
+      //   }
     };
 
     // Create neon drops at intervals
@@ -72,7 +72,17 @@ const BgNionLine = () => {
   return (
     <div className="hero-container relative min-h-screen ">
       <div className="absolute inset-0 bg-grid-pattern opacity-20">
-        Hero componets
+        <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-4 tracking-tight">
+            <span className="block">Discover the Future</span>
+            <span className="block text-primary-light">of Web Design</span>
+          </h1>
+          <p className="mt-3 text-base sm:text-lg md:text-xl text-primary sm:mt-5 sm:max-w-xl sm:mx-auto md:mt-5">
+            Elevate your online presence with our cutting-edge hero sections.
+            Seamlessly blending aesthetics and functionality for an
+            unforgettable user experience.
+          </p>
+        </div>
       </div>
     </div>
   );
