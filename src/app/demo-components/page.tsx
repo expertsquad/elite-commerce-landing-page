@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Nizam from "./_components/Nizam";
 import Zayed from "./_components/Zayed";
