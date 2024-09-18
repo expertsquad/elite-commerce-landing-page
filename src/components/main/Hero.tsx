@@ -12,8 +12,8 @@ const Hero = () => {
       const drop = document.createElement("div");
       drop.classList.add("neon-drop");
 
-      // Position on the grid lines (multiples of 50px)
-      const gridWidth = 50;
+      // Position on the grid lines (multiples of 100px)
+      const gridWidth = 100;
       const randomLeftPosition =
         Math.floor(Math.random() * (window.innerWidth / gridWidth)) * gridWidth;
       drop.style.left = `${randomLeftPosition}px`;
@@ -38,8 +38,8 @@ const Hero = () => {
       const drop = document.createElement("div");
       drop.classList.add("neon-drop-horizontal");
 
-      // Align the drop with the grid lines (multiples of 50px)
-      const gridHeight = 50;
+      // Align the drop with the grid lines (multiples of 100px)
+      const gridHeight = 100;
       const randomTopPosition =
         Math.floor(Math.random() * (window.innerHeight / gridHeight)) *
         gridHeight;
@@ -71,8 +71,12 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="hero-container relative min-h-screen bg-gradient-to-br from-indigo-900 to-purple-800">
-      <div className="absolute inset-0 bg-grid-pattern opacity-20"></div>
+    <div className="hero-container relative min-h-screen bg-gradient-primary">
+      <div className="absolute inset-0 bg-grid-pattern ">
+        <div className="text-5xl text-center text-black-70 mx-auto z-10">
+          Bangladesh 2.0
+        </div>
+      </div>
     </div>
   );
 };
