@@ -15,19 +15,19 @@ import WhyChooseElite from "@/components/main/WhyChooseElite";
 export default function Home() {
   return (
     <main>
-      <Hero />
+      {/* <Hero />
       <WhyChooseElite />
-      <AllFeature />
+      <AllFeature /> */}
       <TopFeature />
-      <ServiceCarousel />
+      {/* <ServiceCarousel /> */}
       <PricingTable />
       <ShowResponsive />
-      <Technology />
+      {/* <Technology />
       <Testimonial />
       <MobileOptimized />
       <GetHelp />
       <ExploreSoftwareCarousel />
-      <Footer />
+      <Footer /> */}
     </main>
   );
 }

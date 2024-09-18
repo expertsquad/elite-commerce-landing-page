@@ -21,6 +21,22 @@ const config: Config = {
         15: "var(--white-15)",
         DEFAULT: "var(--white)",
       },
+      violet: {
+        light: "var(--violet-light)",
+        DEFAULT: "var(--violet)",
+      },
+      blue: {
+        light: "var(--blue-light)",
+        DEFAULT: "var(--blue)",
+      },
+      danger: {
+        light: "var(--danger-light)",
+        DEFAULT: "var(--danger)",
+      },
+      yellow: {
+        light: "var(--yellow-light)",
+        DEFAULT: "var(--yellow)",
+      },
       black: {
         transparent: "var(--black-transparent)",
         10: "var(--black-10)",
@@ -44,6 +60,7 @@ const config: Config = {
       "gradient-secondary-reverse": "var(--gradient-secondary-reverse)",
       "gradient-secondary-light": "var(--gradient-secondary-light)",
       "gradient-positive": "var(--gradient-positive)",
+      "gradient-violet": "var(--gradient-violet)",
       "gradient-positive-light": "var(--gradient-positive-light)",
       "gradient-danger-light": "var(--gradient-danger-light)",
       "gradient-warning-light": "var(--gradient-warning-light)",
@@ -58,6 +75,18 @@ const config: Config = {
       10: "10",
       20: "20",
       50: "50",
+    },
+    transformOrigin: {
+      custom: "0 100px",
+    },
+    keyframes: {
+      rotateText: {
+        "0%": { transform: "rotate(0deg)" },
+        "100%": { transform: "rotate(360deg)" },
+      },
+    },
+    animation: {
+      "spin-rotate-text": "rotateText 10s linear infinite",
     },
     extend: {},
   },

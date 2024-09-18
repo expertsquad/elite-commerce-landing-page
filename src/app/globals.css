@@ -8,6 +8,14 @@
   --primary-light: #0ce47f;
   --secondary: #ff1810;
   --secondary-light: #ff9153;
+  --violet: #7c71ff;
+  --violet-light: #eeedff;
+  --blue: #00a6ff;
+  --blue-light: #e8f7ff;
+  --danger: #ff0079;
+  --danger-light: #ffeaf4;
+  --yellow: #ffbd00;
+  --yellow-light: #fff7e0;
   --transparent: transparent;
   --white: white;
   --white-15: #ffffff26;
@@ -33,6 +41,7 @@
     var(--primary-light),
     var(--primary)
   );
+  --gradient-violet: linear-gradient(90deg, var(--violet), var(--violet-light));
 
   --gradient-primary-light: linear-gradient(
     90deg,

@@ -1,13 +1,15 @@
 import React from "react";
 
 const HighlightText = ({
-  text,
+  children,
   className,
 }: {
-  text?: string;
+  children?: React.ReactNode;
   className?: string;
 }) => {
-  return <div className={`text-gradient-primary ${className}`}>{text}</div>;
+  return (
+    <span className={`text-gradient-primary ${className}`}>{children}</span>
+  );
 };
 
 export default HighlightText;
