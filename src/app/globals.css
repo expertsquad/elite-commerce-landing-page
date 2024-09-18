@@ -177,6 +177,13 @@
 
 /* Neon Line end */
 
+@layer utilities {
+  .border-neon {
+    border-color: #00ff00; /* Neon green */
+    box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
+  }
+}
+
 /* * {
   outline: 1px solid red;
 } */
