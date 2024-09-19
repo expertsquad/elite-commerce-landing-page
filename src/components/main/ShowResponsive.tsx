@@ -12,7 +12,7 @@ import quickOrder from "@/assets/images/quickOrder.png";
 
 const ShowResponsive = () => {
   const [selected, setSelected] = React.useState("Home Page");
-  console.log(selected);
+
   return (
     <div className="main-container my-10">
       <div className="space-y-[clamp(20px,2.5vw,30px)]">
@@ -36,18 +36,20 @@ const ShowResponsive = () => {
           </HighlightText>{" "}
         </p>
       </div>
-      <div className="border border-black-10 rounded-[20px] md:px-[30px] py-10 bg-[#0CE47F0D] flex items-center gap-5 mt-10">
-        <div className="h-[510px] overflow-y-auto space-y-5 flex-1 ">
+      <div className="border border-black-10 rounded-[20px] px-[clamp(20px,2.5vw,30px)] py-[clamp(25px,2.5vw,40px)] bg-[#0CE47F0D] grid grid-cols-1 md:grid-cols-2 items-center gap-5 mt-10">
+        <div className="md:h-[510px] md:w-auto w-full md:overflow-y-auto overflow-x-auto scrollbar-x-remove  flex md:flex-col flex-row gap-5  ">
           {showResponsiveData?.map((item) => (
             <div
               onClick={() => setSelected(item?.title)}
               key={item?.id}
-              className={`rounded-[10px] border border-white hover:border-primary group transition-all duration-300 md:px-5 md:py-4 bg-white cursor-pointer flex flex-col gap-2.5 ${
-                selected === item?.title ? "border-primary" : ""
+              className={`md:w-full min-w-[270px] rounded-[10px] border  hover:border-primary group transition-all duration-300 px-[clamp(10px,2.5vw,20px)] py-[clamp(8px,2.5vw,16px)] bg-white cursor-pointer flex flex-col gap-[clamp(7px,2.5vw,10px)] ${
+                selected === item?.title
+                  ? "border-primary"
+                  : "md:border-white border-black-10"
               }`}
             >
               <span
-                className={`   font-medium text-lg transition-all duration-300 ${
+                className={`   font-medium [font-size:_clamp(16px,2.5vw,18px)] transition-all duration-300 ${
                   selected === item?.title
                     ? "text-primary"
                     : "text-black-50 group-hover:text-primary"
@@ -56,7 +58,7 @@ const ShowResponsive = () => {
                 {item?.title}
               </span>
               <p
-                className={`text-base  transition-all duration-300 ${
+                className={`[font-size:_clamp(14px,2.5vw,16px)] transition-all duration-300 md:line-clamp-none line-clamp-3 ${
                   selected === item?.title
                     ? "text-primary"
                     : "group-hover:text-primary text-black-50"
@@ -67,7 +69,7 @@ const ShowResponsive = () => {
             </div>
           ))}
         </div>
-        <div className="flex-1">
+        <div className="">
           <div className="relative w-full h-96 ">
             {selected === "Home Page" ? (
               <Image

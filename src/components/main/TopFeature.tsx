@@ -9,7 +9,7 @@ import TopFeatureCard from "../Shared/TopFeatureCard";
 const TopFeature = () => {
   return (
     <div className="main-container py-10">
-      <div className="space-y-[30px]">
+      <div className="space-y-[clamp(20px,2.5vw,30px)]">
         <div className="h-[30px] w-[160px] relative rounded-l-full overflow-hidden mx-auto flex items-center justify-start pl-2">
           <span className="z-50  absolute text-sm text-white">
             Top Features
@@ -21,7 +21,7 @@ const TopFeature = () => {
             className="object-cover top-0 left-0 w-full h-full"
           />
         </div>
-        <p className="text-center  font-semibold text-3xl">
+        <p className="text-center  font-semibold [font-size:_clamp(15px,2.5vw,40px)]">
           Product Design Online feature will help your{" "}
           <HighlightText>Customer easy</HighlightText> customize and design
           product online.
