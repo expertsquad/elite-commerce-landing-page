@@ -36,8 +36,8 @@ const Footer = () => {
               ))}
             </div>
 
-            <div className="text-[#DDDDDD]">
-              <p className="[font-size:_clamp(12px,2.5vw,18px)]">
+            <div className="">
+              <p className="[font-size:_clamp(12px,2.5vw,18px)] text-[#DDDDDD]">
                 Lorem ipsum dolor sit amet consectetur. Commodo mollis urna
                 dictum at tellus ultricies nunc aliquam. Vitae placerat amet
                 adipiscing in tempor convallis.Lorem ipsum dolor sit amet
@@ -63,9 +63,11 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 md:gap-0 gap-4 items-center md:justify-between justify-center text-white">
-        <div className="md:bg-[#242424] w-full md:rounded-tr-full flex items-center justify-center md:py-7 text-base md:order-none order-3">
-          © 2024 Elite Commerce Exertsquad.net
+      <div className="grid grid-cols-1 md:grid-cols-3 md:gap-0 gap-4 items-center md:justify-between justify-center ">
+        <div className="md:bg-[#242424] w-full md:rounded-tr-full flex items-center justify-center md:py-5 md:px-5  md:order-none order-3 ">
+          <span className="text-xs md:text-base lg:text-lg text-white">
+            © 2024 Elite Commerce Exertsquad.net
+          </span>
         </div>
         <div className="w-full flex items-center gap-3.5 justify-center md:order-none order-1">
           <div className="rounded-full border-[1.5px] flex items-center justify-center border-black-50  h-[34px] w-[34px]">
@@ -84,11 +86,11 @@ const Footer = () => {
             <TwitterXIcon />
           </div>
         </div>
-        <div className="md:bg-[#242424] gap-5  w-full md:rounded-tl-full flex items-center justify-center md:py-7 text-base md:order-none order-2">
-          <Link href={`*`} className="underline">
+        <div className="md:bg-[#242424] gap-5  w-full md:rounded-tl-full flex items-center justify-center md:py-5 md:px-5 text-xs md:text-base lg:text-lg md:order-none order-2">
+          <Link href={`*`} className="underline text-white">
             Privacy Policy{" "}
           </Link>
-          <Link href={`*`} className="underline">
+          <Link href={`*`} className="underline text-white">
             Refund Policy
           </Link>
         </div>

@@ -22,10 +22,10 @@ export default function Home() {
       {/* <ServiceCarousel /> */}
       <PricingTable />
       <ShowResponsive />
-      {/* <Technology />
-      <Testimonial />
+      <Technology />
+      {/* <Testimonial /> */}
       <MobileOptimized />
-      <GetHelp />
+      {/* <GetHelp />
       <ExploreSoftwareCarousel /> */}
       <Footer />
     </main>
