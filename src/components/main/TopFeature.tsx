@@ -1,20 +1,3 @@
-<<<<<<< HEAD
-import PanelContent from "../ui/PanelContent";
-
-const TopFeature = () => {
-  return (
-    <div className="main-container my-10 text-center">
-      {/* Feature section header and description */}
-      <h2 className="text-3xl mb-4 ">
-        Solution-wise Features of Elite Commerce
-      </h2>
-      <h4>
-        Meet the dynamic features of Elite Commerce that comes with Customer
-        Panel, Admin Panel, and other solutions.
-      </h4>
-
-      <PanelContent />
-=======
 import Image from "next/image";
 import React from "react";
 import sectionBg from "@/assets/images/sectionBg.png";
@@ -63,7 +46,6 @@ const TopFeature = () => {
           />
         ))}
       </div>
->>>>>>> 0b184e60c79e35cd50a367812182af326ae098cb
     </div>
   );
 };
