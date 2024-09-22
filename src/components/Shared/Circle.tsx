@@ -12,7 +12,7 @@ const Circle = ({ spinText, className, icon, bgColor }: ICircle) => {
       textElement.innerHTML = characters
         .map(
           (char, i) =>
-            `<span class="absolute text- left-[50%] text-[16px]  origin-custom" style="transform:rotate(${
+            `<span class="absolute text- left-[50%] text-xs  origin-custom" style="transform:rotate(${
               i * 8.2
             }deg)">${char}</span>`
         )
@@ -33,7 +33,7 @@ const Circle = ({ spinText, className, icon, bgColor }: ICircle) => {
           {spinText}
         </div>
         {/* Circle center content */}
-        <div className=" absolute p-[3px] border border-white  rounded-full  flex items-center justify-center text-white">
+        <div className=" animate-bounce absolute p-[3px] border border-white  rounded-full  flex items-center justify-center text-white">
           {icon}
         </div>
       </div>

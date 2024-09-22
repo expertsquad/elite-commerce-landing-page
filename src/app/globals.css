@@ -129,6 +129,11 @@
     background-position: center;
     background-repeat: no-repeat;
   }
+  .all-feature {
+    background-image: url("../assets/images/allFeatureBannerBg.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
   .border-gradient-primary {
     background-image: linear-gradient(white, white),
       linear-gradient(90deg, var(--primary), var(--primary-light));

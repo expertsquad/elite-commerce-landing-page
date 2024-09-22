@@ -76,19 +76,27 @@ const config: Config = {
       20: "20",
       50: "50",
     },
-    transformOrigin: {
-      custom: "0 100px",
-    },
-    keyframes: {
-      rotateText: {
-        "0%": { transform: "rotate(0deg)" },
-        "100%": { transform: "rotate(360deg)" },
+
+    extend: {
+      transformOrigin: {
+        custom: "0 100px",
+      },
+      keyframes: {
+        rotateText: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(360deg)" },
+        },
+        customSpin: {
+          to: {
+            transform: "rotate(360deg)",
+          },
+        },
+      },
+      animation: {
+        "spin-rotate-text": "rotateText 10s linear infinite",
+        "spin-custom": "customSpin 10s linear infinite",
       },
     },
-    animation: {
-      "spin-rotate-text": "rotateText 10s linear infinite",
-    },
-    extend: {},
   },
   plugins: [],
 };

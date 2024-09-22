@@ -16,8 +16,8 @@ export default function Home() {
   return (
     <main>
       {/* <Hero />
-      <WhyChooseElite />
-      <AllFeature /> */}
+      <WhyChooseElite /> */}
+      <AllFeature />
       <TopFeature />
       {/* <ServiceCarousel /> */}
       <PricingTable />

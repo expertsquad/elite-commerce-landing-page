@@ -4,6 +4,7 @@ import sectionBg from "@/assets/images/sectionBgMobileOptimized.png";
 import MobileView from "../ui/MobileView/MobileView";
 import BehindContainer from "../ui/GetHelp/BehindContainer";
 import GetHelpForm from "../ui/GetHelp/GetHelpForm";
+import Circle from "../Shared/Circle";
 
 const MobileOptimized = () => {
   return (
@@ -30,10 +31,10 @@ const MobileOptimized = () => {
           <MobileView />
         </div>
       </div>
-      <div className="get-help flex items-center justify-center relative ">
+      {/* <div className="get-help flex items-center justify-center relative ">
         <BehindContainer />
         <GetHelpForm />
-      </div>
+      </div> */}
     </div>
   );
 };
