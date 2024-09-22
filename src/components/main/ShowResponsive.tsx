@@ -36,13 +36,13 @@ const ShowResponsive = () => {
           </HighlightText>{" "}
         </p>
       </div>
-      <div className="border border-black-10 rounded-[20px] px-[clamp(20px,2.5vw,30px)] py-[clamp(25px,2.5vw,40px)] bg-[#0CE47F0D] grid grid-cols-1 md:grid-cols-2 items-center gap-5 mt-10">
-        <div className="md:h-[510px] md:w-auto w-full md:overflow-y-auto overflow-x-auto scrollbar-x-remove  flex md:flex-col flex-row gap-5  ">
+      <div className="md:border md:border-black-10 rounded-[20px] px-[clamp(10px,2.5vw,30px)] py-[clamp(25px,2.5vw,40px)] md:bg-[#0CE47F0D] grid grid-cols-1 md:grid-cols-2 items-center gap-5 mt-10">
+        <div className="md:h-[510px] md:w-auto w-full md:overflow-y-auto overflow-x-auto scrollbar-x-remove   flex md:flex-col flex-row gap-[clamp(10px,2.5vw,20px)]  ">
           {showResponsiveData?.map((item) => (
             <div
               onClick={() => setSelected(item?.title)}
               key={item?.id}
-              className={`md:w-full min-w-[270px] rounded-[10px] border  hover:border-primary group transition-all duration-300 px-[clamp(10px,2.5vw,20px)] py-[clamp(8px,2.5vw,16px)] bg-white cursor-pointer flex flex-col gap-[clamp(7px,2.5vw,10px)] ${
+              className={`md:w-full min-w-[270px] rounded-[10px] border  hover:border-primary group transition-all duration-300 px-[clamp(6px,2.5vw,20px)] py-[clamp(8px,2.5vw,16px)] bg-white cursor-pointer flex flex-col gap-[clamp(3px,2.5vw,10px)] ${
                 selected === item?.title
                   ? "border-primary"
                   : "md:border-white border-black-10"
@@ -69,7 +69,7 @@ const ShowResponsive = () => {
             </div>
           ))}
         </div>
-        <div className="">
+        <div className="md:bg-transparent bg-[#0CE47F0D] md:border-none border border-black-10 rounded-[20px] md:rounded-none ">
           <div className="relative w-full h-96 ">
             {selected === "Home Page" ? (
               <Image

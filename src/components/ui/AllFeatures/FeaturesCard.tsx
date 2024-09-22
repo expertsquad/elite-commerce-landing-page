@@ -51,7 +51,7 @@ const FeaturesCard = ({
         <div className="absolute -right-2 -top-2">
           <Image src={secondaryEllipse} alt="primaryEllipse" />
         </div>
-        <div className="relative  w-full h-[260px]">
+        <div className="relative   w-full h-[260px] rounded-md overflow-hidden">
           <Image
             src={second ? data?.images?.[0] : data?.images?.[1]}
             alt="feature-image"
