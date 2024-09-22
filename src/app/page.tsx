@@ -25,8 +25,8 @@ export default function Home() {
       <Technology />
       {/* <Testimonial /> */}
       <MobileOptimized />
-      {/* <GetHelp />
-      <ExploreSoftwareCarousel /> */}
+      <GetHelp />
+      {/* <ExploreSoftwareCarousel /> */}
       <Footer />
     </main>
   );

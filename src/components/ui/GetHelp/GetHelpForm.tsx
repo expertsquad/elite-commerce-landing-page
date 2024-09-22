@@ -78,6 +78,7 @@ const GetHelpForm = () => {
             label="Your message*"
             placeholder="Type your message here"
             name="subject"
+            className="max-h-20"
           />
           <Button className="outline-none hover:scale-105 transition-all duration-300 hover:bg-gradient-primary-reverse flex items-center justify-center gap-1.5 bg-gradient-primary rounded-full py-3.5 px-10 text-white text-base w-full ">
             Send Message
