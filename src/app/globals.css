@@ -182,6 +182,19 @@
     border-color: #00ff00; /* Neon green */
     box-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00;
   }
+
+  /* Nizam start */
+  .perspective-180 {
+    perspective: 400px;
+  }
+
+  .rotate-y-20 {
+    transform: rotateY(20deg);
+  }
+  .rotate-y-23 {
+    transform: rotateY(23deg);
+  }
+  /* Nizam End */
 }
 
 /* * {
