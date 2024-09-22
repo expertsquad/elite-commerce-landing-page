@@ -37,7 +37,7 @@ const TopFeature = () => {
       </div>
 
       {/* Top Feature Card Section */}
-      <div className="grid grid-cols-2 md:grid-cols-3 place-items-center gap-x-[clamp(14px,2.5vw,20px)] gap-y-[clamp(14px,2.5vh,20px)]">
+      <div className="grid grid-cols-2 md:grid-cols-3 place-items-center gap-x-[clamp(10px,2.5vw,20px)] gap-y-[clamp(10px,2.5vh,20px)]">
         {topFeatureCardData?.map((card) => (
           <TopFeatureCard
             key={card._id}
