@@ -31,7 +31,7 @@ const MobileOptimized = () => {
           <MobileView />
         </div>
       </div>
-      <div className="get-help flex items-center justify-center relative ">
+      <div className="get-help flex items-center justify-center relative group">
         <BehindContainer />
         <GetHelpForm />
       </div>
