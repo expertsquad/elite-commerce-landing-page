@@ -69,7 +69,7 @@ const Videos = () => {
         >
           {/* <source src="/videos/EliteCommerce.mp4" type="video/mp4" /> */}
           <source src="/videos/EliteCommer.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
+          Your browser does not support the video tag hello this is videos.
         </video>
       </div>
     </div>
