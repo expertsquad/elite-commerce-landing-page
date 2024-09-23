@@ -8,52 +8,61 @@ const testimonials = [
   {
     name: "John Doe",
     comment: "Great experience and support.",
+    rating: 4,
     img: "https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     name: "John Dfgsdoe",
     comment: "Amazing service and friendly staff.",
+    rating: 5,
     img: "https://images.pexels.com/photos/845457/pexels-photo-845457.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     name: "John sgfsdf",
     comment: "Highly recommended!",
+    rating: 3,
     img: "https://images.pexels.com/photos/775091/pexels-photo-775091.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     name: "Jane Smghfgith",
     comment: "Fantastic experience!",
+    rating: 4,
     img: "https://images.pexels.com/photos/248528/pexels-photo-248528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     name: "Michael Johhjghfgnson",
     comment: "Loved the experience!",
+    rating: 5,
     img: "https://images.pexels.com/photos/27568669/pexels-photo-27568669/free-photo-of-a-person-holding-a-samsung-galaxy-s20-with-the-app-on-it.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     name: "Michael sfgsd",
     comment: "Will come back again.",
+    rating: 4,
     img: "https://images.pexels.com/photos/15940011/pexels-photo-15940011/free-photo-of-close-up-of-a-smartphone-displaying-a-conversation-with-chatgpt.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     name: "Michael ertser",
     comment: "Excellent support!",
+    rating: 3,
     img: "https://images.pexels.com/photos/12203594/pexels-photo-12203594.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     name: "Michael dfghdf",
     comment: "Very satisfied with the service.",
+    rating: 4,
     img: "https://images.pexels.com/photos/9213716/pexels-photo-9213716.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
   {
     name: "Michael Jotghdfghhnson",
     comment: "A wonderful experience!",
+    rating: 5,
     img: "https://images.pexels.com/photos/28411653/pexels-photo-28411653/free-photo-of-tunisian-seaman-fixing-an-engine.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
 ];
 
 const TestimonialCarousel = () => {
-  const [currentIndex, setCurrentIndex] = useState(4); // Start with the middle testimonial (index 4)
+  const [currentIndex, setCurrentIndex] = useState(4);
   const [hover, setHover] = useState(false);
   const totalTestimonials = testimonials.length;
 
@@ -62,7 +71,7 @@ const TestimonialCarousel = () => {
       const interval = setInterval(() => {
         nextSlide();
       }, 3000); // Change every 3 seconds
-      return () => clearInterval(interval); // Cleanup interval on component unmount or hover
+      return () => clearInterval(interval);
     }
   }, [hover]);
 
@@ -133,11 +142,13 @@ const TestimonialCarousel = () => {
                 </div>
               </div>
               {index === currentIndex && (
-                <div className="flex justify-center items-center  ">
+                <div className="flex justify-between items-center">
                   {/* Left Arrow */}
                   <button className="hidden md:block" onClick={prevSlide}>
                     <IconChevronLeft size={32} />
                   </button>
+                  {/* comments and ratings with name */}
+
                   <div className="text-center mt-20 text-primary md:w-1/2 w-full ">
                     <h3 className="text-lg font-bold">
                       {testimonials[index].name}
