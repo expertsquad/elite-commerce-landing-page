@@ -22,7 +22,11 @@ const Button3d = ({
     <button className={`group relative ${button3dMainClass}`}>
       {/* <!-- Background Shadow/Effect Div --> */}
       <div
+<<<<<<< HEAD
         className={`absolute mr-1 ml-1 inset-0 h-full -z-10 transform translate-x-3 translate-y-2  rounded-md  transition-all duration-300 ease-in-out group-hover:-translate-x-1 group-hover:scale-[40px] group-hover:-ml-1.5 group-hover:right-3.5 group-hover:mt-2  ${background3dclass}`}
+=======
+        className={`absolute mr-1 ml-1 inset-0 h-full -z-10 transform translate-x-3 translate-y-2  transition-all duration-300 ease-in-out group-hover:-translate-x-1 group-hover:scale-[40px] group-hover:-ml-1.5 group-hover:right-3.5 group-hover:mt-2  ${background3dclass}`}
+>>>>>>> 2716a2abf474b7ed667d7a33a29716bde4b90774
       ></div>
 
       {/* Conditionally rendered hover text */}
@@ -34,7 +38,11 @@ const Button3d = ({
 
       {/* <!-- Main Button Div --> */}
       <div
+<<<<<<< HEAD
         className={`relative w-[145px] text-black transform translate-x-2 translate-y-2  rounded-md px-3 py-3 bg-gradient-secondary transition-transform duration-300 ease-in-out group-hover:translate-x-3 group-hover:translate-y-1 group-hover:scale-105  ${mainButtonDiv}`}
+=======
+        className={`relative w-[145px] text-black transform translate-x-2 translate-y-2 px-3 py-3 bg-gradient-secondary transition-transform duration-300 ease-in-out group-hover:translate-x-3 group-hover:translate-y-1 group-hover:scale-105  ${mainButtonDiv}`}
+>>>>>>> 2716a2abf474b7ed667d7a33a29716bde4b90774
       >
         {/* <!-- Button Content --> */}
         <div>
