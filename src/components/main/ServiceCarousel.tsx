@@ -1,7 +1,12 @@
 import React from "react";
+import Infinity from "../hero/Infinity";
 
 const ServiceCarousel = () => {
-  return <div>Service Carousel</div>;
+  return (
+    <div className="main-container">
+      <Infinity />
+    </div>
+  );
 };
 
 export default ServiceCarousel;

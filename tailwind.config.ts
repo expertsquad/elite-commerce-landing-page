@@ -1,3 +1,4 @@
+import { transform } from "next/dist/build/swc";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -58,7 +59,32 @@ const config: Config = {
       20: "20",
       50: "50",
     },
-    extend: {},
+    extend: {
+      animation: {
+        pulseColor: "pulseColor 3s infinite",
+        "loop-scroll": "loop-scroll 40s linear infinite",
+        "right-scroll": "right-scroll 70s linear infinite",
+        "rightSlow-scroll": "rightSlow-scroll 40s linear infinite",
+      },
+      keyframes: {
+        "loop-scroll": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        "right-scroll": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(100%)" },
+        },
+        "rightSlow-scroll": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        pulseColor: {
+          "0%, 100%": { backgroundColor: "#D9D9D9" }, // Default color
+          "50%": { backgroundColor: "#FF0000" }, // The color change in the middle of the animation
+        },
+      },
+    },
   },
   plugins: [],
 };
