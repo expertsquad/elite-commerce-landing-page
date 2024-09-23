@@ -3,7 +3,7 @@ import React, { useRef, useEffect, useState } from "react";
 
 const Videos = () => {
   const videoRef = useRef<HTMLDivElement>(null);
-  const [videoSize, setVideoSize] = useState({ width: 250, height: 250 });
+  const [videoSize, setVideoSize] = useState({ width: 500, height: 370 }); // Default size
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,9 +29,9 @@ const Videos = () => {
         Math.min(1, visibleHeight / totalVisibleHeight)
       );
 
-      // Calculate new width and height, ensuring full width is possible (e.g., 100vw)
-      const newWidth = 250 + (window.innerWidth - 250) * scrollPercentage;
-      const newHeight = 250 + (600 - 250) * scrollPercentage;
+      // Calculate new width and height, ensuring smooth growth from 500px to full width
+      const newWidth = 500 + (window.innerWidth - 500) * scrollPercentage;
+      const newHeight = 370 + (500 - 370) * scrollPercentage;
 
       // Update video size based on scroll percentage
       setVideoSize({ width: newWidth, height: newHeight });
@@ -45,11 +45,11 @@ const Videos = () => {
   }, []);
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden md:h-[520px]">
       {/* Video container */}
       <div
         ref={videoRef}
-        className="rounded-md overflow-hidden mx-auto transition-all duration-300 ease-in-out"
+        className="rounded-md overflow-hidden mx-auto transition-all duration-500 ease-in-out" // Smoother transition
         style={{
           width: `${videoSize.width}px`, // Dynamically apply the video width
           height: `${videoSize.height}px`, // Dynamically apply the video height
@@ -67,9 +67,8 @@ const Videos = () => {
             objectFit: "cover",
           }}
         >
-          {/* <source src="/videos/EliteCommerce.mp4" type="video/mp4" /> */}
           <source src="/videos/EliteCommer.mp4" type="video/mp4" />
-          Your browser does not support the video tag hello this is videos.
+          Your browser does not support the video tag.
         </video>
       </div>
     </div>
