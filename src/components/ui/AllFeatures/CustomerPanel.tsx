@@ -30,12 +30,12 @@ const CustomerPanel = () => {
   };
 
   return (
-    <div className="grid md:grid-cols-3  grid-cols-1 md:gap-5">
-      <div
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        className="md:bg-[#0CE47F0D] p-5 md:border border-black-10 rounded-[10px]"
-      >
+    <div
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className="grid md:grid-cols-3  grid-cols-1 md:gap-5"
+    >
+      <div className="md:bg-[#0CE47F0D] p-5 md:border border-black-10 rounded-[10px]">
         <div className="space-y-8 md:text-start text-center">
           <HighlightText className="font-semibold text-base">
             All Feature

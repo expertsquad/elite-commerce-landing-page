@@ -2,19 +2,21 @@ import Image from "next/image";
 import React from "react";
 import primaryEllipse from "@/assets/images/primaryColorEllipse.svg";
 import secondaryEllipse from "@/assets/images/secondaryEllipse.svg";
-import demo from "@/assets/images/customerPanelImages/quickOrder.png";
 import highlight from "@/assets/images/Highlight_04.svg";
 import highlight2 from "@/assets/images/Highlight_09.svg";
+import arrow from "@/assets/images/arrowRight.svg";
 
 const FeaturesCard = ({
   cardTitle,
   second,
+  first,
   data,
   bottomHighlight,
   topHighlight,
 }: {
   cardTitle?: string;
   second?: boolean;
+  first?: boolean;
   data?: {
     description?: string;
     images?: any;
@@ -44,6 +46,12 @@ const FeaturesCard = ({
           />
         </div>
       )}
+      {first && (
+        <div className="absolute -right-24 -top-6">
+          <Image src={arrow} alt="arrow" className="w-[130px] h-[130px]" />
+        </div>
+      )}
+
       <div className="bg-white p-5  relative  shadow-sm rounded-[20px] overflow-hidden  flex flex-col gap-5">
         <div className="absolute -left-2 -top-2">
           <Image src={primaryEllipse} alt="primaryEllipse" />
@@ -73,9 +81,6 @@ const FeaturesCard = ({
               : "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}
           </span>
         </div>
-        {/* <div>
-              <Image src={highlight} alt="highlight" />
-            </div> */}
       </div>
     </div>
   );
