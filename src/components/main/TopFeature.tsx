@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import sectionBg from "@/assets/images/sectionBg.png";
-import topFeaturesImage from "@/assets/images/topFeaturesSvg.svg";
+import topFeaturesGif from "@/assets/images/topFeatureGif.gif";
 import HighlightText from "../Shared/HighlightText";
 import { topFeatureCardData } from "@/constants/topFeaturesData";
 import TopFeatureCard from "../Shared/TopFeatureCard";
@@ -10,7 +10,7 @@ const TopFeature = () => {
   return (
     <div className="main-container py-10">
       <div className="space-y-[clamp(20px,2.5vw,30px)]">
-        <div className="h-[30px] w-[160px] relative rounded-l-full overflow-hidden mx-auto flex items-center justify-start pl-2">
+        <div className="h-[30px] w-[160px] relative rounded-l-full overflow-hidden mx-auto flex items-center justify-start pl-2 ">
           <span className="z-50  absolute text-sm text-white">
             Top Features
           </span>
@@ -27,12 +27,12 @@ const TopFeature = () => {
           product online.
         </p>
       </div>
-      <div className="w-full h-96 relative mt-10">
+      <div className="w-full md:h-96 h-[280px] relative mt-10 bg-white">
         <Image
-          src={topFeaturesImage}
+          src={topFeaturesGif}
           alt="top features"
           fill
-          className="top-0 left-0  object-contain h-full w-full"
+          className="top-0 left-0  object-contain h-full w-full bg-white"
         />
       </div>
 

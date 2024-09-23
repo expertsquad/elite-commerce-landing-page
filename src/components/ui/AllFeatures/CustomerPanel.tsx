@@ -47,7 +47,7 @@ const CustomerPanel = () => {
                   activeFeature?.title === feature?.title
                     ? "bg-gradient-primary text-white"
                     : "bg-[#119F5B0D] text-black-80"
-                } md:whitespace-normal whitespace-nowrap`}
+                } md:whitespace-normal whitespace-nowrap group`}
                 onClick={() => handleMenuItemClick(index)}
                 key={feature?._id}
                 title={feature?.title}
