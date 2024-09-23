@@ -1,14 +1,11 @@
 "use client";
 import React, { useEffect } from "react";
-<<<<<<< HEAD
-=======
 import Button3d from "../Shared/Button3d";
 import Videos from "../hero/Videos";
 import CursorHover from "../Shared/CursorHover";
 import videoHover from "@/assets/images/videosHover.png";
 import Image from "next/image";
 // Import your custom CursorHover component
->>>>>>> 2716a2abf474b7ed667d7a33a29716bde4b90774
 
 const Hero = () => {
   useEffect(() => {
@@ -16,30 +13,17 @@ const Hero = () => {
     let currentHorizontalDrops = 0;
 
     const createVerticalNeonDrop = () => {
-<<<<<<< HEAD
-      if (currentDrops >= 5) return; // Limit the number of vertical drops to 5
-=======
       if (currentDrops >= 5) return;
->>>>>>> 2716a2abf474b7ed667d7a33a29716bde4b90774
 
       const drop = document.createElement("div");
       drop.classList.add("neon-drop");
 
-<<<<<<< HEAD
-      // Position on the grid lines (multiples of 100px)
-      const gridWidth = 100;
-=======
       const gridWidth = 250;
->>>>>>> 2716a2abf474b7ed667d7a33a29716bde4b90774
       const randomLeftPosition =
         Math.floor(Math.random() * (window.innerWidth / gridWidth)) * gridWidth;
       drop.style.left = `${randomLeftPosition}px`;
 
-<<<<<<< HEAD
-      drop.style.animationDuration = `${Math.random() * 9 + 9}s`; // Randomize the animation duration
-=======
       drop.style.animationDuration = `${Math.random() * 9 + 9}s`;
->>>>>>> 2716a2abf474b7ed667d7a33a29716bde4b90774
 
       const heroContainer = document.querySelector(".hero-container");
       if (heroContainer) {
@@ -54,21 +38,12 @@ const Hero = () => {
     };
 
     const createHorizontalNeonDrop = () => {
-<<<<<<< HEAD
-      if (currentHorizontalDrops >= 5) return; // Limit the number of horizontal drops to 5
-=======
       if (currentHorizontalDrops >= 5) return;
->>>>>>> 2716a2abf474b7ed667d7a33a29716bde4b90774
 
       const drop = document.createElement("div");
       drop.classList.add("neon-drop-horizontal");
 
-<<<<<<< HEAD
-      // Align the drop with the grid lines (multiples of 100px)
-      const gridHeight = 100;
-=======
       const gridHeight = 250;
->>>>>>> 2716a2abf474b7ed667d7a33a29716bde4b90774
       const randomTopPosition =
         Math.floor(Math.random() * (window.innerHeight / gridHeight)) *
         gridHeight;
@@ -87,10 +62,6 @@ const Hero = () => {
       }
     };
 
-<<<<<<< HEAD
-    // Create neon drops at intervals
-=======
->>>>>>> 2716a2abf474b7ed667d7a33a29716bde4b90774
     const interval = setInterval(() => {
       const activeDrops = Math.floor(Math.random() * 4) + 2;
       for (let i = 0; i < activeDrops; i++) {
@@ -103,15 +74,6 @@ const Hero = () => {
   }, []);
 
   return (
-<<<<<<< HEAD
-    <div className="hero-container relative min-h-screen bg-gradient-primary">
-      <div className="absolute inset-0 bg-grid-pattern ">
-        <div className="text-5xl text-center text-black-70 mx-auto z-10">
-          Bangladesh 2.0
-        </div>
-      </div>
-    </div>
-=======
     <section
       id="home"
       className="hero-container relative min-h-screen bg-white-15 "
@@ -175,7 +137,6 @@ const Hero = () => {
         </div>
       </div>
     </section>
->>>>>>> 2716a2abf474b7ed667d7a33a29716bde4b90774
   );
 };
 
