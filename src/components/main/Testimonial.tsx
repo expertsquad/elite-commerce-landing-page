@@ -9,7 +9,8 @@ const Testimonial = () => {
         <div className=" flext items-center justify-center gap-7 text-center">
           <div>Testimonial</div>
           <h2 className="[font-size:clamp(20px,3.5vw,30px)] font-bold text-center">
-            Our Customer Say About Our product
+            Our Customer Say About Our{" "}
+            <span className="text-primary">product</span>
           </h2>
           <p>
             Choose us for dedicated customer support, regular updates and
