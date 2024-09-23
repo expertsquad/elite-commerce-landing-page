@@ -1,3 +1,4 @@
+import { transform } from "next/dist/build/swc";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -21,22 +22,6 @@ const config: Config = {
         15: "var(--white-15)",
         DEFAULT: "var(--white)",
       },
-      violet: {
-        light: "var(--violet-light)",
-        DEFAULT: "var(--violet)",
-      },
-      blue: {
-        light: "var(--blue-light)",
-        DEFAULT: "var(--blue)",
-      },
-      danger: {
-        light: "var(--danger-light)",
-        DEFAULT: "var(--danger)",
-      },
-      yellow: {
-        light: "var(--yellow-light)",
-        DEFAULT: "var(--yellow)",
-      },
       black: {
         transparent: "var(--black-transparent)",
         10: "var(--black-10)",
@@ -57,10 +42,8 @@ const config: Config = {
       "gradient-primary-reverse": "var(--gradient-primary-reverse)",
       "gradient-primary-light": "var(--gradient-primary-light)",
       "gradient-secondary": "var(--gradient-secondary)",
-      "gradient-secondary-reverse": "var(--gradient-secondary-reverse)",
       "gradient-secondary-light": "var(--gradient-secondary-light)",
       "gradient-positive": "var(--gradient-positive)",
-      "gradient-violet": "var(--gradient-violet)",
       "gradient-positive-light": "var(--gradient-positive-light)",
       "gradient-danger-light": "var(--gradient-danger-light)",
       "gradient-warning-light": "var(--gradient-warning-light)",
@@ -76,25 +59,30 @@ const config: Config = {
       20: "20",
       50: "50",
     },
-
     extend: {
-      transformOrigin: {
-        custom: "0 100px",
+      animation: {
+        pulseColor: "pulseColor 3s infinite",
+        "loop-scroll": "loop-scroll 40s linear infinite",
+        "right-scroll": "right-scroll 70s linear infinite",
+        "rightSlow-scroll": "rightSlow-scroll 40s linear infinite",
       },
       keyframes: {
-        rotateText: {
-          "0%": { transform: "rotate(0deg)" },
-          "100%": { transform: "rotate(360deg)" },
+        "loop-scroll": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
         },
-        customSpin: {
-          to: {
-            transform: "rotate(360deg)",
-          },
+        "right-scroll": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(100%)" },
         },
-      },
-      animation: {
-        "spin-rotate-text": "rotateText 10s linear infinite",
-        "spin-custom": "customSpin 10s linear infinite",
+        "rightSlow-scroll": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        pulseColor: {
+          "0%, 100%": { backgroundColor: "#D9D9D9" }, // Default color
+          "50%": { backgroundColor: "#FF0000" }, // The color change in the middle of the animation
+        },
       },
     },
   },

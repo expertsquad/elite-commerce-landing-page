@@ -3,6 +3,7 @@ import ExploreSoftwareCarousel from "@/components/main/ExploreSoftwareCarousel";
 import Footer from "@/components/main/Footer";
 import GetHelp from "@/components/main/GetHelp";
 import Hero from "@/components/main/Hero";
+import InfinityCarouse from "@/components/main/InfinityCarouse";
 import MobileOptimized from "@/components/main/MobileOptimized";
 import PricingTable from "@/components/main/PricingTable";
 import ServiceCarousel from "@/components/main/ServiceCarousel";
@@ -14,19 +15,20 @@ import WhyChooseElite from "@/components/main/WhyChooseElite";
 
 export default function Home() {
   return (
-    <main>
-      {/* <Hero />
-      <WhyChooseElite /> */}
+    <main className="space-y-32">
+      <Hero />
+      <WhyChooseElite />
       <AllFeature />
       <TopFeature />
-      {/* <ServiceCarousel /> */}
+      <ServiceCarousel />
       <PricingTable />
       <ShowResponsive />
+      <InfinityCarouse />
       <Technology />
-      {/* <Testimonial /> */}
+      <Testimonial />
       <MobileOptimized />
       <GetHelp />
-      {/* <ExploreSoftwareCarousel /> */}
+      <ExploreSoftwareCarousel />
       <Footer />
     </main>
   );
