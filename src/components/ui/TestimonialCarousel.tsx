@@ -84,64 +84,77 @@ const TestimonialCarousel = () => {
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      {/* Left Arrow */}
-      <button
-        className="absolute transform -translate-y-1/2 left-4 z-10 text-primary"
-        onClick={prevSlide}
-      >
-        <IconChevronLeft size={32} />
-      </button>
-
       {/* Testimonial slides */}
       <div className="flex justify-center items-center space-x-4 ">
         {Array.from({ length: 9 }).map((_, i) => {
           const index =
-            (currentIndex + i - 4 + totalTestimonials) % totalTestimonials; // Wrap around the index
+            (currentIndex + i - 4 + totalTestimonials) % totalTestimonials;
 
           return (
             <div
               key={index}
-              className={`flex flex-col items-center transition-transform duration-700 ease-in-out ${
+              className={`w-[100px] h-[100px] flex flex-col items-center transition-transform duration-700 ease-in-out ${
                 index === currentIndex
-                  ? "scale-110 z-10"
-                  : "scale-80 opacity-60"
+                  ? "scale-110 transition-transform duration-700 ease-in-out z-10"
+                  : index === (currentIndex + 1) % totalTestimonials ||
+                    index ===
+                      (currentIndex - 1 + totalTestimonials) % totalTestimonials
+                  ? "scale-95 transition-transform duration-700 ease-in-out opacity-60"
+                  : index === (currentIndex + 2) % totalTestimonials ||
+                    index ===
+                      (currentIndex - 2 + totalTestimonials) % totalTestimonials
+                  ? "scale-75 transition-transform duration-700 ease-in-out opacity-60"
+                  : index === (currentIndex + 3) % totalTestimonials ||
+                    index ===
+                      (currentIndex - 3 + totalTestimonials) % totalTestimonials
+                  ? "scale-50 transition-transform duration-700 ease-in-out opacity-60"
+                  : index === (currentIndex + 4) % totalTestimonials ||
+                    index ===
+                      (currentIndex - 4 + totalTestimonials) % totalTestimonials
+                  ? "scale-50 transition-transform duration-700 ease-in-out opacity-60"
+                  : ""
               }`}
-              style={{
-                width: "100px",
-                height: "100px",
-              }}
             >
-              <div className="rounded-full w-full h-full border-2 border-primary flex items-center justify-center">
-                <Image
-                  src={testimonials[index].img}
-                  alt={testimonials[index].name}
-                  className="rounded-full object-cover indent-0"
-                  width={150}
-                  height={150}
-                />
+              <div className="rounded-full w-full h-full flex items-center justify-center ">
+                <div
+                  className={`w-[100px] h-[100px] mx-auto relative shrink-0 my-7 ${
+                    index === currentIndex
+                      ? "border border-primary-light rounded-full"
+                      : ""
+                  }`}
+                >
+                  <Image
+                    src={testimonials[index].img}
+                    alt={testimonials[index].name}
+                    className="rounded-full object-cover border-dashed border"
+                    fill
+                    sizes="(max-width: 100px) 5vw, 10vw"
+                  />
+                </div>
               </div>
               {index === currentIndex && (
-                <div className="text-center mt-20 text-primary ">
-                  <h3 className="text-lg font-bold">
-                    {testimonials[index].name}
-                  </h3>
-                  <p className="text-sm">{testimonials[index].comment}</p>
+                <div className="flex justify-center items-center  ">
+                  {/* Left Arrow */}
+                  <button className="hidden md:block" onClick={prevSlide}>
+                    <IconChevronLeft size={32} />
+                  </button>
+                  <div className="text-center mt-20 text-primary md:w-1/2 w-full ">
+                    <h3 className="text-lg font-bold">
+                      {testimonials[index].name}
+                    </h3>
+                    <p className="text-sm">{testimonials[index].comment}</p>
+                  </div>
+                  {/* Right Arrow */}
+                  <button className="hidden md:block" onClick={nextSlide}>
+                    <IconChevronRight size={32} />
+                  </button>
                 </div>
               )}
             </div>
           );
         })}
       </div>
-
-      {/* Right Arrow */}
-      <button
-        className="absolute top-1/2 transform -translate-y-1/2 right-4 z-10 text-primary"
-        onClick={nextSlide}
-      >
-        <IconChevronRight size={32} />
-      </button>
     </div>
   );
 };
-
 export default TestimonialCarousel;
