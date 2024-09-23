@@ -15,7 +15,7 @@ const TopFeatureCard = ({
 }) => {
   return (
     <div
-      className={`md:max-w-[350px] max-w-[250px] border border-black-10 w-full md:h-[300px] h-[250px]   p-5 flex items-center justify-center rounded-2xl hover:scale-105 transition-all duration-300 cursor-pointer hover:shadow-2xl ${
+      className={`md:max-w-[350px] max-w-[250px] border border-black-10 w-full md:h-[300px] h-[250px]   p-[clamp(10px,2.5vw,20px)] flex items-center justify-center rounded-2xl hover:scale-105 transition-all duration-300 cursor-pointer hover:shadow-2xl ${
         data?.title === "Premium Features"
           ? "bg-gradient-primary"
           : data?.title === "High-Performance"

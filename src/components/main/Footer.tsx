@@ -4,7 +4,7 @@ import logo from "@/assets/images/mainLogoWhite.svg";
 import Link from "next/link";
 import ArrowUpRight from "@/assets/icons/ArrowUpRight";
 import singleLogo from "@/assets/images/expertSquadSingle.svg";
-import footerRightSection from "@/assets/images/FooterRightSectionsvg.svg";
+import footerCircle from "@/assets/images/footerCircle.png";
 import YoutubeIcon from "@/assets/icons/YoutubeIcon";
 import InstagramIcon from "@/assets/icons/InstagramIcon";
 import FacebookIcon from "@/assets/icons/FacebookIcon";
@@ -37,7 +37,7 @@ const Footer = () => {
             </div>
 
             <div className="">
-              <p className="[font-size:_clamp(12px,2.5vw,18px)] text-[#DDDDDD]">
+              <p className="[font-size:_clamp(12px,2.5vw,18px)] text-[#DDDDDD] md:text-start text-center">
                 Lorem ipsum dolor sit amet consectetur. Commodo mollis urna
                 dictum at tellus ultricies nunc aliquam. Vitae placerat amet
                 adipiscing in tempor convallis.Lorem ipsum dolor sit amet
@@ -56,10 +56,18 @@ const Footer = () => {
               <ArrowUpRight color="#fff" height={20} width={20} />
             </Link>
           </div>
-          <div className=" flex items-center justify-center md:justify-end">
-            <div className=" ">
-              <Image src={footerRightSection} alt="" />
+          <div className=" flex items-center flex-col justify-center md:justify-end gap-[clamp(10px,2.5vw,40px)]">
+            <div className="relative md:w-[150px] md:h-[150px] w-[80px] h-[80px] animate-spin-custom">
+              <Image
+                src={footerCircle}
+                alt=""
+                fill
+                className="object-contain w-full h-full top-0 left-0"
+              />
             </div>
+            <span className="text-white font-bold [font-size:_clamp(18px,2.5vw,24px)] italic [font-family:_'Sansita_One']">
+              Elite-Commerce
+            </span>
           </div>
         </div>
       </div>

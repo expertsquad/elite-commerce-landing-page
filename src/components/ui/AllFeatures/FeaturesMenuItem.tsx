@@ -1,3 +1,5 @@
+import MegaMenuIcon from "@/assets/icons/MegaMenuIcon";
+import CustomHoverIconColor from "@/components/Shared/CustomHoverIconColor";
 import React from "react";
 
 const FeaturesMenuItem = ({
@@ -16,7 +18,9 @@ const FeaturesMenuItem = ({
       onClick={onClick}
       className={`${className}  py-[clamp(10px,2.5vw,13px)] rounded-full px-[clamp(10px,2.5vw,20px)] flex items-center justify-center md:justify-start gap-[clamp(6px,2.5vw,6px)] font-medium [font-size:_clamp(12px,2.5vw,16px)] border cursor-pointer border-white bg-[#119F5B0D ] duration-300 transition-all hover:bg-gradient-primary hover:text-white`}
     >
-      {icon}
+      <CustomHoverIconColor pathname={title} menuItem={title}>
+        <MegaMenuIcon />
+      </CustomHoverIconColor>
       <span>{title}</span>
     </div>
   );
