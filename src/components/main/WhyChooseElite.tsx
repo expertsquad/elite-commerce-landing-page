@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-import React from "react";
-
-const WhyChooseElite = () => {
-  return <div>Why Choose elite commerce</div>;
-=======
 "use client";
 import React from "react";
 import videoHover from "@/assets/images/videosHover.png";
@@ -181,7 +175,6 @@ const WhyChooseElite = () => {
       </div>
     </div>
   );
->>>>>>> 2716a2abf474b7ed667d7a33a29716bde4b90774
 };
 
 export default WhyChooseElite;

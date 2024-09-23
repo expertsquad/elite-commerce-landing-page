@@ -10,20 +10,14 @@
   },
   "dependencies": {
     "@tabler/icons-react": "^3.17.0",
-<<<<<<< HEAD
-=======
     "lodash": "^4.17.21",
     "lodash-es": "^4.17.21",
->>>>>>> 2716a2abf474b7ed667d7a33a29716bde4b90774
     "next": "14.2.11",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
-<<<<<<< HEAD
-=======
     "@types/lodash-es": "^4.17.12",
->>>>>>> 2716a2abf474b7ed667d7a33a29716bde4b90774
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

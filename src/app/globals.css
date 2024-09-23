@@ -138,19 +138,11 @@
 .bg-grid-pattern {
   background-image: linear-gradient(
       to right,
-<<<<<<< HEAD
-      rgba(194, 96, 39, 0.432) 1px,
-      transparent 1px
-    ),
-    linear-gradient(to bottom, rgba(255, 24, 16, 0.281) 1px, transparent 1px);
-  background-size: 100px 100px; /* Grid lines every 100px */
-=======
       rgba(255, 229, 229, 1) 1px,
       transparent 1px
     ),
     linear-gradient(to bottom, rgba(255, 229, 229, 1) 1px, transparent 1px);
   background-size: 250px 250px; /* Grid lines every 100px */
->>>>>>> 2716a2abf474b7ed667d7a33a29716bde4b90774
 }
 
 .neon-drop {
@@ -168,11 +160,7 @@
   width: 100px; /* Match the grid size for better alignment */
   background: linear-gradient(to right, transparent, #ff9153, transparent);
   animation: fall-horizontal linear infinite;
-<<<<<<< HEAD
-  left: -100px; /* Start off-screen */
-=======
   left: -250px; /* Start off-screen */
->>>>>>> 2716a2abf474b7ed667d7a33a29716bde4b90774
 }
 
 @keyframes fall {
@@ -199,12 +187,9 @@
   .perspective-180 {
     perspective: 400px;
   }
-<<<<<<< HEAD
-=======
   .paused {
     animation-play-state: paused;
   }
->>>>>>> 2716a2abf474b7ed667d7a33a29716bde4b90774
 
   .rotate-y-20 {
     transform: rotateY(20deg);
