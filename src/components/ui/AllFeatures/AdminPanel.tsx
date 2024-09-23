@@ -31,12 +31,12 @@ const AdminPanel = () => {
   };
 
   return (
-    <div className="grid md:grid-cols-3  grid-cols-1 md:gap-5">
-      <div
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-        className="md:bg-[#0CE47F0D] p-5 md:border border-black-10 rounded-[10px]"
-      >
+    <div
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className="grid md:grid-cols-3  grid-cols-1 md:gap-5"
+    >
+      <div className="md:bg-[#0CE47F0D] p-5 md:border border-black-10 rounded-[10px]">
         <div className="space-y-8 md:text-start text-center">
           <HighlightText className="font-semibold text-base ">
             All Feature
@@ -61,6 +61,7 @@ const AdminPanel = () => {
       <div className="border border-black-10 rounded-[10px] p-[clamp(16px,2.5vw,32px)] flex gap-[clamp(20px,2.5vw,40px)] md:flex-row flex-col md:justify-normal md:items-start justify-center items-center bg-[#0CE47F0D] col-span-2">
         <div>
           <FeaturesCard
+            first
             cardTitle="Minimal Design Content For"
             data={activeFeature}
             bottomHighlight

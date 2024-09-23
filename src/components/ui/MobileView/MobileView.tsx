@@ -5,7 +5,7 @@ import { mobileOptimizedData } from "@/constants/mobileOptimizedData";
 
 const MobileView = () => {
   return (
-    <div className="grid lg:grid-cols-5 md:grid-cols-4 grid-cols-1 md:gap-5 gap-3.5">
+    <div className="flex items-center justify-center overflow-x-auto scrollbar-x-remove md:gap-5 gap-3.5">
       {mobileOptimizedData?.map((data) => (
         <div key={data?.id} className="flex flex-col items-center  gap-3">
           <div className="relative w-[200px] h-[420px]">
