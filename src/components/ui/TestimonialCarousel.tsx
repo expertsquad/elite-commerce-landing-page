@@ -14,7 +14,7 @@ const TestimonialCarousel = () => {
     if (!hover) {
       const interval = setInterval(() => {
         nextSlide();
-      }, 3000); // Change every 3 seconds
+      }, 5000);
       return () => clearInterval(interval);
     }
   }, [hover]);
@@ -32,10 +32,10 @@ const TestimonialCarousel = () => {
   };
 
   return (
-    <div className="relative w-full mx-auto py-10">
+    <div className="relative w-full mx-auto py-10 overflow-hidden">
       {/* Testimonial slides */}
       <div className="flex justify-center items-center flex-col gap-10 w-full">
-        <div className="flex justify-center items-center gap-7 w-full overflow-hidden  ">
+        <div className="flex justify-center items-center gap-7 w-full overflow-hidden h-[200px]">
           {Array.from({ length: 9 }).map((_, i) => {
             const index =
               (currentIndex + i - 4 + totalTestimonials) % totalTestimonials;
@@ -45,7 +45,7 @@ const TestimonialCarousel = () => {
                 onMouseEnter={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
                 key={index}
-                className={`flex flex-col items-center transition-all duration-700 ease-in-out  ${
+                className={`flex flex-col items-center transition-all duration-1000 ease-in-out  ${
                   index === currentIndex
                     ? "scale-125 z-10" // Active item
                     : index === (currentIndex + 1) % totalTestimonials ||
@@ -96,34 +96,35 @@ const TestimonialCarousel = () => {
         {currentIndex + 1 && (
           <div className=" flex justify-between items-center gap-9 md:h-[300px] h-full md:w-8/12 w-full mx-auto">
             {/* Left Arrow */}
-            <div className="hidden md:block">
+            <div className="hidden md:block animate-slide-in-left">
               <button
-                className="border border-primary hover:border-secondary rounded-full text-primary hover:text-secondary h-[45px] w-[45px] flex justify-center items-center transition-all duration-300 ease-in-out"
+                className="border border-primary hover:border-secondary rounded-full text-primary hover:text-secondary h-[45px] w-[45px] flex justify-center items-center transition-all duration-300 ease-in-out hover:animate-pulse"
                 onClick={prevSlide}
               >
                 <IconArrowLeft stroke={1} size={32} />
               </button>
             </div>
             {/* Comments and ratings with name */}
-            <div className="text-center w-full md:w-10/12 border border-black-10 h-[300px] flex flex-col justify-center items-center p-7 rounded-2xl ">
-              <div className="w-full flex justify-center items-center flex-col gap-4 border-b border-black-10 mb-5 pb-5">
+            <div className="text-center w-full md:w-10/12 border border-black-10 h-[300px] flex flex-col justify-center items-center p-7 rounded-2xl">
+              <div className="w-full flex justify-center items-center flex-col gap-4 border-b border-black-10 mb-5 pb-5 animate-slide-in-left">
                 <StarRating rating={testimonials[currentIndex]?.rating} />
-                <h3 className="text-2xl ">
+                <h3 className="text-2xl animate-slide-in-right">
                   {" "}
                   {testimonials[currentIndex]?.about}
                 </h3>
               </div>
-              <p className="text-sm line-clamp-3">
+              <p className="text-sm line-clamp-3 animate-slide-in-left">
                 {testimonials[currentIndex]?.comment}
               </p>
-              <h3 className="text-lg font-bold my-3">
+              <h3 className="text-lg font-bold my-3 animate-slide-in-right">
                 - {testimonials[currentIndex]?.name}
               </h3>
             </div>
+
             {/* Right Arrow */}
-            <div className="hidden md:block">
+            <div className="hidden md:block animate-slide-in-right">
               <button
-                className="border border-primary hover:border-secondary rounded-full text-primary hover:text-secondary h-[45px] w-[45px] flex justify-center items-center transition-all duration-300 ease-in-out"
+                className="border border-primary hover:border-secondary rounded-full text-primary hover:text-secondary h-[45px] w-[45px] flex justify-center items-center transition-all duration-300 ease-in-out hover:animate-pulse"
                 onClick={nextSlide}
               >
                 <IconArrowRight stroke={1} size={32} />

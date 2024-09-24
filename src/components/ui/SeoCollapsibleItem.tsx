@@ -13,13 +13,13 @@ const SeoCollapsibleItem = () => {
   };
 
   return (
-    <div className="md:w-[400px] w-full">
+    <div className="w-full">
       {SeoCollapsibleItems?.map((section, index) => (
         <div
           key={index}
           className={`mb-4 ${
             openSection === index &&
-            "bg-gradient-primary p-4 rounded-lg text-white"
+            "bg-gradient-primary p-4 rounded-lg text-white transition-all duration-300 ease-in-out"
           } `}
         >
           {/* Header */}
