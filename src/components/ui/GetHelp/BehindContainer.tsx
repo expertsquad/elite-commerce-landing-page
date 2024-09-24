@@ -1,14 +1,24 @@
+"use client";
 import React from "react";
 import ring from "@/assets/images/ring.png";
 import butterfly from "@/assets/images/butterfly.png";
 import Image from "next/image";
 import LoveIcon from "@/assets/icons/LoveIcon";
 import SatisfiedEmoji from "@/assets/icons/SatisfiedEmoji";
+import { useVisibleSection } from "@/components/Shared/useVisibleSection";
 
 const BehindContainer = () => {
+  const { visibleSection, sectionRefs } = useVisibleSection(100, 110);
   return (
-    <div className="absolute">
-      <div className="bg-gradient-primary rounded-[20px] md:w-[430px] w-[300px]   md:h-[670px] h-[452px] inset-0 group-hover:rotate-0 transition-all duration-300 -rotate-6 relative "></div>
+    <div
+      ref={(el) => {
+        sectionRefs.current[60] = el;
+      }}
+      className={`absolute transition-transform duration-1000 delay-10 ease-in-out ${
+        visibleSection === 60 ? " rotate-0" : "  -rotate-90 "
+      }`}
+    >
+      <div className="bg-gradient-primary rounded-[20px] md:w-[430px] w-[300px] md:h-[670px] h-[452px] inset-0 group-hover/form:rotate-0  transition-all duration-300 -rotate-6 relative "></div>
     </div>
   );
 };

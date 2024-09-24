@@ -110,6 +110,11 @@
     background-origin: border-box;
     background-clip: content-box, border-box;
   }
+  .all-feature {
+    background-image: url("../assets/images/allFeatureBannerBg.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
 
 /* scroll bar */
@@ -132,6 +137,13 @@
   @apply bg-gradient-primary;
 }
 
+.image-select-none {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
 /* Neon Line start */
 
 /* Updated grid size to 100px */
@@ -187,12 +199,21 @@
   .perspective-180 {
     perspective: 400px;
   }
+  .perspective-170 {
+    perspective: -500px;
+  }
+  .paused {
+    animation-play-state: paused;
+  }
 
   .rotate-y-20 {
     transform: rotateY(20deg);
   }
   .rotate-y-23 {
     transform: rotateY(23deg);
+  }
+  .rotate-y-22 {
+    transform: rotateY(-23deg);
   }
   /* Nizam End */
 }

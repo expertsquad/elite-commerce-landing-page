@@ -37,57 +37,6 @@ const Shariful = () => {
       <div className="w-36 h-12 bg-gradient-secondary-light rounded-md"></div>
       <div className="w-36 h-12 bg-gradient-secondary rounded-md"></div>
       <div className="w-36 h-12 bg-gradient-primary-light rounded-md"></div>
-      {/* <div className="flex items-center justify-center gap-5 flex-wrap">
-        <BagFileIcon />
-        <ComputerIcon />
-        <KnowledgePowerIcon />
-        <ResponsiveIcon />
-        <UnboxIcon />
-        <HumbergerMenuIcon />
-        <OpenEyeIcon />
-        <ColorPaletteIcon />
-        <BostaIcon />
-        <RightArrow />
-        <ArrowUpRight />
-        <Adjusments />
-        <MagnifyIcon />
-        <EyeIcon />
-        <IconBolt />
-        <IconHeart />
-        <IconStar />
-        <IconShoppingBag />
-      </div>
-      <div className="flex items-center justify-center gap-5 flex-wrap">
-        <PremiumIcon />
-        <HighPerformanceIcon />
-        <EasyToUseIcon />
-        <BestPriceIcon />
-        <UniqueDesignIcon />
-        <SupportIcon />
-        <LoveIcon />
-        <SatisfiedEmoji />
-      </div> */}
-      <div className=" flex items-center justify-center">
-        <Circle
-          bgColor="bg-gradient-secondary-reverse"
-          className="w-[200px] h-[200px]"
-          icon={<ArrowDownIcon width={16} height={16} />}
-          spinText="EXPERT SQUAD, ELITE COMMERCE."
-        />
-      </div>
-      <HighlightText text="Shariful Islam" className="font-bold" />
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
-        {[...Array(6)].map((_, i) => (
-          <TopFeatureCard
-            key={i}
-            iconContainerStyle="border border-secondary"
-            className="bg-gradient-primary  border border-black-10"
-            featureIcon={<PremiumIcon />}
-            featureTitle="Premium Features"
-            featureDescription="Equipped with many advanced features for an online store!"
-          />
-        ))}
-      </div>
     </div>
   );
 };

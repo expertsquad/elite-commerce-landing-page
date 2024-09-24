@@ -28,6 +28,7 @@ export default function Home() {
       <Technology />
       <SeoSection />
       <Testimonial />
+      {/* <Testimonial /> */}
       <MobileOptimized />
       <GetHelp />
       <ExploreSoftwareCarousel />
