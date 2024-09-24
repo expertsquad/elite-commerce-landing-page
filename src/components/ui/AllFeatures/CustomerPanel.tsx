@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import HighlightText from "@/components/Shared/HighlightText";
 import { customerPanelFeatures } from "@/constants/featuresData";

@@ -8,6 +8,14 @@
   --primary-light: #0ce47f;
   --secondary: #ff1810;
   --secondary-light: #ff9153;
+  --violet: #7950f2;
+  --violet-light: #eeedff;
+  --blue: #007bff;
+  --blue-light: #e8f7ff;
+  --red: #dc1313;
+  --red-light: #ffeaf4;
+  --yellow: #ffc107;
+  --yellow-light: #fff7e0;
   --transparent: transparent;
   --white: white;
   --white-15: #ffffff26;
@@ -112,6 +120,11 @@
   }
   .all-feature {
     background-image: url("../assets/images/allFeatureBannerBg.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .footer-main {
+    background-image: url("../assets/images/footerBg.png");
     background-position: center;
     background-repeat: no-repeat;
   }

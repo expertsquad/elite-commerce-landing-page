@@ -13,7 +13,7 @@ import TwitterXIcon from "@/assets/icons/TwitterXIcon";
 
 const Footer = () => {
   return (
-    <div className="bg-[#171717] footer-main ">
+    <footer className="bg-[#171717] footer-main ">
       <div className="main-container  py-10 ">
         <div className="grid grid-cols-1 md:grid-cols-3 md:gap-5 gap-[30px] items-center justify-between w-full">
           <div className="space-y-5 md:col-span-2 flex flex-col md:items-start items-center">
@@ -103,7 +103,7 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

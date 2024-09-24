@@ -30,12 +30,6 @@ const AllFeaturesBanner = () => {
           width={110}
           height={110}
         />
-        {/* <Circle
-          bgColor="bg-gradient-primary "
-          className="w-[200px] h-[200px]"
-          icon={<ArrowDownIcon width={16} height={16} />}
-          spinText="EXPERT SQUAD, ELITE COMMERCE."
-        /> */}
       </div>
     </div>
   );

@@ -2,7 +2,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Nunito } from "next/font/google";
-import RootLayout from "@/components/RootLayout"; // Move RootLayout to client component
+import RootLayout from "@/components/RootLayout";
+import ScrollToTopButton from "@/components/Shared/ScrollToTop";
+import BuyNow from "@/components/Shared/BuyNow";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -17,9 +19,11 @@ export const metadata: Metadata = {
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body className={`${nunito.className}`}>
-        <RootLayout>{children}</RootLayout>
+        <RootLayout>
+          <BuyNow /> {children} <ScrollToTopButton />
+        </RootLayout>
       </body>
     </html>
   );

@@ -8,7 +8,10 @@ import Circle from "../Shared/Circle";
 
 const MobileOptimized = () => {
   return (
-    <div className="flex flex-col gap-10 main-container  my-10">
+    <section
+      id="Mobile-optimized"
+      className="flex flex-col gap-10 main-container  my-10"
+    >
       <div className="space-y-[clamp(20px,2.5vw,30px)] items-center flex flex-col">
         <div className="h-[40px] w-[220px] relative rounded-l-full overflow-hidden mx-auto flex items-center justify-start pl-4">
           <span className="z-20  absolute text-sm text-white">
@@ -29,7 +32,7 @@ const MobileOptimized = () => {
       <div>
         <MobileView />
       </div>
-    </div>
+    </section>
   );
 };
 
