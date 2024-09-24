@@ -14,7 +14,6 @@ const SeoSection = () => {
             Optimum Online Impact with Precision{" "}
             <span className="text-primary">SEO</span>
           </h2>
-
           <SeoCollapsibleItem />
         </div>
         {/* right div */}

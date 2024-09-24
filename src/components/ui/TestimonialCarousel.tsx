@@ -96,7 +96,7 @@ const TestimonialCarousel = () => {
         {currentIndex + 1 && (
           <div className=" flex justify-between items-center gap-9 md:h-[300px] h-full md:w-8/12 w-full mx-auto">
             {/* Left Arrow */}
-            <div className="hidden md:block animate-slide-in-left">
+            <div className="hidden md:block animate-slide-in-left ">
               <button
                 className="border border-primary hover:border-secondary rounded-full text-primary hover:text-secondary h-[45px] w-[45px] flex justify-center items-center transition-all duration-300 ease-in-out hover:animate-pulse"
                 onClick={prevSlide}
@@ -106,23 +106,23 @@ const TestimonialCarousel = () => {
             </div>
             {/* Comments and ratings with name */}
             <div className="text-center w-full md:w-10/12 border border-black-10 h-[300px] flex flex-col justify-center items-center p-7 rounded-2xl">
-              <div className="w-full flex justify-center items-center flex-col gap-4 border-b border-black-10 mb-5 pb-5 animate-slide-in-left">
+              <div className="w-full flex justify-center items-center flex-col gap-4 border-b border-black-10 mb-5 pb-5 ">
                 <StarRating rating={testimonials[currentIndex]?.rating} />
-                <h3 className="text-2xl animate-slide-in-right">
+                <h3 className="text-2xl ">
                   {" "}
                   {testimonials[currentIndex]?.about}
                 </h3>
               </div>
-              <p className="text-sm line-clamp-3 animate-slide-in-left">
+              <p className="text-sm line-clamp-3 ">
                 {testimonials[currentIndex]?.comment}
               </p>
-              <h3 className="text-lg font-bold my-3 animate-slide-in-right">
+              <h3 className="text-lg font-bold my-3">
                 - {testimonials[currentIndex]?.name}
               </h3>
             </div>
 
             {/* Right Arrow */}
-            <div className="hidden md:block animate-slide-in-right">
+            <div className="hidden md:block animate-slide-in-right ">
               <button
                 className="border border-primary hover:border-secondary rounded-full text-primary hover:text-secondary h-[45px] w-[45px] flex justify-center items-center transition-all duration-300 ease-in-out hover:animate-pulse"
                 onClick={nextSlide}
