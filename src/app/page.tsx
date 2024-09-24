@@ -25,7 +25,7 @@ export default function Home() {
       <ShowResponsive />
       <InfinityCarouse />
       <Technology />
-      <Testimonial />
+      {/* <Testimonial /> */}
       <MobileOptimized />
       <GetHelp />
       <ExploreSoftwareCarousel />

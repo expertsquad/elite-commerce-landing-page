@@ -10,12 +10,7 @@ const GetHelp = () => {
 
   return (
     <div className={`main-container my-10 `}>
-      <div
-        ref={(el) => {
-          sectionRefs.current[52] = el;
-        }}
-        className={`get-help flex items-center justify-center`}
-      >
+      <div className={`get-help flex items-center justify-center`}>
         <BehindContainer />
         <GetHelpForm />
       </div>

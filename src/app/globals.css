@@ -162,6 +162,13 @@
   @apply bg-gradient-primary;
 }
 
+.image-select-none {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
 /* Neon Line start */
 
 /* Updated grid size to 100px */
