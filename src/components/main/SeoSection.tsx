@@ -22,7 +22,7 @@ const SeoSection = () => {
         </div>
       </div>
       {/* blur ball */}
-      <div className="h-[180px] w-[180px] bg-primary blur-[230px] absolute bottom-0 right-0   "></div>
+      <div className="h-[180px] w-[180px] bg-primary blur-[230px] absolute bottom-0 right-0"></div>
     </section>
   );
 };
