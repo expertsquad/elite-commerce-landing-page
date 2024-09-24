@@ -34,7 +34,7 @@ const TestimonialCarousel = () => {
   return (
     <div className="relative w-full mx-auto py-10">
       {/* Testimonial slides */}
-      <div className="flex justify-center items-center flex-col gap-10">
+      <div className="flex justify-center items-center flex-col gap-10 w-full">
         <div className="flex justify-center items-center gap-7 w-full overflow-hidden  ">
           {Array.from({ length: 9 }).map((_, i) => {
             const index =
@@ -45,7 +45,7 @@ const TestimonialCarousel = () => {
                 onMouseEnter={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
                 key={index}
-                className={`flex flex-col items-center transition-all duration-700 ease-in-out ${
+                className={`flex flex-col items-center transition-all duration-700 ease-in-out  ${
                   index === currentIndex
                     ? "scale-125 z-10" // Active item
                     : index === (currentIndex + 1) % totalTestimonials ||
@@ -73,7 +73,7 @@ const TestimonialCarousel = () => {
               >
                 <div className="rounded-full flex items-center justify-center">
                   <div
-                    className={`w-[100px] h-[100px] mx-auto relative shrink-0 my-7 ${
+                    className={`md:w-[100px] md:h-[100px] w-[60px] h-[60px] mx-auto relative shrink-0 my-7 ${
                       index === currentIndex
                         ? "border border-secondary rounded-full"
                         : ""
@@ -105,15 +105,19 @@ const TestimonialCarousel = () => {
               </button>
             </div>
             {/* Comments and ratings with name */}
-            <div className="text-center w-full md:w-10/12 border border-black-10 h-[300px] flex flex-col justify-center items-center p-10 rounded-2xl ">
-              <div>
-                <StarRating rating={5} />
+            <div className="text-center w-full md:w-10/12 border border-black-10 h-[300px] flex flex-col justify-center items-center p-7 rounded-2xl ">
+              <div className="w-full flex justify-center items-center flex-col gap-4 border-b border-black-10 mb-5 pb-5">
+                <StarRating rating={testimonials[currentIndex]?.rating} />
+                <h3 className="text-2xl ">
+                  {" "}
+                  {testimonials[currentIndex]?.about}
+                </h3>
               </div>
               <p className="text-sm line-clamp-3">
-                {testimonials[currentIndex].comment}
+                {testimonials[currentIndex]?.comment}
               </p>
               <h3 className="text-lg font-bold my-3">
-                {testimonials[currentIndex].name}
+                - {testimonials[currentIndex]?.name}
               </h3>
             </div>
             {/* Right Arrow */}
