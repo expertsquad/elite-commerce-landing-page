@@ -219,6 +219,21 @@
 }
 
 /* slide left and right and top and bottom animation start */
+@keyframes waveAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-wave {
+  animation: waveAnimation 2s ease-in-out infinite;
+}
 
 /* Slide in from the left */
 @keyframes slideInLeft {

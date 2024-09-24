@@ -30,7 +30,7 @@ const Circle = ({ spinText, className, icon, bgColor }: ICircle) => {
           ref={textRef}
           className="absolute w-full h-full animate-spin-rotate-text text-white select-none "
         >
-          {spinText} heelo
+          {spinText}
         </div>
         {/* Circle center content */}
         <div className=" animate-bounce absolute p-[3px] border border-white  rounded-full  flex items-center justify-center text-white">
