@@ -7,7 +7,7 @@ import CommercialPricingCard from "../ui/Pricing/CommercialPricingCard";
 
 const PricingTable = () => {
   return (
-    <div className="main-container py-10">
+    <section id="Pricing" className="main-container py-10 overflow-hidden">
       <div className="space-y-[clamp(20px,2.5vw,30px)]">
         <div className="h-[30px] w-[115px] relative rounded-l-full overflow-hidden mx-auto flex items-center justify-start pl-2">
           <span className="z-20  absolute text-sm text-white">Pricing</span>
@@ -38,7 +38,7 @@ const PricingTable = () => {
         <PersonalPricingCard />
         <CommercialPricingCard />
       </div>
-    </div>
+    </section>
   );
 };
 

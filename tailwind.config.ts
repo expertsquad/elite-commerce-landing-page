@@ -17,10 +17,26 @@ const config: Config = {
         light: "var(--secondary-light)",
         DEFAULT: "var(--secondary)",
       },
+      blue: {
+        DEFAULT: "var(--blue)",
+        light: "var(--blue-light)",
+      },
+      violet: {
+        DEFAULT: "var(--violet)",
+        light: "var(--violet-light)",
+      },
       white: {
         transparent: "var(--white-transparent)",
         15: "var(--white-15)",
         DEFAULT: "var(--white)",
+      },
+      red: {
+        DEFAULT: "var(--red)",
+        light: "var(--red-light)",
+      },
+      yellow: {
+        DEFAULT: "var(--yellow)",
+        light: "var(--yellow-light)",
       },
       black: {
         transparent: "var(--black-transparent)",
@@ -33,7 +49,6 @@ const config: Config = {
         DEFAULT: "var(--black)",
       },
       transparent: "var(--transparent)",
-      frame: "var(--frame-bg)",
     },
 
     // gradient bg color

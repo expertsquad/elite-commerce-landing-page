@@ -35,7 +35,7 @@ const ShowResponsive = () => {
   };
 
   return (
-    <div className="main-container my-10">
+    <section id="desktop-mobile-optimized" className="main-container my-10">
       <div className="space-y-[clamp(20px,2.5vw,30px)]">
         <div className="h-[30px] w-[300px] relative rounded-l-full overflow-hidden mx-auto flex items-center justify-start pl-2">
           <span className="z-20 absolute text-sm text-white">
@@ -59,7 +59,7 @@ const ShowResponsive = () => {
       </div>
 
       <div className="md:border md:border-black-10 rounded-[20px] px-[clamp(10px,2.5vw,30px)] py-[clamp(25px,2.5vw,40px)] md:bg-[#0CE47F0D] grid grid-cols-1 md:grid-cols-2 items-center gap-5 mt-10">
-        <div className="md:h-[510px] md:w-auto w-full md:overflow-y-auto overflow-x-auto scrollbar-x-remove flex md:flex-col flex-row gap-[clamp(10px,2.5vw,20px)]">
+        <div className="md:h-[510px] md:w-auto w-full md:overflow-y-auto overflow-x-auto scrollbar-x-remove flex md:flex-col flex-row gap-[clamp(10px,2.5vw,20px)] md:pr-4">
           {showResponsiveData?.map((item) => (
             <div
               onClick={() => handleMenuClick(item)}
@@ -139,7 +139,7 @@ const ShowResponsive = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
