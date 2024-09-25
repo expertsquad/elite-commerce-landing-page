@@ -111,18 +111,18 @@ const TestimonialCarousel = () => {
             </div>
 
             {/* Comments and ratings with name */}
-            <div className="text-center w-full md:w-10/12 border border-black-10 h-[300px] flex flex-col justify-center items-center p-7 rounded-2xl">
+            <div className="text-center w-full md:w-10/12 border border-black-10 h-[350px] flex flex-col justify-center items-center p-7 rounded-2xl">
               <div className="w-full flex justify-center items-center flex-col gap-4 border-b border-black-10 mb-5 pb-5 ">
                 <StarRating rating={testimonials[currentIndex]?.rating} />
                 <div className="flex justify-center items-center gap-2">
-                  <IconMapPin />
+                  <IconMapPin size={18} />
                   <h3 className="text-2xl  ">
                     {" "}
                     {testimonials[currentIndex]?.location}
                   </h3>
                 </div>
               </div>
-              <p className="text-sm line-clamp-3 ">
+              <p className="md:text-lg text-md line-clamp-3 md:h-[130px] h-[160px]">
                 {testimonials[currentIndex]?.comment}
               </p>
               <h3 className="text-lg font-bold my-3">
