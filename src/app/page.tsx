@@ -24,7 +24,6 @@ export default function Home() {
       <ServiceCarousel />
       <PricingTable />
       <ShowResponsive />
-      <InfinityCarouse />
       <Technology />
       <SeoSection />
       <Testimonial />
