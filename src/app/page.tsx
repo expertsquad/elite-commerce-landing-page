@@ -23,7 +23,6 @@ export default function Home() {
       <ServiceCarousel />
       <PricingTable />
       <ShowResponsive />
-      <InfinityCarouse />
       <Technology />
       <Testimonial />
       <MobileOptimized />

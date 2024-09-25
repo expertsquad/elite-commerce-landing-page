@@ -21,7 +21,7 @@ const Header = () => {
 
   return (
     <div>
-      <div className="main-container flex items-center justify-between py-4">
+      <div className="main-container flex items-center justify-between py-4 ">
         <div className="flex items-center justify-center gap-5">
           <button
             onClick={handleToggle}

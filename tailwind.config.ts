@@ -62,11 +62,18 @@ const config: Config = {
     extend: {
       animation: {
         pulseColor: "pulseColor 3s infinite",
-        "loop-scroll": "loop-scroll 40s linear infinite",
-        "right-scroll": "right-scroll 70s linear infinite",
-        "rightSlow-scroll": "rightSlow-scroll 40s linear infinite",
+        "serviceloop-scroll": "serviceloop-scroll 40s linear infinite",
+        "loop-scroll": "loop-scroll 60s linear infinite",
+        "right-scroll": "right-scroll 35s linear infinite",
+        "left-scroll": "left-scroll 20s linear infinite",
+        "right-Slow-scroll": "right-Slow-scroll 20s linear infinite",
+        "four-scroll": "four-scroll 30s linear infinite",
       },
       keyframes: {
+        "serviceloop-scroll": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
         "loop-scroll": {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-100%)" },
@@ -75,9 +82,17 @@ const config: Config = {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(100%)" },
         },
-        "rightSlow-scroll": {
+        "right-Slow-scroll": {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-100%)" },
+        },
+        "left-scroll": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
+        },
+        "four-scroll": {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(100%)" },
         },
         pulseColor: {
           "0%, 100%": { backgroundColor: "#D9D9D9" }, // Default color

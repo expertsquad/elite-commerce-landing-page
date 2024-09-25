@@ -1,25 +1,24 @@
 import Image from "next/image";
 import React from "react";
-import anqular from "@/assets/images/infinity05.png";
-import ts from "@/assets/images/infinity04.png";
-import face from "@/assets/images/infinity01.png";
-import tail from "@/assets/images/infinity02.png";
-import whatsapp from "@/assets/images/infinity03.png";
+import infinity05 from "@/assets/images/infinity/infinity05.png";
+import infinity06 from "@/assets/images/infinity/infinity06.png";
+import infinity07 from "@/assets/images/infinity/infinity07.png";
+import infinity08 from "@/assets/images/infinity/infinity08.png";
 
 const InfinityLoopTwo = () => {
-  const images = [face, tail, whatsapp, ts, anqular];
+  const images = [infinity05, infinity06, infinity07, infinity08];
 
   return (
-    <div className="relative overflow-hidden w-full">
+    <div className="relative overflow-hidden w-full space-x-1">
       {/* First scrolling container */}
-      <div className="flex space-x-16 animate-right-scroll w-[150%]">
+      <div className="flex space-x-0.5 animate-right-scroll w-[100%]">
         {images.map((imgSrc, index) => (
-          <div key={index} className="relative  h-28 w-52  md:h-48 md:w-80">
+          <div key={index}>
             <Image
               src={imgSrc}
-              loading="lazy"
               alt=""
-              className="object-contain w-full h-full"
+              quality={80}
+              className="w-[400px] h-[90px] sm:w-[450px] sm:h-[100px] md:w-[450px] md:h-[180px] lg:w-[450px] lg:h-[180px] xl:w-[500px] xl:h-[190px] 2xl:w-[500px] 2xl:h-[250px] "
             />
           </div>
         ))}
@@ -27,16 +26,16 @@ const InfinityLoopTwo = () => {
 
       {/* Duplicate for infinite scroll effect */}
       <div
-        className="absolute top-0 flex space-x-16 animate-right-scroll w-[150%]"
+        className="absolute top-0 flex space-x-0.5 animate-right-scroll w-[100%]"
         style={{ right: "100%" }}
       >
         {images.map((imgSrc, index) => (
-          <div key={index} className="relative h-28 w-52  md:h-48 md:w-80">
+          <div key={index}>
             <Image
               src={imgSrc}
-              loading="lazy"
               alt=""
-              className="object-contain w-full h-full"
+              quality={80}
+              className="w-[400px] h-[90px] sm:w-[450px] sm:h-[100px] md:w-[450px] md:h-[180px] lg:w-[450px] lg:h-[180px] xl:w-[500px] xl:h-[190px] 2xl:w-[500px] 2xl:h-[250px] "
             />
           </div>
         ))}

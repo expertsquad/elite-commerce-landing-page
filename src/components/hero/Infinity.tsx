@@ -22,7 +22,6 @@ const Infinity = () => {
           <div key={index} className="relative h-11 w-40">
             <Image
               src={imgSrc}
-              loading="lazy"
               alt=""
               className="object-contain w-full h-full top-0 left-0"
             />
@@ -39,7 +38,6 @@ const Infinity = () => {
           <div key={index} className="relative h-11 w-40">
             <Image
               src={imgSrc}
-              loading="lazy"
               alt=""
               className="object-contain w-full h-full top-0 left-0"
             />
