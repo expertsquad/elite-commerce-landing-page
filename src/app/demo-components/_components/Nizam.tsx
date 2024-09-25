@@ -44,6 +44,17 @@ const Nizam = () => {
       <BtnButton />
 
       <Infinity />
+
+      <Button3d
+        button3dMainClass="perspective-180"
+        buttonText="hello me"
+        showHoverText={true}
+        background3dclass={`rotate-y-24  bg-white border border-[#ff1810] group-hover:rotate-y-25`}
+        textClasss="text-white text-[clamp(12px,3vw,16px)]"
+        mainButtonDiv="rotate-y-25 group-hover:rotate-y-25"
+        boldText="$90"
+        boldTextClass="font-bold text-[clamp(12px,3vw,16px)]"
+      />
     </div>
   );
 };
