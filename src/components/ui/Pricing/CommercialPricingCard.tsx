@@ -1,9 +1,11 @@
 "use client";
 import IconShoppingBag from "@/assets/icons/IconShoppingBag";
 import PrimaryCheckMarkIcon from "@/assets/icons/PrimaryCheckMarkIcon";
-import WhiteCheckMarkIcon from "@/assets/icons/WhiteCheckMarkIcon";
+import Button from "@/components/Shared/Button";
 import { useVisibleSection } from "@/components/Shared/useVisibleSection";
+import Image from "next/image";
 import React from "react";
+import purchase from "@/assets/images/purchase.svg";
 
 const CommercialPricingCard = () => {
   const { visibleSection, sectionRefs } = useVisibleSection(100, 110);
@@ -35,31 +37,37 @@ const CommercialPricingCard = () => {
             <div className="rounded-full w-[18px] h-[18px] bg-white flex items-center justify-center">
               <PrimaryCheckMarkIcon />
             </div>
+            <span className=" text-base">Customer Panel</span>
+          </div>
+          <div className="flex items-center gap-2.5 text-white">
+            <div className="rounded-full w-[18px] h-[18px] bg-white flex items-center justify-center">
+              <PrimaryCheckMarkIcon />
+            </div>
             <span className=" text-base">Admin Panel</span>
           </div>
           <div className="flex items-center gap-2.5 text-white">
             <div className="rounded-full w-[18px] h-[18px] bg-white flex items-center justify-center">
               <PrimaryCheckMarkIcon />
             </div>
-            <span className=" text-base">Store Panel</span>
+            <span className=" text-base">Mega Menu</span>
           </div>
           <div className="flex items-center gap-2.5 text-white">
             <div className="rounded-full w-[18px] h-[18px] bg-white flex items-center justify-center">
               <PrimaryCheckMarkIcon />
             </div>
-            <span className=" text-base">Customer App</span>
+            <span className=" text-base">Quick View</span>
           </div>
           <div className="flex items-center gap-2.5 text-white">
             <div className="rounded-full w-[18px] h-[18px] bg-white flex items-center justify-center">
               <PrimaryCheckMarkIcon />
             </div>
-            <span className=" text-base">Web app</span>
+            <span className=" text-base">Quick Order</span>
           </div>
           <div className="flex items-center gap-2.5 text-white">
             <div className="rounded-full w-[18px] h-[18px] bg-white flex items-center justify-center">
               <PrimaryCheckMarkIcon />
             </div>
-            <span className=" text-base">Landing Page</span>
+            <span className=" text-base">Live Message</span>
           </div>
           <div className="bg-primary rounded-full flex items-center justify-center py-0.5 px-4 w-min">
             Included
@@ -68,20 +76,28 @@ const CommercialPricingCard = () => {
             <div className="rounded-full w-[18px] h-[18px] bg-white flex items-center justify-center">
               <PrimaryCheckMarkIcon />
             </div>
-            <span className=" text-base">Web app</span>
-          </div>
-          <div className="flex items-center gap-2.5 text-white">
-            <div className="rounded-full w-[18px] h-[18px] bg-white flex items-center justify-center">
-              <PrimaryCheckMarkIcon />
-            </div>
-            <span className=" text-base">Landing Page</span>
+            <span className=" text-base">Commercial use permission</span>
           </div>
         </div>
       </div>
-      <button className=" mt-5 outline-none hover:scale-105 transition-all duration-300  flex items-center justify-center gap-1.5 bg-white rounded-full py-1.5 px-10 text-primary text-base">
+      {/* <button className=" mt-5 outline-none hover:scale-105 transition-all duration-300  flex items-center justify-center gap-1.5 bg-white rounded-full py-1.5 px-10 text-primary text-base">
         <IconShoppingBag />
         Purchase Now
-      </button>
+      </button> */}
+      <Button
+        mainClass="font-medium text-white border border-black-10 px-[10px] py-[5px] md:px-5 md:py-2 bg-gradient-primary"
+        stripHoverEffect={true}
+        animatationThree={true}
+        animatationThreeClss="bg-gradient-secondary"
+        iconFourTrue={true}
+        iconFour={
+          <div className="relative h-5 w-5 mr-1">
+            <IconShoppingBag />
+          </div>
+        }
+        buttonText="Purchase"
+        buttonTextClass="text-white text-[clamp(12px,3vw,16px)] group-hover:text-white"
+      />
     </div>
   );
 };

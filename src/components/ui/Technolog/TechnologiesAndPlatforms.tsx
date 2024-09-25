@@ -9,10 +9,8 @@ const TechnologiesAndPlatforms = () => {
   const { visibleSection, sectionRefs } = useVisibleSection(100, 110);
   return (
     <div
-      ref={(el) => {
-        sectionRefs.current[58] = el;
-      }}
-      className={`space-y-5 px-5 py-10 shadow-md rounded-[10px] `}
+      className={`space-y-5 px-5 py-10 shadow-md rounded-[10px] 
+         `}
     >
       <div className="text-center font-semibold [font-size:_clamp(14px,2.5vw,18px)]">
         {" "}
@@ -34,7 +32,7 @@ const TechnologiesAndPlatforms = () => {
                 className="w-full h-full top-0 left-0 object-contain"
               />
             </div>
-            <span className="[font-family:sansation] [font-size:_clamp(12px,2.5vw,18px)]">
+            <span className=" [font-size:_clamp(12px,2.5vw,16px)] font-semibold text-wrap">
               {tech?.title}
             </span>
           </div>

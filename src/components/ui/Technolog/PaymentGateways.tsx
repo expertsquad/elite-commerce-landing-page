@@ -45,7 +45,7 @@ const PaymentGateways = () => {
                   className="w-full h-full top-0 left-0 object-contain image-select-none"
                 />
               </div>
-              <span className="[font-family:_Sansation] font-bold text-black-70 [font-size:_clamp(12px,2.5vw,18px)]">
+              <span className=" font-semibold text-black-70 [font-size:_clamp(12px,2.5vw,16px)]">
                 {gate?.name}
               </span>
             </div>

@@ -12,7 +12,7 @@ const MobileView = () => {
       ref={(el) => {
         sectionRefs.current[91] = el;
       }}
-      className={`flex items-center justify-center overflow-x-auto transition-transform ease-in-out duration-700 scrollbar-x-remove md:gap-5 gap-3.5 ${
+      className={`flex items-center justify-center overflow-x-auto transition-transform ease-in-out duration-700 scrollbar-x-remove md:gap-10 gap-3.5 ${
         visibleSection
           ? "opacity-100 translate-x-0"
           : "opacity-0 md:-translate-y-0 md:translate-x-[500px] -translate-y-[500px]"

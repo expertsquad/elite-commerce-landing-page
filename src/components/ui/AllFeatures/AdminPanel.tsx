@@ -79,7 +79,7 @@ const AdminPanel = () => {
         <div
           className={`transition-transform ease-in-out duration-700 ${
             isAnimating
-              ? "md:-translate-y-[500px] -translate-x-[500px] opacity-0"
+              ? "md:-translate-y-[500px] md:translate-x-0 -translate-y-0 -translate-x-[50px] opacity-0"
               : "md:translate-y-0 opacity-100 translate-x-0 "
           }`}
         >
@@ -94,7 +94,7 @@ const AdminPanel = () => {
         <div
           className={`transition-transform ease-in-out duration-700 md:mt-24 ${
             isAnimating
-              ? "translate-x-[500px] md:translate-y-[500px] opacity-0"
+              ? "translate-x-[50px] translate-y-0 md:translate-y-[500px] md:translate-x-0 opacity-0"
               : "translate-x-0 md:translate-y-0 opacity-100"
           }`}
         >

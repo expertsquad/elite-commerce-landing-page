@@ -35,31 +35,37 @@ const PersonalPricingCard = () => {
             <div className="rounded-full w-[18px] h-[18px] bg-gradient-primary flex items-center justify-center">
               <WhiteCheckMarkIcon />
             </div>
+            <span className="text-black-70 text-base">Customer Panel</span>
+          </div>
+          <div className="flex items-center gap-2.5">
+            <div className="rounded-full w-[18px] h-[18px] bg-gradient-primary flex items-center justify-center">
+              <WhiteCheckMarkIcon />
+            </div>
             <span className="text-black-70 text-base">Admin Panel</span>
           </div>
           <div className="flex items-center gap-2.5">
             <div className="rounded-full w-[18px] h-[18px] bg-gradient-primary flex items-center justify-center">
               <WhiteCheckMarkIcon />
             </div>
-            <span className="text-black-70 text-base">Store Panel</span>
+            <span className="text-black-70 text-base">Mega Menu</span>
           </div>
           <div className="flex items-center gap-2.5">
             <div className="rounded-full w-[18px] h-[18px] bg-gradient-primary flex items-center justify-center">
               <WhiteCheckMarkIcon />
             </div>
-            <span className="text-black-70 text-base">Customer App</span>
+            <span className="text-black-70 text-base">Quick View</span>
           </div>
           <div className="flex items-center gap-2.5">
             <div className="rounded-full w-[18px] h-[18px] bg-gradient-primary flex items-center justify-center">
               <WhiteCheckMarkIcon />
             </div>
-            <span className="text-black-70 text-base">Web app</span>
+            <span className="text-black-70 text-base">Quick Order</span>
           </div>
           <div className="flex items-center gap-2.5">
             <div className="rounded-full w-[18px] h-[18px] bg-gradient-primary flex items-center justify-center">
               <WhiteCheckMarkIcon />
             </div>
-            <span className="text-black-70 text-base">Landing Page</span>
+            <span className="text-black-70 text-base">Live Message</span>
           </div>
         </div>
       </div>

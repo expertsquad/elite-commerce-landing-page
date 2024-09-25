@@ -5,11 +5,13 @@ import Circle from "@/components/Shared/Circle";
 import ArrowDownIcon from "@/assets/icons/ArrowDownIcon";
 import Image from "next/image";
 import demo from "@/assets/images/circleRound.png";
+import SpinCircle from "@/components/Shared/SpinCircle";
+import { IconArrowDown } from "@tabler/icons-react";
 
 const AllFeaturesBanner = () => {
   return (
     <div className="all-feature w-full lg:h-[450px] md:h-[290px] h-[200px] rounded-[20px] flex items-start justify-center  py-[clamp(20px,2.5vh,30px)] px-3.5 relative">
-      <div className="flex flex-col items-center gap-[clamp(20px,2.5vw,30px)] max-w-[600px]">
+      <div className="flex flex-col items-center gap-[clamp(10px,2.5vw,30px)] max-w-[600px]">
         <span className="text-gradient-secondary [font-size:_clamp(14px,2.5vw,26px)]">
           Our Feature
         </span>
@@ -23,12 +25,10 @@ const AllFeaturesBanner = () => {
         </p>
       </div>
       <div className="absolute -bottom-14">
-        <Image
-          className="animate-spin-custom"
-          src={demo}
-          alt="circle"
-          width={110}
-          height={110}
+        <SpinCircle
+          className="bg-gradient-primary"
+          icon={<IconArrowDown />}
+          spinText="EXPERT SQUAD | ELITE COMMERCE."
         />
       </div>
     </div>
