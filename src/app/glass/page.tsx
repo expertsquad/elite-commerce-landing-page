@@ -1,6 +1,7 @@
 import Button from "@/components/Shared/Button";
 import Circle from "@/components/Shared/Circle";
-import { IconArrowUpRight } from "@tabler/icons-react";
+import SpinCircle from "@/components/Shared/SpinCircle";
+import { IconArrowUpRight, IconDog } from "@tabler/icons-react";
 
 const page = () => {
   return (
@@ -8,8 +9,12 @@ const page = () => {
       <div className=" md:w-8/12 w-full mx-auto flex items-center justify-center flex-col gap-4 bg-primary-light/30 p-7 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-xl shadow-md border border-black-10">
         <p className="py-4 bg-secondary-light w-full">Element is coming</p>
         <div className="h-[160px] w-[160px] bg-secondary/50 rounded-full flex items-center justify-center mx-auto ">
-          hi
-          <Circle spinText="Hello Bangladesh Companigonj" />
+          <SpinCircle
+            icon={<IconDog stroke={1} />}
+            className="bg-gradient-secondary"
+            spinText="Elite Commerce - Expert Squad ."
+          />
+          {/* <Circle spinText="Hello Bangladesh Companigonj" /> */}
         </div>
         <h2 className="text-black-80 [font-size:clamp(1.5rem,4vw,3rem)] font-semibold">
           Grab Elite Commerce now before <br />

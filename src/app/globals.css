@@ -302,6 +302,33 @@
 
 /* slide left and right and top and bottom animation end */
 
+/* Spin text animation start */
+
+.spin-char {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0 0px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+/* Optional spinning animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.circle-text {
+  animation: spin 15s linear infinite; /* Adjust speed as needed */
+}
+
+/* Spin text animation end */
+
 /* * {
   outline: 1px solid red;
 } */
