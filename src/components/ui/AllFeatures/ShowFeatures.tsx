@@ -21,13 +21,23 @@ const ShowFeatures = () => {
           />
         </div>
         <div onClick={() => setShowFeture("Admin Panel")}>
-          <Button3d
+          {/* <Button3d
             button3dMainClass="perspective-170"
             buttonText="Admin Panel"
             showHoverText
             background3dclass={`-rotate-y-20  bg-white border border-primary group-hover:rotate-y-22 rounded-[5px]`}
             textClasss="text-white text-[clamp(12px,3vw,16px)] font-normal [letter-spacing:1px] whitespace-nowrap"
             mainButtonDiv="rotate-y-22 group-hover:rotate-y-23 rounded-[5px] !bg-gradient-primary"
+          /> */}
+          <Button3d
+            button3dMainClass="perspective-180"
+            buttonText="Admin Panel"
+            showHoverText={true}
+            background3dclass={`rotate-y-24  bg-white border border-primary group-hover:rotate-y-25 rounded-[5px]`}
+            textClasss="text-white text-[clamp(12px,3vw,16px)] font-normal [letter-spacing:1px] whitespace-nowrap"
+            mainButtonDiv="rotate-y-25 group-hover:rotate-y-25 rounded-[5px] !bg-gradient-primary"
+            // boldText="$90"
+            boldTextClass="font-bold text-[clamp(12px,3vw,16px)]"
           />
         </div>
       </div>
