@@ -116,7 +116,7 @@ const TestimonialCarousel = () => {
                 <StarRating rating={testimonials[currentIndex]?.rating} />
                 <div className="flex justify-center items-center gap-2">
                   <IconMapPin size={18} />
-                  <h3 className="text-2xl  ">
+                  <h3 className="text-lg  ">
                     {" "}
                     {testimonials[currentIndex]?.location}
                   </h3>
