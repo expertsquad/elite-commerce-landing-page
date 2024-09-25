@@ -8,11 +8,11 @@ const SeoCollapsibleItems = [
   {
     header: "Transparent States Reporting",
     description:
-      "Holisticly predominate revolutionar value without robust manufacturey products credibly.",
+      "real-time sharing of progress or status updates to ensure accountability and trust in processes or systems across sectors",
   },
   {
     header: "24/7 Dedicated Support",
     description:
-      "Holisticly predominate revolutionar value without robust manufacturey products credibly.",
+      "the-clock assistance through a dedicated team assigned to handle specific client needs, offering personalized and immediate help at any time.",
   },
 ];

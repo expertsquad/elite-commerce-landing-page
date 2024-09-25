@@ -20,7 +20,7 @@ const Testimonial = () => {
               className="object-cover top-0 left-0 w-full h-full"
             />
           </div>
-          <h2 className="[font-size:clamp(20px,3.5vw,30px)] font-bold text-center my-3 animate-slide-in-left">
+          <h2 className="[font-size:clamp(20px,3.5vw,30px)] font-bold text-center my-3">
             Our Customer Say About Our{" "}
             <span className="text-primary">product</span>
           </h2>

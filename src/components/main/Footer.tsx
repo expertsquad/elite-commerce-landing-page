@@ -26,23 +26,46 @@ const Footer = () => {
               />
             </div>
             <div className="flex items-center gap-[30px] text-white md:flex-nowrap flex-wrap">
-              {[...Array(5)].map((_, i) => (
-                <Link
-                  className="underline [font-size:_clamp(12px,2.5vw,18px)] "
-                  href={``}
-                >
-                  Home
-                </Link>
-              ))}
+              <Link
+                className="underline [font-size:_clamp(12px,2.5vw,18px)] "
+                href={`#`}
+              >
+                Home
+              </Link>
+              <Link
+                className="underline [font-size:_clamp(12px,2.5vw,18px)] "
+                href={`https://elite-commerce.vercel.app/`}
+                target="_blank"
+              >
+                Demo
+              </Link>
+              <Link
+                className="underline [font-size:_clamp(12px,2.5vw,18px)] "
+                href={``}
+              >
+                Features
+              </Link>
+              <Link
+                className="underline [font-size:_clamp(12px,2.5vw,18px)] "
+                href={`#Pricing`}
+              >
+                Pricing
+              </Link>
+              <Link
+                className="underline [font-size:_clamp(12px,2.5vw,18px)] "
+                href={`#Get-help`}
+              >
+                Get Help
+              </Link>
             </div>
 
             <div className="">
-              <p className="[font-size:_clamp(12px,2.5vw,18px)] text-[#DDDDDD] md:text-start text-center">
-                Lorem ipsum dolor sit amet consectetur. Commodo mollis urna
-                dictum at tellus ultricies nunc aliquam. Vitae placerat amet
-                adipiscing in tempor convallis.Lorem ipsum dolor sit amet
-                consectetur. Commodo mollis urna dictum at tellus ultricies nunc
-                aliquam. Vitae placerat amet adipiscing in tempor convallis.
+              <p className="[font-size:_clamp(12px,2.5vw,18px)] text-[#a7a4a4] md:text-start text-center">
+                Expert Squad is a leader in innovative eCommerce solutions,
+                offering Elite Commerce, an all-in-one platform designed to
+                simplify online business operations. Our mission is to empower
+                businesses to grow, streamline processes, and succeed in the
+                digital marketplace with powerful, user-friendly tools.
               </p>
             </div>
 
@@ -70,37 +93,37 @@ const Footer = () => {
             </span>
           </div>
         </div>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 md:gap-0 gap-4 items-center md:justify-between justify-center ">
-        <div className="md:bg-[#242424] w-full md:rounded-tr-full flex items-center justify-center md:py-5 md:px-5  md:order-none order-3 ">
-          <span className="text-xs md:text-base lg:text-lg text-white">
-            © 2024 Elite Commerce Exertsquad.net
-          </span>
-        </div>
-        <div className="w-full flex items-center gap-3.5 justify-center md:order-none order-1">
-          <div className="rounded-full border-[1.5px] flex items-center justify-center border-black-50  h-[34px] w-[34px]">
-            <YoutubeIcon />
+        <div className="grid grid-cols-1 md:grid-cols-5 md:gap-0 gap-4 items-center md:justify-between justify-center ">
+          <div className="md:bg-[#242424] w-full md:rounded-tr-full flex items-center justify-center md:py-5 md:px-5  md:order-none order-3 md:col-span-2 ">
+            <span className="text-xs md:text-base lg:text-lg text-white ">
+              © 2024 Elite Commerce Exertsquad.net
+            </span>
           </div>
-          <div className="rounded-full border-[1.5px] flex items-center justify-center border-black-50  h-[34px] w-[34px]">
-            <InstagramIcon />
+          <div className="w-full flex items-center gap-3.5 justify-center md:order-none order-1">
+            <div className="rounded-full border-[1.5px] flex items-center justify-center border-black-50  h-[34px] w-[34px]">
+              <YoutubeIcon />
+            </div>
+            <div className="rounded-full border-[1.5px] flex items-center justify-center border-black-50  h-[34px] w-[34px]">
+              <InstagramIcon />
+            </div>
+            <div className="rounded-full border-[1.5px] flex items-center justify-center border-black-50  h-[34px] w-[34px]">
+              <FacebookIcon />
+            </div>
+            <div className="rounded-full border-[1.5px] flex items-center justify-center border-black-50  h-[34px] w-[34px]">
+              <LinkedInIcon />
+            </div>
+            <div className="rounded-full border-[1.5px] flex items-center justify-center border-black-50  h-[34px] w-[34px]">
+              <TwitterXIcon />
+            </div>
           </div>
-          <div className="rounded-full border-[1.5px] flex items-center justify-center border-black-50  h-[34px] w-[34px]">
-            <FacebookIcon />
+          <div className="md:bg-[#242424] gap-5  w-full md:rounded-tl-full flex items-center justify-center md:py-5 md:px-5 text-xs md:text-base lg:text-lg md:order-none order-2 md:col-span-2 ">
+            <Link href={`*`} className="underline text-white">
+              Privacy Policy{" "}
+            </Link>
+            <Link href={`*`} className="underline text-white">
+              Refund Policy
+            </Link>
           </div>
-          <div className="rounded-full border-[1.5px] flex items-center justify-center border-black-50  h-[34px] w-[34px]">
-            <LinkedInIcon />
-          </div>
-          <div className="rounded-full border-[1.5px] flex items-center justify-center border-black-50  h-[34px] w-[34px]">
-            <TwitterXIcon />
-          </div>
-        </div>
-        <div className="md:bg-[#242424] gap-5  w-full md:rounded-tl-full flex items-center justify-center md:py-5 md:px-5 text-xs md:text-base lg:text-lg md:order-none order-2">
-          <Link href={`*`} className="underline text-white">
-            Privacy Policy{" "}
-          </Link>
-          <Link href={`*`} className="underline text-white">
-            Refund Policy
-          </Link>
         </div>
       </div>
     </footer>

@@ -1,17 +1,18 @@
 import Image from "next/image";
 import React from "react";
-import infinity13 from "@/assets/images/infinity/infinity13.png";
-import infinity14 from "@/assets/images/infinity/infinity14.png";
-import infinity15 from "@/assets/images/infinity/infinity15.png";
-import infinity16 from "@/assets/images/infinity/infinity16.png";
+import anqular from "@/assets/images/infinity05.png";
+import infinity01 from "@/assets/images/infinity/infinity01.png";
+import infinity02 from "@/assets/images/infinity/infinity02.png";
+import infinity03 from "@/assets/images/infinity/infinity03.png";
+import infinity04 from "@/assets/images/infinity/infinity04.png";
 
-const InfinityLoopFour = () => {
-  const images = [infinity13, infinity14, infinity15, infinity16];
+const InfinityLoopOne = () => {
+  const images = [infinity01, infinity02, infinity03, infinity04];
 
   return (
-    <div className="relative overflow-hidden w-full space-x-1 ">
+    <div className="relative overflow-hidden w-full space-x-1">
       {/* First scrolling container */}
-      <div className="flex  space-x-0.5 animate-four-scroll w-[100%] overflow-hidden">
+      <div className="flex space-x-0.5 animate-left-scroll w-[100%]">
         {images.map((imgSrc, index) => (
           <div key={index}>
             <Image
@@ -26,8 +27,8 @@ const InfinityLoopFour = () => {
 
       {/* Duplicate for infinite scroll effect */}
       <div
-        className="absolute top-0 flex space-x-0.5 animate-four-scroll w-[100%] overflow-hidden"
-        style={{ right: "100%" }} // Start from the right for left scroll
+        className="absolute top-0 flex  space-x-0.5 animate-left-scroll w-[100%]"
+        style={{ left: "100%" }} // Start from the right for left scroll
       >
         {images.map((imgSrc, index) => (
           <div key={index} className="">
@@ -44,4 +45,4 @@ const InfinityLoopFour = () => {
   );
 };
 
-export default InfinityLoopFour;
+export default InfinityLoopOne;
