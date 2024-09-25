@@ -172,8 +172,8 @@
 
 .neon-drop {
   position: absolute;
-  width: 2px;
-  height: 100px; /* Match the grid size for better alignment */
+  width: 1.5px;
+  height: 50px; /* Match the grid size for better alignment */
   background: linear-gradient(to bottom, transparent, #ff9153, transparent);
   animation: fall linear infinite;
   top: -100px; /* Start above the visible area */
@@ -181,8 +181,8 @@
 
 .neon-drop-horizontal {
   position: absolute;
-  height: 2px;
-  width: 100px; /* Match the grid size for better alignment */
+  height: 1.5px;
+  width: 50px; /* Match the grid size for better alignment */
   background: linear-gradient(to right, transparent, #ff9153, transparent);
   animation: fall-horizontal linear infinite;
   left: -250px; /* Start off-screen */
@@ -254,7 +254,7 @@
 /* Slide in from the left */
 @keyframes slideInLeft {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(-10%);
     opacity: 0;
   }
   100% {
@@ -344,6 +344,134 @@
 }
 
 /* Spin text animation end */
+
+/* Blur bg start */
+.bg-blur-custom {
+  background: rgba(12, 0, 0, 0.7);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(20.5px);
+  -webkit-backdrop-filter: blur(20.5px);
+  border-radius: 10px;
+}
+
+/* Blur bg end */
+
+/* animation 360 deg start */
+.custom-animation-360deg-opacity {
+  animation: custom-rotate-360deg-opacity 20s infinite linear;
+}
+
+@keyframes custom-rotate-360deg-opacity {
+  0% {
+    rotate: 0deg;
+    opacity: 0.6;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  20% {
+    opacity: 0.6;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.6;
+  }
+
+  80% {
+    opacity: 0.3;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    rotate: 360deg;
+    opacity: 0.8;
+  }
+}
+.custom-animation-360deg-opacity-right {
+  animation: custom-rotate-360deg-opacity 24s infinite linear;
+}
+
+@keyframes custom-rotate-360deg-opacity {
+  0% {
+    rotate: 0deg;
+    opacity: 0.6;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  20% {
+    opacity: 0.6;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 0.6;
+  }
+
+  80% {
+    opacity: 0.3;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    rotate: 360deg;
+    opacity: 0.8;
+  }
+}
+.custom-animation-rotate {
+  animation: custom-rotate 4s infinite alternate;
+}
+
+@keyframes custom-rotate {
+  from {
+    rotate: 5deg;
+  }
+
+  to {
+    rotate: -5deg;
+  }
+}
 
 /* * {
   outline: 1px solid red;

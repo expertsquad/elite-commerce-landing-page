@@ -7,7 +7,7 @@ const SpinCircle = ({
   icon,
   iconClassName,
 }: {
-  spinText?: string;
+  spinText: string;
   className?: string;
   icon?: React.ReactNode;
   iconClassName?: string;
@@ -30,7 +30,7 @@ const SpinCircle = ({
     return () => window.removeEventListener("resize", updateTranslateY);
   }, []);
 
-  const characters = spinText.split("");
+  const characters = spinText?.split("");
 
   // Create spinning text by applying a rotate for each character
   const spinTextStyle = characters
@@ -48,7 +48,7 @@ const SpinCircle = ({
         className={`${className} relative rounded-full flex items-center justify-center md:w-[150px] md:h-[150px] h-[100px] w-[100px]`}
       >
         {/* Spinning text around the circle */}
-        <div className="circle-text absolute text-white">
+        <div className="circle-text absolute ">
           <div dangerouslySetInnerHTML={{ __html: spinTextStyle }} />
         </div>
 

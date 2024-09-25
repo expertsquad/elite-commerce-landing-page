@@ -5,10 +5,11 @@ import InfinityLoopThree from "../infinityLoop/InfinityLoopThree";
 import InfinityLoopOne from "../infinityLoop/InfinityLoopOne";
 import sectionBg from "@/assets/images/sectionBg.png";
 import Image from "next/image";
+import Glassmorphism from "../ui/Glassmorphism";
 
 const ExploreSoftwareCarousel = () => {
   return (
-    <div className="bg-black-80 py-5 md:py-10 overflow-hidden">
+    <div className="bg-black-80 py-5 md:py-10  relative">
       <div className="space-y-2.5 md:space-y-5 text-center w-full">
         <div className="h-[30px] w-[160px] relative rounded-l-full overflow-hidden mx-auto flex items-center justify-start pl-2 ">
           <span className="z-50  absolute text-sm text-white">Screenshot</span>
@@ -33,6 +34,10 @@ const ExploreSoftwareCarousel = () => {
         <InfinityLoopTwo />
         <InfinityLoopThree />
         <InfinityLoopFour />
+      </div>
+      {/* glassmorphism  */}
+      <div className="absolute left-0 right-0 bottom-[-100px]">
+        <Glassmorphism />
       </div>
     </div>
   );
