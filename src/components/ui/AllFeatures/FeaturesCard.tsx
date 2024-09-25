@@ -18,7 +18,8 @@ const FeaturesCard = ({
   second?: boolean;
   first?: boolean;
   data?: {
-    description?: string;
+    description1?: string;
+    description2?: string;
     images?: any;
     title?: string;
     _id?: string;
@@ -76,9 +77,7 @@ const FeaturesCard = ({
             </span>
           </span>
           <span className="text-black-50 [font-size:_clamp(12px,2.5vw,14px)] font-medium line-clamp-2">
-            {second
-              ? data?.description
-              : "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}
+            {first ? data?.description1 : second ? data?.description2 : ""}
           </span>
         </div>
       </div>
