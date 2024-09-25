@@ -34,7 +34,7 @@ const Button3d = ({
 
       {/* <!-- Main Button Div --> */}
       <div
-        className={`relative w-[145px] text-black transform translate-x-2 translate-y-2 px-3 py-3 bg-gradient-secondary transition-transform duration-300 ease-in-out group-hover:translate-x-3 group-hover:translate-y-1 group-hover:scale-105  ${mainButtonDiv}`}
+        className={`relative w-[145px]  transform translate-x-2 translate-y-2 px-3 py-3  transition-transform duration-300 ease-in-out group-hover:translate-x-3 group-hover:translate-y-1 group-hover:scale-105  ${mainButtonDiv}`}
       >
         {/* <!-- Button Content --> */}
         <div>

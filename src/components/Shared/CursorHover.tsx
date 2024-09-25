@@ -53,7 +53,7 @@ const CursorHover: React.FC<CursorHoverProps> = ({
     <div ref={hoverRef} className="relative inline-block">
       <div
         ref={cursorRef}
-        className={`absolute rounded-full transform -translate-x-1/2 -translate-y-1/2 pointer-events-none transition-transform duration-200 opacity-0 z-[9999] ${cursorSize} ${customClass}`}
+        className={`absolute rounded-full transform -translate-x-1/2 -translate-y-1/2 pointer-events-none transition-transform duration-200 opacity-0 z-[100] ${cursorSize} ${customClass}`}
         style={{
           transform: `scale(1)`, // Ensure the cursor is scaled correctly
         }}

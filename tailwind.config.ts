@@ -76,15 +76,28 @@ const config: Config = {
     },
     extend: {
       animation: {
-        pulseColor: "pulseColor 3s infinite",
+        pulseColor: "pulseColor 5s infinite",
         "serviceloop-scroll": "serviceloop-scroll 40s linear infinite",
         "loop-scroll": "loop-scroll 60s linear infinite",
         "right-scroll": "right-scroll 35s linear infinite",
         "left-scroll": "left-scroll 20s linear infinite",
         "right-Slow-scroll": "right-Slow-scroll 20s linear infinite",
         "four-scroll": "four-scroll 30s linear infinite",
+        moveAndSpin: "moveAndSpin 65s ease-in-out infinite",
       },
       keyframes: {
+        moveAndSpin: {
+          "0%": { transform: "translate(0, 0) rotate(360deg)" }, // Start at top-left
+          "12.5%": { transform: "translate(200px, 120px) rotateX(360deg)" }, // Top-right
+          "25%": { transform: "translate(200px, 200px) rotate(-360deg)" }, // Bottom-right
+          "37.5%": { transform: "translate(0, 100px) rotate(360deg)" }, // Bottom-left
+          "45.5%": { transform: "translate(190px, 100px) rotate(280deg)" }, // Bottom-left
+          "50%": { transform: "translate(0, 0) rotate(360deg)" }, // Back to top-left
+          "62.5%": { transform: "translate(120px, 200px) rotate(-360deg)" }, // Cross to center
+          "75%": { transform: "translate(100px, 100px) rotate(360deg)" }, // Cross to bottom-right
+          "87.5%": { transform: "translate(0, 0) rotate(315deg)" }, // Cross to top-left
+          "100%": { transform: "translate(0, 0) rotate(360deg)" }, // Return to start
+        },
         "serviceloop-scroll": {
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-100%)" },

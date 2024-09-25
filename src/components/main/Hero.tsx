@@ -5,6 +5,7 @@ import Videos from "../hero/Videos";
 import CursorHover from "../Shared/CursorHover";
 import videoHover from "@/assets/images/videosHover.png";
 import Image from "next/image";
+import heroAnimated from "@/assets/images/heroAnimatsvg.svg";
 
 const Hero: React.FC = () => {
   const heroRef = useRef<HTMLDivElement | null>(null);
@@ -73,25 +74,25 @@ const Hero: React.FC = () => {
 
   return (
     <div
+      // animate-[spin_linear_10s_infinite]
       ref={heroRef}
-      className="hero-container relative min-h-screen bg-white-15 "
+      className="hero-container relative min-h-screen bg-white-15"
     >
-      <div className="absolute inset-0 bg-grid-pattern">
-        <div className="space-y-6 md:space-y-14 pt-11 z-20">
+      <div className="relative inset-0 bg-grid-pattern ">
+        {/* <span className="bg-primary absolute left-0 w-[100px] h-[120px] filter blur-[120px] top-11"></span> */}
+        {/* <div className="absolute top-0 left-0">
+          <Image
+            src={heroAnimated}
+            alt="Home Page design"
+            className="w-[100px] h-[100px] animate-moveAndSpin"
+          />
+        </div> */}
+        <div className="space-y-6 md:space-y-14 pt-11 ">
           <div className="flex items-center justify-center w-full h-full flex-col gap-8">
-            <CursorHover
-              hoverScale={6}
-              cursorSize="w-20 h-20 -mt-10 -ml-10"
-              customClass="bg-[#ffff] mix-blend-difference p-10 pointer-events-none"
-              customCursorContent={
-                <div className="bg-[#ffff] w-full h-full rounded-full"></div>
-              }
-            >
-              <h1 className="text-center mx-auto text-[clamp(18px,3vw,50px)] font-semibold text-black-80">
-                Innovative Solutions For Your <br /> E-Commerce{" "}
-                <span className="text-primary">Success.</span>
-              </h1>
-            </CursorHover>
+            <h1 className="text-center mx-auto text-[clamp(18px,3vw,50px)] font-semibold text-black-80 -z-1">
+              Innovative Solutions For Your <br /> E-Commerce{" "}
+              <span className="text-primary">Success.</span>
+            </h1>
 
             <p className="[letter-spacing:0.4px] text-center text-black-70 text-[clamp(12px,3vw,17px)]">
               The Best <i className="text-secondary">E-Commerce</i> Marketplace
@@ -105,16 +106,17 @@ const Hero: React.FC = () => {
               buttonText="Buy Now"
               showHoverText={true}
               background3dclass={`rotate-y-20 bg-white border border-[#ff1810] group-hover:rotate-y-23 rounded-[5px]`}
-              textClasss="text-white text-[clamp(12px,3vw,16px)] font-normal [letter-spacing:1px]"
-              mainButtonDiv="rotate-y-23 group-hover:rotate-y-23 rounded-[5px]"
+              textClasss="text-[clamp(12px,3vw,16px)] font-normal [letter-spacing:1px] text-white group-hover:black-80"
+              mainButtonDiv="rotate-y-23 group-hover:rotate-y-23 rounded-[5px] bg-gradient-secondary group-hover:bg-gradient-primary"
               boldText="$90"
               boldTextClass="font-bold text-[clamp(12px,3vw,16px)] "
             />
           </div>
-          <div className="flex items-center justify-center w-full rounded-md overflow-hidden">
+
+          <div className="flex items-center justify-center w-full rounded-md overflow-hidden ">
             <CursorHover
               hoverScale={1}
-              cursorSize="w-20 h-20 flex -ml-10 -mt-10"
+              cursorSize="w-20 h-20 flex -ml-10 -mt-10 "
               customClass="bg-transparent"
               customCursorContent={
                 <div>

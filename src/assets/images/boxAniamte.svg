@@ -1,0 +1,12 @@
+<svg>
+  <filter id="gooey">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="25" />
+    <feColorMatrix
+      values="
+                  1 0 0 0 0
+                  0 1 0 0 0
+                  0 0 1 0 0
+                  0 0 0 90 -25"
+    />
+  </filter>
+</svg>

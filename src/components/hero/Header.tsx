@@ -41,7 +41,7 @@ const Header = () => {
         </div>
 
         <div
-          className={`bg-white md:bg-transparent md:bg-gradient-to-r md:from-[#ffffff88] md:via-[#f0f0f0aa] md:to-[#ffffff88] md:backdrop-blur-lg h-[190vh] md:h-auto overflow-hidden flex-col md:flex-row flex items-center mt-32 md:mt-0 justify-center md:justify-between gap-3 md:gap-6 z-50 md:shadow-none shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] transition-all duration-300 ease-in-out ${
+          className={`bg-white md:bg-transparent md:bg-gradient-to-r md:from-[#ffff] md:via-[#dddcdcaa] md:to-[#ffffff88] md:backdrop-blur-lg h-[190vh] md:h-auto overflow-hidden flex-col md:flex-row flex items-center mt-32 md:mt-0 justify-center md:justify-between gap-3 md:gap-6 z-50 md:shadow-none shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] transition-all duration-300 ease-in-out ${
             open
               ? "w-[250px] md:w-auto -translate-x-[15%] fixed md:relative"
               : "-translate-x-[150%] md:w-auto overflow-hidden fixed md:relative"

@@ -14,8 +14,8 @@ export default function RootLayout({
       <div
         className={`sticky top-0 z-[1000] transition-transform duration-300 ease-in-out h-full ${
           isScrolled
-            ? "bg-gradient-to-r from-[#ffffff88] via-[#f0f0f0aa] to-[#ffffff88] backdrop-blur-lg shadow-lg border border-[#e2e4e5] z-50" // Glass effect with custom colors
-            : " bg-white "
+            ? "bg-gradient-to-r from-[#eeeded88] via-[#dfdedeaa] to-[#ebe9e988] backdrop-blur-2xl shadow-lg z-50" // Glass effect with custom colors
+            : " bg-gradient-to-r from-[#ececec88] via-[#e7e7e7aa] to-[#f1f1f188] backdrop-blur-2xl  z-50"
         }`}
       >
         <Header />

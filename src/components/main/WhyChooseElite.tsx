@@ -60,13 +60,13 @@ const WhyChooseElite = () => {
       </div>
 
       {/* Responsive Grid Section */}
-      <div className="grid grid-cols-2 md:grid-cols-8 gap-4 h-auto md:h-[370px] overflow-hidden">
+      <div className="grid grid-cols-2 md:grid-cols-8 gap-5 h-auto md:h-[400px] overflow-hidden">
         {/* First Box */}
         <div
           ref={(el) => {
             sectionRefs.current[0] = el; // Assign to ref
           }}
-          className={` col-span-2 flex items-center justify-between flex-row md:flex-col border border-black-10 rounded-[10px] py-5 md:py-2 px-5 overflow-hidden transition-transform duration-700 ease-in-out
+          className={`col-span-2 flex items-center justify-between flex-row md:flex-col border border-black-10 rounded-[10px] py-5 md:py-2 px-5 overflow-hidden transition-transform duration-700 ease-in-out
       ${
         visibleSection === 0
           ? "opacity-100 translate-x-0"
@@ -105,34 +105,39 @@ const WhyChooseElite = () => {
 
         {/* Second Box */}
         <div
-          className={`col-span-3 border border-black-10 rounded-[10px]  overflow-hidden py-2.5 px-[15px] space-y-3 transition-transform duration-700 ease-in-out   ${
+          className={`group/secondbox flex justify-between flex-col gap-0.5 col-span-3 border border-black-10 rounded-[10px] overflow-hidden py-2.5 px-[15px] transition-transform duration-700 ease-in-out ${
             visibleSection === 0
               ? "opacity-100 translate-x-0"
-              : "opacity-0 translate-x-[-100%]"
+              : "opacity-0 md:translate-x-[150px] lg:translate-x-[100%]" // Change to a fixed value if necessary
           }`}
-          style={{ transitionDelay: "0.2s" }}
+          style={{ transitionDelay: "0.3s" }}
         >
           <div className="space-x-2">
             <span
-              className="inline-block w-2 h-2 rounded-full bg-[#D9D9D9] animate-pulseColor"
+              className="inline-block w-2 h-2 rounded-full  bg-[#D9D9D9] group-hover/secondbox:bg-[#D70101]"
               style={{ animationDelay: "0s" }}
             ></span>
             <span
-              className="inline-block w-2 h-2 rounded-full bg-[#D9D9D9] animate-pulseColor"
+              className="inline-block w-2 h-2 rounded-full bg-[#D9D9D9] group-hover/secondbox:bg-[#FCC201]"
               style={{ animationDelay: "0.5s" }}
             ></span>
             <span
-              className="inline-block w-2 h-2 rounded-full bg-[#D9D9D9] animate-pulseColor"
+              className="inline-block w-2 h-2 rounded-full bg-[#D9D9D9] group-hover/secondbox:bg-[#0DE37F]"
               style={{ animationDelay: "1s" }}
             ></span>
           </div>
-          <div className="overflow-hidden">
-            <div className="relative w-full md:w-96 h-64">
+          <div className="overflow-hidden  relative">
+            {/* <span className="group-hover/secondbox:bg-[#000000B2] absolute bottom-0 w-full h-[100px] filter blur-[120px] group-hover/secondbox:backdrop-blur-md group-hover/secondbox:shadow-lg"></span> */}
+            <span className="group-hover/secondbox:absolute group-hover/secondbox:bottom-0 group-hover/secondbox:left-0 w-full h-[130px] group-hover/secondbox:bg-white/10 backdrop-blur-[2px] group-hover/secondbox:shadow-[2px] le"></span>
+
+            <button className="relative font-medium  text-primary bg-white border border-primary rounded-full text-[clamp(15px,3vw,12px)] px-2.5 py-1.5 group-hover/secondbox:absolute hidden group-hover/secondbox:block group-hover/secondbox:left-[170px] group-hover/secondbox:bottom-[40px] transition-all duration-300 ease-in-out hover:bg-gradient-secondary hover:text-white hover:border-none">
+              Demo
+            </button>
+            <div className="">
               <Image
-                src={chooseOne}
                 alt="Hover Video Icon"
-                fill
-                className="object-contain w-full h-full top-0 left-0"
+                src={chooseOne}
+                className=" w-full h-full object-cover"
               />
             </div>
           </div>
@@ -141,7 +146,7 @@ const WhyChooseElite = () => {
               Elite Commerce
             </h5>
             {/* <button className="px-2.5 py-1.5 border border-black-30 rounded-full text-[clamp(15px,3vw,12px)]">
-              Customer Panel
+              Admin Panel
             </button> */}
             <Button
               mainClass="font-medium  text-white bg-white border border-black-15 rounded-full text-[clamp(15px,3vw,12px)] px-2.5 py-1.5"
@@ -170,7 +175,7 @@ const WhyChooseElite = () => {
 
         {/* Third Box */}
         <div
-          className={`col-span-3 border border-black-10 rounded-[10px] overflow-hidden py-2.5 px-[15px] space-y-3 transition-transform duration-700 ease-in-out ${
+          className={`flex justify-between flex-col gap-0.5 col-span-3 border border-black-10 rounded-[10px] overflow-hidden py-2.5 px-[15px] transition-transform duration-700 ease-in-out ${
             visibleSection === 0
               ? "opacity-100 translate-x-0"
               : "opacity-0 md:translate-x-[150px] lg:translate-x-[100%]" // Change to a fixed value if necessary
@@ -180,24 +185,23 @@ const WhyChooseElite = () => {
           <div className="space-x-2">
             <span
               className="inline-block w-2 h-2 rounded-full bg-[#D9D9D9] animate-pulseColor"
-              style={{ animationDelay: "0s" }}
+              style={{ animationDelay: "4s" }}
             ></span>
             <span
               className="inline-block w-2 h-2 rounded-full bg-[#D9D9D9] animate-pulseColor"
-              style={{ animationDelay: "0.5s" }}
+              style={{ animationDelay: "5s" }}
             ></span>
             <span
               className="inline-block w-2 h-2 rounded-full bg-[#D9D9D9] animate-pulseColor"
-              style={{ animationDelay: "1s" }}
+              style={{ animationDelay: "6s" }}
             ></span>
           </div>
           <div className="overflow-hidden">
-            <div className="relative w-full md:w-96 h-64">
+            <div className="">
               <Image
                 src={chooseTwo}
                 alt="Hover Video Icon"
-                fill
-                className="object-contain w-full h-full top-0 left-0"
+                className=" w-full h-full object-cover"
               />
             </div>
           </div>
