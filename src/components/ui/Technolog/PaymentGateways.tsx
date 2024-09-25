@@ -34,8 +34,9 @@ const PaymentGateways = () => {
               key={gate?._id}
               // title={gate?.status === "inactive" ? "Coming Soon" : ""}
               className={`border border-black-10 flex flex-col gap-[clamp(4px,2.5vw,8px)] items-center justify-center  rounded-full md:w-[180px] md:h-[180px] w-[110px] h-[110px] cursor-pointer -ml-5 ${
-                gate?.status === "inactive" ? "opacity-25 " : ""
-              }`}
+                gate?.status === "active" &&
+                "hover:bg-[#F8f8f8] transition-all ease-in duration-300"
+              } ${gate?.status === "inactive" ? "opacity-25 " : ""}`}
             >
               <div className="relative md:w-[74px] md:h-[74px] w-[43px] h-[43px]">
                 <Image

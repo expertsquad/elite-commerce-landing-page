@@ -29,7 +29,7 @@ const MobileOptimized = () => {
           Elite Commerce Customer Panel & Admin Panel Design .
         </span>
       </div>
-      <div>
+      <div className="overflow-hidden">
         <MobileView />
       </div>
     </section>

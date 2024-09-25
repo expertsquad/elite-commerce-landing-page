@@ -33,7 +33,7 @@ const FeaturesCard = ({
           <Image
             src={highlight}
             alt="highlight"
-            className="lg:w-[70px] lg:h-[50px] md:w-[44px] md:h-[31px] w-[22px] h-[17px]"
+            className="lg:w-[70px] lg:h-[50px] md:w-[44px] md:h-[31px] w-[22px] h-[17px] animate-ping"
           />
         </div>
       )}
@@ -42,7 +42,7 @@ const FeaturesCard = ({
           <Image
             src={highlight2}
             alt="highlight"
-            className="lg:w-[135px] lg:h-[100px] w-[70px] h-[51px] "
+            className="lg:w-[135px] lg:h-[100px] w-[70px] h-[51px] animate-pulse"
           />
         </div>
       )}
