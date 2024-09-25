@@ -10,6 +10,7 @@ import enjoyOne from "@/assets/images/enjoyThesvgOne.svg";
 import enjoyTwo from "@/assets/images/enjoyThesvgTwo.svg";
 import { useVisibleSection } from "../Shared/useVisibleSection";
 import Button from "../Shared/Button";
+import { IconArrowUpRight } from "@tabler/icons-react";
 const WhyChooseElite = () => {
   const { visibleSection, sectionRefs } = useVisibleSection(100, 110);
   return (
@@ -115,23 +116,22 @@ const WhyChooseElite = () => {
           <div className="space-x-2">
             <span
               className="inline-block w-2 h-2 rounded-full  bg-[#D9D9D9] group-hover/secondbox:bg-[#D70101]"
-              style={{ animationDelay: "0s" }}
+              // style={{ animationDelay: "0s" }}
             ></span>
             <span
               className="inline-block w-2 h-2 rounded-full bg-[#D9D9D9] group-hover/secondbox:bg-[#FCC201]"
-              style={{ animationDelay: "0.5s" }}
+              // style={{ animationDelay: "0.5s" }}
             ></span>
             <span
               className="inline-block w-2 h-2 rounded-full bg-[#D9D9D9] group-hover/secondbox:bg-[#0DE37F]"
-              style={{ animationDelay: "1s" }}
+              // style={{ animationDelay: "1s" }}
             ></span>
           </div>
           <div className="overflow-hidden  relative">
-            {/* <span className="group-hover/secondbox:bg-[#000000B2] absolute bottom-0 w-full h-[100px] filter blur-[120px] group-hover/secondbox:backdrop-blur-md group-hover/secondbox:shadow-lg"></span> */}
             <span className="group-hover/secondbox:absolute group-hover/secondbox:bottom-0 group-hover/secondbox:left-0 w-full h-[130px] group-hover/secondbox:bg-white/10 backdrop-blur-[2px] group-hover/secondbox:shadow-[2px] le"></span>
 
-            <button className="relative font-medium  text-primary bg-white border border-primary rounded-full text-[clamp(15px,3vw,12px)] px-2.5 py-1.5 group-hover/secondbox:absolute hidden group-hover/secondbox:block group-hover/secondbox:left-[170px] group-hover/secondbox:bottom-[40px] transition-all duration-300 ease-in-out hover:bg-gradient-secondary hover:text-white hover:border-none">
-              Demo
+            <button className="space-x-2 relative font-medium  text-primary bg-white border border-primary rounded-full text-[clamp(15px,3vw,12px)] px-2.5 py-1.5 group-hover/secondbox:absolute hidden group-hover/secondbox:flex group-hover/secondbox:items-center group-hover/secondbox:justify-center group-hover/secondbox:gap-2 group-hover/secondbox:left-[170px] group-hover/secondbox:bottom-[40px] transition-all duration-300 ease-in-out hover:bg-gradient-secondary hover:text-white hover:border-none">
+              <IconArrowUpRight stroke={1} /> Demo
             </button>
             <div className="">
               <Image
@@ -145,9 +145,6 @@ const WhyChooseElite = () => {
             <h5 className="text-[clamp(16px,3vw,12px)] font-semibold text-black-70">
               Elite Commerce
             </h5>
-            {/* <button className="px-2.5 py-1.5 border border-black-30 rounded-full text-[clamp(15px,3vw,12px)]">
-              Admin Panel
-            </button> */}
             <Button
               mainClass="font-medium  text-white bg-white border border-black-15 rounded-full text-[clamp(15px,3vw,12px)] px-2.5 py-1.5"
               stripHoverEffect={true}
@@ -160,7 +157,7 @@ const WhyChooseElite = () => {
               // animatationThree={true}
               // animatationThreeClss="bg-gradient-primary"
               animatationFour={true}
-              animatationFourClass="bg-gradient-secondary"
+              animatationFourClass="bg-gradient-secondary group-hover/secondbox:bg-gradient-secondary"
               // animatationFive={true}
               // animatationFiveClass="bg-gradient-secondary"
               // animatationSix={true}
@@ -175,7 +172,7 @@ const WhyChooseElite = () => {
 
         {/* Third Box */}
         <div
-          className={`flex justify-between flex-col gap-0.5 col-span-3 border border-black-10 rounded-[10px] overflow-hidden py-2.5 px-[15px] transition-transform duration-700 ease-in-out ${
+          className={`group/thardbox flex justify-between flex-col gap-0.5 col-span-3 border border-black-10 rounded-[10px] overflow-hidden py-2.5 px-[15px] transition-transform duration-700 ease-in-out ${
             visibleSection === 0
               ? "opacity-100 translate-x-0"
               : "opacity-0 md:translate-x-[150px] lg:translate-x-[100%]" // Change to a fixed value if necessary
@@ -184,19 +181,24 @@ const WhyChooseElite = () => {
         >
           <div className="space-x-2">
             <span
-              className="inline-block w-2 h-2 rounded-full bg-[#D9D9D9] animate-pulseColor"
-              style={{ animationDelay: "4s" }}
+              className="inline-block w-2 h-2 rounded-full  bg-[#D9D9D9] group-hover/thardbox:bg-[#D70101]"
+              style={{ animationDelay: "0s" }}
             ></span>
             <span
-              className="inline-block w-2 h-2 rounded-full bg-[#D9D9D9] animate-pulseColor"
-              style={{ animationDelay: "5s" }}
+              className="inline-block w-2 h-2 rounded-full bg-[#D9D9D9] group-hover/thardbox:bg-[#FCC201]"
+              style={{ animationDelay: "0.5s" }}
             ></span>
             <span
-              className="inline-block w-2 h-2 rounded-full bg-[#D9D9D9] animate-pulseColor"
-              style={{ animationDelay: "6s" }}
+              className="inline-block w-2 h-2 rounded-full bg-[#D9D9D9] group-hover/thardbox:bg-[#0DE37F]"
+              style={{ animationDelay: "1s" }}
             ></span>
           </div>
-          <div className="overflow-hidden">
+          <div className="overflow-hidden relative">
+            <span className="group-hover/thardbox:absolute group-hover/thardbox:bottom-0 group-hover/thardbox:left-0 w-full h-[130px] group-hover/thardbox:bg-white/10 backdrop-blur-[2px] group-hover/thardbox:shadow-[2px] le"></span>
+
+            <button className=" relative text-secondary bg-white border border-secondary rounded-full text-[clamp(15px,3vw,12px)] px-2.5 py-1.5 group-hover/thardbox:absolute hidden  group-hover/thardbox:left-[170px] group-hover/thardbox:bottom-[40px] transition-all duration-300 ease-in-out hover:bg-gradient-primary hover:text-white hover:border-none group-hover/thardbox:flex group-hover/thardbox:items-center group-hover/thardbox:gap-2">
+              <IconArrowUpRight stroke={1} /> Demo
+            </button>
             <div className="">
               <Image
                 src={chooseTwo}
@@ -209,28 +211,11 @@ const WhyChooseElite = () => {
             <h5 className="text-[clamp(16px,3vw,12px)] font-semibold text-black-70">
               Elite Commerce
             </h5>
-            {/* <button className="px-2.5 py-1.5 border border-black-30 rounded-full text-[clamp(15px,3vw,12px)]">
-              Admin Panel
-            </button> */}
             <Button
               mainClass="font-medium  text-white bg-white border border-black-15 rounded-full text-[clamp(15px,3vw,12px)] px-2.5 py-1.5"
               stripHoverEffect={true}
-              // iconOne={<IconArrowRight stroke={2} />}
-              // iconTwo={<IconArrowRight stroke={2} />}
-              // animatationOne={true}
-              // animatationOneClass="bg-gradient-secondary"
-              // animatationTwo={true}
-              // animatationTwoClass=" bg-gradient-secondary"
-              // animatationThree={true}
-              // animatationThreeClss="bg-gradient-primary"
-              // animatationFour={true}
-              // animatationFourClass="bg-gradient-secondary"
-              // animatationFive={true}
-              // animatationFiveClass="bg-gradient-secondary"
               animatationSix={true}
-              animatationSixClass="bg-gradient-secondary"
-              // animationSeven={true}
-              // animationSevenClass="bg-gradient-secondary"
+              animatationSixClass="bg-gradient-secondary group-hover/thardbox:bg-gradient-secondary"
               buttonText="Admin Panel"
               buttonTextClass="text-black-70 text-[clamp(12px,3vw,16px)] group-hover:text-white"
             />
