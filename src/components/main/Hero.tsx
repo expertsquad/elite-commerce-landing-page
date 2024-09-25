@@ -47,7 +47,7 @@ const Hero: React.FC = () => {
         Math.floor(Math.random() * (window.innerHeight / gridHeight)) *
         gridHeight;
       drop.style.top = `${randomTopPosition}px`;
-      drop.style.animationDuration = `20s`;
+      drop.style.animationDuration = ` 20s`;
 
       if (heroRef.current) {
         heroRef.current.appendChild(drop);

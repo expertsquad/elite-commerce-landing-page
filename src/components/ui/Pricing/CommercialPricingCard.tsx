@@ -1,11 +1,24 @@
+"use client";
 import IconShoppingBag from "@/assets/icons/IconShoppingBag";
 import PrimaryCheckMarkIcon from "@/assets/icons/PrimaryCheckMarkIcon";
 import WhiteCheckMarkIcon from "@/assets/icons/WhiteCheckMarkIcon";
+import { useVisibleSection } from "@/components/Shared/useVisibleSection";
 import React from "react";
 
 const CommercialPricingCard = () => {
+  const { visibleSection, sectionRefs } = useVisibleSection(100, 110);
+
   return (
-    <div className="md:-ml-5 border border-black-10 rounded-[20px] p-[clamp(20px,2.5vw,30px)] flex justify-between flex-col  w-[310px]  bg-gradient-primary">
+    <div
+      ref={(el) => {
+        sectionRefs.current[8] = el;
+      }}
+      className={`md:-ml-5 border border-black-10 rounded-[20px] p-[clamp(20px,2.5vw,30px)] flex justify-between flex-col  w-[310px]  bg-gradient-primary transition-transform ease-in-out duration-700 delay-200 ${
+        visibleSection === 8
+          ? "opacity-100 translate-x-0"
+          : "opacity-0 translate-x-[-300px]"
+      }`}
+    >
       <div className="space-y-[clamp(15px,2.5vw,20px)] text-white">
         <div className="flex gap-2 items-end ">
           <span className="font-bold text-3xl">$95</span>

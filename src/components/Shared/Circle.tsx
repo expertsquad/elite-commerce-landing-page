@@ -21,7 +21,7 @@ const Circle = ({ spinText, className, icon, bgColor }: ICircle) => {
   }, []);
 
   return (
-    <div className={`rounded-full p-2 ${bgColor}`}>
+    <div className={`rounded-full p-2 bg-gradient-primary ${bgColor}`}>
       <div
         className={`relative rounded-full  flex items-center justify-center ${className}`}
       >

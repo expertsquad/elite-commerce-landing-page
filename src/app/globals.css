@@ -8,13 +8,13 @@
   --primary-light: #0ce47f;
   --secondary: #ff1810;
   --secondary-light: #ff9153;
-  --violet: #7c71ff;
+  --violet: #7950f2;
   --violet-light: #eeedff;
-  --blue: #00a6ff;
+  --blue: #007bff;
   --blue-light: #e8f7ff;
-  --danger: #ff0079;
-  --danger-light: #ffeaf4;
-  --yellow: #ffbd00;
+  --red: #dc1313;
+  --red-light: #ffeaf4;
+  --yellow: #ffc107;
   --yellow-light: #fff7e0;
   --transparent: transparent;
   --white: white;
@@ -41,7 +41,6 @@
     var(--primary-light),
     var(--primary)
   );
-  --gradient-violet: linear-gradient(90deg, var(--violet), var(--violet-light));
 
   --gradient-primary-light: linear-gradient(
     90deg,
@@ -53,12 +52,6 @@
     90deg,
     var(--secondary),
     var(--secondary-light)
-  );
-
-  --gradient-secondary-reverse: linear-gradient(
-    90deg,
-    var(--secondary-light),
-    var(--secondary)
   );
 
   --gradient-secondary-light: linear-gradient(
@@ -119,26 +112,21 @@
 }
 
 @layer utilities {
-  .footer-main {
-    background-image: url("../assets/images/footerBg.png");
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  .get-help {
-    background-image: url("../assets/images/getHelpbg.png");
-    background-position: center;
-    background-repeat: no-repeat;
+  .border-gradient-primary {
+    background-image: linear-gradient(white, white),
+      linear-gradient(90deg, var(--primary), var(--primary-light));
+    background-origin: border-box;
+    background-clip: content-box, border-box;
   }
   .all-feature {
     background-image: url("../assets/images/allFeatureBannerBg.svg");
     background-position: center;
     background-repeat: no-repeat;
   }
-  .border-gradient-primary {
-    background-image: linear-gradient(white, white),
-      linear-gradient(90deg, var(--primary), var(--primary-light));
-    background-origin: border-box;
-    background-clip: content-box, border-box;
+  .footer-main {
+    background-image: url("../assets/images/footerBg.png");
+    background-position: center;
+    background-repeat: no-repeat;
   }
 }
 
@@ -162,6 +150,13 @@
   @apply bg-gradient-primary;
 }
 
+.image-select-none {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
 /* Neon Line start */
 
 /* Updated grid size to 100px */
@@ -238,6 +233,117 @@
   }
   /* Nizam End */
 }
+
+/* slide left and right and top and bottom animation start */
+@keyframes waveAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-wave {
+  animation: waveAnimation 2s ease-in-out infinite;
+}
+
+/* Slide in from the left */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Slide in from the right  */
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Slide in from the top */
+@keyframes slideInTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Slide in from the bottom */
+@keyframes slideInBottom {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Animation classes */
+.animate-slide-in-left {
+  animation: slideInLeft 0.5s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.5s ease-out forwards;
+}
+
+.animate-slide-in-top {
+  animation: slideInTop 0.5s ease-out forwards;
+}
+
+.animate-slide-in-bottom {
+  animation: slideInBottom 0.5s ease-out forwards;
+}
+
+/* slide left and right and top and bottom animation end */
+
+/* Spin text animation start */
+
+.spin-char {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0 0px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+/* Optional spinning animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.circle-text {
+  animation: spin 15s linear infinite; /* Adjust speed as needed */
+}
+
+/* Spin text animation end */
 
 /* * {
   outline: 1px solid red;

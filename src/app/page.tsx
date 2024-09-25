@@ -6,6 +6,7 @@ import Hero from "@/components/main/Hero";
 import InfinityCarouse from "@/components/main/InfinityCarouse";
 import MobileOptimized from "@/components/main/MobileOptimized";
 import PricingTable from "@/components/main/PricingTable";
+import SeoSection from "@/components/main/SeoSection";
 import ServiceCarousel from "@/components/main/ServiceCarousel";
 import ShowResponsive from "@/components/main/ShowResponsive";
 import Technology from "@/components/main/Technology";
@@ -24,6 +25,7 @@ export default function Home() {
       <PricingTable />
       <ShowResponsive />
       <Technology />
+      <SeoSection />
       <Testimonial />
       <MobileOptimized />
       <GetHelp />

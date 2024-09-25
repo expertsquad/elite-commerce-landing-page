@@ -1,59 +1,13 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
+import { IconArrowLeft, IconArrowRight, IconMapPin } from "@tabler/icons-react";
 import Image from "next/image";
-
-// Dummy data for testimonials
-const testimonials = [
-  {
-    name: "John Doe",
-    comment: "Great experience and support.",
-    img: "https://images.pexels.com/photos/837358/pexels-photo-837358.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  },
-  {
-    name: "John Dfgsdoe",
-    comment: "Amazing service and friendly staff.",
-    img: "https://images.pexels.com/photos/845457/pexels-photo-845457.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  },
-  {
-    name: "John sgfsdf",
-    comment: "Highly recommended!",
-    img: "https://images.pexels.com/photos/775091/pexels-photo-775091.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  },
-  {
-    name: "Jane Smghfgith",
-    comment: "Fantastic experience!",
-    img: "https://images.pexels.com/photos/248528/pexels-photo-248528.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  },
-  {
-    name: "Michael Johhjghfgnson",
-    comment: "Loved the experience!",
-    img: "https://images.pexels.com/photos/27568669/pexels-photo-27568669/free-photo-of-a-person-holding-a-samsung-galaxy-s20-with-the-app-on-it.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  },
-  {
-    name: "Michael sfgsd",
-    comment: "Will come back again.",
-    img: "https://images.pexels.com/photos/15940011/pexels-photo-15940011/free-photo-of-close-up-of-a-smartphone-displaying-a-conversation-with-chatgpt.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  },
-  {
-    name: "Michael ertser",
-    comment: "Excellent support!",
-    img: "https://images.pexels.com/photos/12203594/pexels-photo-12203594.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  },
-  {
-    name: "Michael dfghdf",
-    comment: "Very satisfied with the service.",
-    img: "https://images.pexels.com/photos/9213716/pexels-photo-9213716.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  },
-  {
-    name: "Michael Jotghdfghhnson",
-    comment: "A wonderful experience!",
-    img: "https://images.pexels.com/photos/28411653/pexels-photo-28411653/free-photo-of-tunisian-seaman-fixing-an-engine.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  },
-];
+import { testimonials } from "@/ulits/testimonials";
+import StarRating from "./StarRating";
+import Button from "../Shared/Button";
 
 const TestimonialCarousel = () => {
-  const [currentIndex, setCurrentIndex] = useState(4); // Start with the middle testimonial (index 4)
+  const [currentIndex, setCurrentIndex] = useState(4);
   const [hover, setHover] = useState(false);
   const totalTestimonials = testimonials.length;
 
@@ -61,8 +15,8 @@ const TestimonialCarousel = () => {
     if (!hover) {
       const interval = setInterval(() => {
         nextSlide();
-      }, 3000); // Change every 3 seconds
-      return () => clearInterval(interval); // Cleanup interval on component unmount or hover
+      }, 5000);
+      return () => clearInterval(interval);
     }
   }, [hover]);
 
@@ -79,82 +33,121 @@ const TestimonialCarousel = () => {
   };
 
   return (
-    <div
-      className="relative w-full mx-auto py-10"
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-    >
+    <div className="relative w-full mx-auto py-10 overflow-hidden">
       {/* Testimonial slides */}
-      <div className="flex justify-center items-center space-x-4 ">
-        {Array.from({ length: 9 }).map((_, i) => {
-          const index =
-            (currentIndex + i - 4 + totalTestimonials) % totalTestimonials;
+      <div className="flex justify-center items-center flex-col gap-10 w-full">
+        <div className="flex justify-center items-center gap-7 w-full overflow-hidden h-[200px]">
+          {Array.from({ length: 9 }).map((_, i) => {
+            const index =
+              (currentIndex + i - 4 + totalTestimonials) % totalTestimonials;
 
-          return (
-            <div
-              key={index}
-              className={`w-[100px] h-[100px] flex flex-col items-center transition-transform duration-700 ease-in-out ${
-                index === currentIndex
-                  ? "scale-110 transition-transform duration-700 ease-in-out z-10"
-                  : index === (currentIndex + 1) % totalTestimonials ||
-                    index ===
-                      (currentIndex - 1 + totalTestimonials) % totalTestimonials
-                  ? "scale-95 transition-transform duration-700 ease-in-out opacity-60"
-                  : index === (currentIndex + 2) % totalTestimonials ||
-                    index ===
-                      (currentIndex - 2 + totalTestimonials) % totalTestimonials
-                  ? "scale-75 transition-transform duration-700 ease-in-out opacity-60"
-                  : index === (currentIndex + 3) % totalTestimonials ||
-                    index ===
-                      (currentIndex - 3 + totalTestimonials) % totalTestimonials
-                  ? "scale-50 transition-transform duration-700 ease-in-out opacity-60"
-                  : index === (currentIndex + 4) % totalTestimonials ||
-                    index ===
-                      (currentIndex - 4 + totalTestimonials) % totalTestimonials
-                  ? "scale-50 transition-transform duration-700 ease-in-out opacity-60"
-                  : ""
-              }`}
-            >
-              <div className="rounded-full w-full h-full flex items-center justify-center ">
-                <div
-                  className={`w-[100px] h-[100px] mx-auto relative shrink-0 my-7 ${
-                    index === currentIndex
-                      ? "border border-primary-light rounded-full"
-                      : ""
-                  }`}
-                >
-                  <Image
-                    src={testimonials[index].img}
-                    alt={testimonials[index].name}
-                    className="rounded-full object-cover border-dashed border"
-                    fill
-                    sizes="(max-width: 100px) 5vw, 10vw"
-                  />
+            return (
+              <div
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+                key={index}
+                className={`flex flex-col items-center transition-all duration-1000 ease-in-out  ${
+                  index === currentIndex
+                    ? "scale-125 z-10" // Active item
+                    : index === (currentIndex + 1) % totalTestimonials ||
+                      index ===
+                        (currentIndex - 1 + totalTestimonials) %
+                          totalTestimonials
+                    ? "scale-95 opacity-40" // 1st on either side
+                    : index === (currentIndex + 2) % totalTestimonials ||
+                      index ===
+                        (currentIndex - 2 + totalTestimonials) %
+                          totalTestimonials
+                    ? "scale-75 opacity-40" // 2nd on either side
+                    : index === (currentIndex + 3) % totalTestimonials ||
+                      index ===
+                        (currentIndex - 3 + totalTestimonials) %
+                          totalTestimonials
+                    ? "scale-50 opacity-40" // 3rd on either side
+                    : index === (currentIndex + 4) % totalTestimonials ||
+                      index ===
+                        (currentIndex - 4 + totalTestimonials) %
+                          totalTestimonials
+                    ? "scale-50 opacity-40" // 4th on either side
+                    : "" // Default size
+                }`}
+              >
+                <div className="rounded-full flex items-center justify-center">
+                  <div
+                    className={`md:w-[100px] md:h-[100px] w-[60px] h-[60px] mx-auto relative shrink-0 my-7 ${
+                      index === currentIndex
+                        ? "border border-secondary rounded-full"
+                        : ""
+                    }`}
+                  >
+                    <Image
+                      src={testimonials[index].img}
+                      alt={testimonials[index].name}
+                      className="rounded-full object-cover"
+                      fill
+                      sizes="(max-width: 100px) 5vw, 10vw"
+                    />
+                  </div>
                 </div>
               </div>
-              {index === currentIndex && (
-                <div className="flex justify-center items-center  ">
-                  {/* Left Arrow */}
-                  <button className="hidden md:block" onClick={prevSlide}>
-                    <IconChevronLeft size={32} />
-                  </button>
-                  <div className="text-center mt-20 text-primary md:w-1/2 w-full ">
-                    <h3 className="text-lg font-bold">
-                      {testimonials[index].name}
-                    </h3>
-                    <p className="text-sm">{testimonials[index].comment}</p>
-                  </div>
-                  {/* Right Arrow */}
-                  <button className="hidden md:block" onClick={nextSlide}>
-                    <IconChevronRight size={32} />
-                  </button>
-                </div>
-              )}
+            );
+          })}
+        </div>
+
+        {currentIndex + 1 && (
+          <div className=" flex justify-between items-center gap-9 md:h-[300px] h-full md:w-8/12 w-full mx-auto">
+            {/* Left Arrow */}
+            <div onClick={prevSlide} className="hidden md:block">
+              <Button
+                mainClass="font-medium text-white border border-black-10 p-2 bg-gradient-primary"
+                stripHoverEffect={true}
+                animatationThree={true}
+                animatationThreeClss="bg-gradient-secondary"
+                iconThreeTrue={true}
+                iconFourTrue={true}
+                iconThree={<IconArrowLeft stroke={1} size={32} />}
+                buttonTextClass="text-white text-[clamp(12px,3vw,16px)] group-hover:text-white"
+              />
             </div>
-          );
-        })}
+
+            {/* Comments and ratings with name */}
+            <div className="text-center w-full md:w-10/12 border border-black-10 h-[300px] flex flex-col justify-center items-center p-7 rounded-2xl">
+              <div className="w-full flex justify-center items-center flex-col gap-4 border-b border-black-10 mb-5 pb-5 ">
+                <StarRating rating={testimonials[currentIndex]?.rating} />
+                <div className="flex justify-center items-center gap-2">
+                  <IconMapPin />
+                  <h3 className="text-2xl  ">
+                    {" "}
+                    {testimonials[currentIndex]?.location}
+                  </h3>
+                </div>
+              </div>
+              <p className="text-sm line-clamp-3 ">
+                {testimonials[currentIndex]?.comment}
+              </p>
+              <h3 className="text-lg font-bold my-3">
+                - {testimonials[currentIndex]?.name}
+              </h3>
+            </div>
+
+            {/* Right Arrow */}
+            <div onClick={nextSlide} className="hidden md:block">
+              <Button
+                mainClass="font-medium text-white border border-black-10 p-2 bg-gradient-primary"
+                stripHoverEffect={true}
+                animatationThree={true}
+                animatationThreeClss="bg-gradient-secondary"
+                iconThreeTrue={true}
+                iconFourTrue={true}
+                iconThree={<IconArrowRight stroke={1} size={32} />}
+                buttonTextClass="text-white text-[clamp(12px,3vw,16px)] group-hover:text-white"
+              />
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
 };
+
 export default TestimonialCarousel;

@@ -1,3 +1,4 @@
+"use client";
 import BestPriceIcon from "@/assets/icons/BestPriceIcon";
 import EasyToUseIcon from "@/assets/icons/EasyToUseIcon";
 import HighPerformanceIcon from "@/assets/icons/HighPerformanceIcon";
@@ -5,17 +6,29 @@ import PremiumIcon from "@/assets/icons/PremiumIcon";
 import SupportIcon from "@/assets/icons/SupportIcon";
 import UniqueDesignIcon from "@/assets/icons/UniqueDesignIcon";
 import React from "react";
+import { useVisibleSection } from "./useVisibleSection";
 
 const TopFeatureCard = ({
+  index,
   className,
   data,
 }: {
+  index: number;
   className?: string;
   data: any;
 }) => {
+  const { visibleSection, sectionRefs } = useVisibleSection(100, 110);
+
   return (
     <div
-      className={`md:max-w-[350px] max-w-[250px] border border-black-10 w-full md:h-[300px] h-[250px]   p-[clamp(10px,2.5vw,20px)] flex items-center justify-center rounded-2xl hover:scale-105 transition-all duration-300 cursor-pointer hover:shadow-2xl ${
+      ref={(el) => {
+        sectionRefs.current[index + 51] = el;
+      }}
+      className={`md:max-w-[400px] max-w-[250px] border border-black-10 w-full md:h-[320px] h-[300px]   p-[clamp(10px,2.5vw,20px)] flex items-center justify-center rounded-2xl  transition-transform ease-in-out duration-700 cursor-pointer    ${
+        visibleSection === index + 51
+          ? "opacity-100 translate-x-0"
+          : "opacity-0 translate-x-[30px]"
+      }  ${
         data?.title === "Premium Features"
           ? "bg-gradient-primary"
           : data?.title === "High-Performance"
@@ -25,7 +38,7 @@ const TopFeatureCard = ({
           : data?.title === "Unique Design"
           ? "bg-blue-light"
           : data?.title === "Dedicated Support"
-          ? "bg-danger-light"
+          ? "bg-red-light"
           : data?.title === "Best of Price"
           ? "bg-yellow-light"
           : ""

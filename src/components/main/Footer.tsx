@@ -4,7 +4,7 @@ import logo from "@/assets/images/mainLogoWhite.svg";
 import Link from "next/link";
 import ArrowUpRight from "@/assets/icons/ArrowUpRight";
 import singleLogo from "@/assets/images/expertSquadSingle.svg";
-import footerCircle from "@/assets/images/footerCircle.png";
+import footerCircle from "@/assets/images/FooterCircle.gif";
 import YoutubeIcon from "@/assets/icons/YoutubeIcon";
 import InstagramIcon from "@/assets/icons/InstagramIcon";
 import FacebookIcon from "@/assets/icons/FacebookIcon";
@@ -13,7 +13,7 @@ import TwitterXIcon from "@/assets/icons/TwitterXIcon";
 
 const Footer = () => {
   return (
-    <div className="bg-[#171717] footer-main ">
+    <footer className="bg-[#171717] footer-main ">
       <div className="main-container  py-10 ">
         <div className="grid grid-cols-1 md:grid-cols-3 md:gap-5 gap-[30px] items-center justify-between w-full">
           <div className="space-y-5 md:col-span-2 flex flex-col md:items-start items-center">
@@ -57,7 +57,7 @@ const Footer = () => {
             </Link>
           </div>
           <div className=" flex items-center flex-col justify-center md:justify-end gap-[clamp(10px,2.5vw,40px)]">
-            <div className="relative md:w-[150px] md:h-[150px] w-[80px] h-[80px] animate-spin-custom">
+            <div className="relative md:w-[150px] md:h-[150px] w-[80px] h-[80px] ">
               <Image
                 src={footerCircle}
                 alt=""
@@ -103,7 +103,7 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 

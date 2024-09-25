@@ -5,7 +5,7 @@ import ShowFeatures from "../ui/AllFeatures/ShowFeatures";
 
 const AllFeature = () => {
   return (
-    <div className="main-container my-10 space-y-[70px]">
+    <section id="Features" className="main-container my-10 space-y-[70px]">
       <AllFeaturesBanner />
       <div className="space-y-10">
         <div className="flex flex-col gap-[clamp(10px,2.5vw,20px)]">
@@ -23,7 +23,7 @@ const AllFeature = () => {
         </div>
         <ShowFeatures />
       </div>
-    </div>
+    </section>
   );
 };
 
