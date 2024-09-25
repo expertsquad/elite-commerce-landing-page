@@ -4,10 +4,10 @@ import SeoCollapsibleItem from "../ui/SeoCollapsibleItem";
 
 const SeoSection = () => {
   return (
-    <section className="relative">
+    <section className="relative animate-slide-in-left ">
       {/* blur ball */}
       <div className="h-[180px] w-[180px] bg-primary blur-[230px] absolute top-0 left-0"></div>
-      <div className="main-container flex items-center justify-center flex-col-reverse lg:gap-12 md:gap-6 gap-10 md:flex-row">
+      <div className="main-container flex items-center md:justify-start justify-center flex-col-reverse lg:gap-12 md:gap-6 gap-10 md:flex-row">
         {/* left div */}
         <div className="lg:w-5/12 md:w-1/2 w-full h-[500px]">
           <h2 className="[font-size:clamp(20px,4.5vw,30px)] font-bold text-start py-5">

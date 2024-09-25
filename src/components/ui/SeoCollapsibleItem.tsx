@@ -2,10 +2,11 @@
 import React, { useState } from "react";
 import { IconCircleDashedCheck } from "@tabler/icons-react";
 import { SeoCollapsibleItems } from "@/ulits/seoCollapsibleItems";
+import { useVisibleSection } from "../Shared/useVisibleSection";
 
 const SeoCollapsibleItem = () => {
   const [openSection, setOpenSection] = useState(0);
-  console.log(openSection);
+  const { sectionRefs, visibleSection } = useVisibleSection(100, 110);
 
   // Toggle the clicked section
   const handleToggle = (index: number) => {
@@ -13,14 +14,14 @@ const SeoCollapsibleItem = () => {
   };
 
   return (
-    <div className="w-full">
+    <div className="w-full  ">
       {SeoCollapsibleItems?.map((section, index) => (
         <div
           key={index}
           className={`mb-4 ${
             openSection === index &&
             "bg-gradient-primary p-4 rounded-lg text-white transition-all duration-300 ease-in-out"
-          } `}
+          }`}
         >
           {/* Header */}
           <div
