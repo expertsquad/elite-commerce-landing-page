@@ -35,7 +35,7 @@ const ScrollToTopButton = () => {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-10 right-10 bg-gradient-primary text-white p-3 rounded-full shadow-lg border border-black-10 transition duration-300 animate-bounce"
+          className="fixed bottom-10 right-10 bg-gradient-primary text-white p-3 rounded-full shadow-lg border border-black-10 transition duration-300  md:block hidden"
         >
           <IconChevronUp size={24} />
         </button>

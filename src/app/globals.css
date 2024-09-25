@@ -124,7 +124,12 @@
     background-repeat: no-repeat;
   }
   .footer-main {
-    background-image: url("../assets/images/footerBg.png");
+    background-image: url("../assets/images/footerBg.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .small-footer {
+    background-image: url("../assets/images/smallFooterBg.svg");
     background-position: center;
     background-repeat: no-repeat;
   }

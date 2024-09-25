@@ -50,7 +50,7 @@ const ShowResponsive = () => {
         </div>
         <p className="text-center">
           <span className="font-bold [font-size:_clamp(18px,2.5vw,40px)]">
-            Furthermore, Elite Commerce is the Mobile-first
+            Furthermore, The Elite Commerce is Mobile-friendly
           </span>{" "}
           <HighlightText className="font-bold [font-size:_clamp(18px,2.5vw,40px)]">
             Design

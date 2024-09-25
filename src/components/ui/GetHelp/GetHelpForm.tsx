@@ -28,7 +28,7 @@ const GetHelpForm = () => {
           <Image
             src={ring}
             alt=""
-            className="w-[57px] h-[38px] md:w-[100px] md:h-[69px]  lg:w-[134px] lg:h-[87px] image-select-none"
+            className="w-[57px] h-[38px] md:w-[100px] md:h-[69px]  lg:w-[134px] lg:h-[87px] image-select-none group-hover/form:rotate-180 transition-all ease-in duration-300"
           />
         </div>
         <div className="absolute lg:-top-[60px] -top-10 -right-8 rotate-[20deg] lg:-right-[60px] md:-top-[50px] md:-right-[70px] lg:rotate-[30deg] md:rotate-[20deg] animate-pulse   -z-10">
@@ -38,10 +38,10 @@ const GetHelpForm = () => {
             className="w-[66px] h-[48px] md:w-[114px] md:h-[84px] lg:w-[135px] lg:h-[100px] image-select-none"
           />
         </div>
-        <div className="absolute md:-left-16 -left-12 top-48">
+        <div className="absolute md:-left-16 -left-12 top-10  group-hover/form:top-48 transition-all ease-in duration-300">
           <LoveIcon />
         </div>
-        <div className="absolute md:-right-16 -right-12 bottom-48">
+        <div className="absolute md:-right-16 -right-12 bottom-10 group-hover/form:bottom-48 transition-all ease-in duration-300">
           <SatisfiedEmoji />
         </div>
         <div className="absolute animate-pulse lg:-bottom-[40px] lg:-left-[70px] md:-left-[50px] md:-bottom-8 -left-8 -bottom-4 rotate-[200deg] -z-10">
@@ -51,7 +51,7 @@ const GetHelpForm = () => {
             className="w-[66px] h-[48px] md:w-[114px] md:h-[84px] lg:w-[135px] lg:h-[100px] image-select-none"
           />
         </div>
-        <div className="absolute lg:-bottom-8 lg:-right-20 md:-right-16 -bottom-3 -right-8 md:-bottom-5 -z-1">
+        <div className="absolute lg:-bottom-8 lg:-right-20 md:-right-16 -bottom-3 -right-8 md:-bottom-5 -z-1 group-hover/form:rotate-180 transition-all ease-in duration-300">
           <Image
             src={ring}
             alt=""

@@ -26,7 +26,7 @@ const MobileOptimized = () => {
         </div>
 
         <span className="font-semibold [font-size:_clamp(18px,2.5vw,30px)] text-center">
-          Elite Commerce Customer Panel & Admin Panel Design .
+          Seamless Mobile Experience, Optimized for All Devices
         </span>
       </div>
       <div className="overflow-hidden">

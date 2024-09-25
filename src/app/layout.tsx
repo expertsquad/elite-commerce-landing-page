@@ -20,9 +20,9 @@ export const metadata: Metadata = {
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${nunito.className}`}>
+      <body className={`${nunito.className} scroll-smooth`}>
         <RootLayout>
-          <BuyNow /> {children} <ScrollToTopButton />
+          {children} <ScrollToTopButton />
         </RootLayout>
       </body>
     </html>

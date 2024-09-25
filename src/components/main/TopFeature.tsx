@@ -27,9 +27,7 @@ const TopFeature = () => {
         <p
           className={`text-center  font-semibold [font-size:_clamp(15px,2.5vw,40px)]`}
         >
-          Product Design Online feature will help your{" "}
-          <HighlightText>Customer easy</HighlightText> customize and design
-          product online.
+          Your All-in-One eCommerce Solution
         </p>
       </div>
       <div

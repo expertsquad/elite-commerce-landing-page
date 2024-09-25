@@ -24,7 +24,7 @@ const TopFeatureCard = ({
       ref={(el) => {
         sectionRefs.current[index + 51] = el;
       }}
-      className={`md:max-w-[400px] max-w-[250px] border border-black-10 w-full md:h-[320px] h-[300px]   p-[clamp(10px,2.5vw,20px)] flex items-center justify-center rounded-2xl  transition-transform ease-in-out duration-700 cursor-pointer    ${
+      className={`md:max-w-[400px] max-w-[250px] border border-black-10 w-full md:h-[320px] h-[250px]   p-[clamp(10px,2.5vw,20px)] flex items-center justify-center rounded-2xl  transition-transform ease-in-out duration-700 cursor-pointer    ${
         visibleSection === index + 51
           ? "opacity-100 translate-x-0"
           : "opacity-0 translate-x-[30px]"
