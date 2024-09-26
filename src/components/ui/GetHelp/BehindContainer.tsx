@@ -15,7 +15,7 @@ const BehindContainer = () => {
         sectionRefs.current[60] = el;
       }}
       className={`absolute transition-transform duration-1000 delay-10 ease-in-out ${
-        visibleSection === 60 ? " rotate-0" : "  -rotate-90 "
+        visibleSection === 60 ? "md:rotate-0" : "  md:-rotate-90 "
       }`}
     >
       <div className="bg-gradient-primary rounded-[20px] md:w-[430px] w-[300px] md:h-[670px] h-[452px] inset-0 group-hover/form:rotate-0  transition-all duration-300 -rotate-6 relative "></div>
