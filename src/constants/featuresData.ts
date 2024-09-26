@@ -181,6 +181,6 @@ export const adminPanelFeatures = [
     description1:
       "Manage your online store from one hub, overseeing users, orders, inventory, and analytics for seamless operations.",
     description2:
-      "Quickly create and manage admin accounts by entering details and assigning roles for better security and team management.   ",
+      "Quickly create and manage admin accounts by entering details and assigning roles for better security and team management.",
   },
 ];
