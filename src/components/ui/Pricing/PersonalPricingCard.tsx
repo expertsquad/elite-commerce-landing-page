@@ -77,33 +77,18 @@ const PersonalPricingCard = () => {
           </div>
         </div>
       </div>
-      <button className=" outline-none hover:scale-105 transition-all duration-300 hover:bg-gradient-primary-reverse flex items-center justify-center gap-1.5 bg-gradient-primary rounded-full py-1.5 px-10 text-white text-base ">
-        <IconShoppingBag />
-        Purchase Now
-      </button>
 
-      {/* <Button
-        mainClass="font-medium  text-white bg-gradient-primary"
+      <Button
+        mainClass="font-medium  text-white bg-gradient-primary py-2"
         stripHoverEffect={true}
         iconOne={<IconArrowRight stroke={2} />}
         iconTwo={<IconArrowRight stroke={2} />}
-        // animatationOne={true}
-        // animatationOneClass="bg-gradient-secondary"
-        // animatationTwo={true}
-        // animatationTwoClass=" bg-gradient-secondary"
-        // animatationThree={true}
-        // animatationThreeClss="bg-gradient-primary"
-        // animatationFour={true}
-        // animatationFourClass="bg-gradient-secondary"
-        // animatationFive={true}
-        // animatationFiveClass="bg-gradient-secondary"
-        // animatationSix={true}
-        // animatationSixClass="bg-gradient-secondary"
-        animationSeven={true}
+        animatationOne={true}
+        animatationOneClass="bg-gradient-secondary"
         animationSevenClass="bg-gradient-secondary"
-        buttonText="my name is nizam"
+        buttonText="Purchase Now"
         buttonTextClass="text-white text-[clamp(12px,3vw,16px)]"
-      /> */}
+      />
     </div>
   );
 };
