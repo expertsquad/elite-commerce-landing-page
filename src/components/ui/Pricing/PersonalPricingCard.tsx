@@ -3,7 +3,7 @@ import IconShoppingBag from "@/assets/icons/IconShoppingBag";
 import WhiteCheckMarkIcon from "@/assets/icons/WhiteCheckMarkIcon";
 import Button from "@/components/Shared/Button";
 import { useVisibleSection } from "@/components/Shared/useVisibleSection";
-import { IconArrowUpRight } from "@tabler/icons-react";
+import { IconArrowRight, IconArrowUpRight } from "@tabler/icons-react";
 import React from "react";
 
 const PersonalPricingCard = () => {
@@ -23,12 +23,18 @@ const PersonalPricingCard = () => {
     >
       <div className="space-y-[clamp(15px,2.5vw,20px)]">
         <div className="flex gap-2 items-end">
-          <span className="font-bold text-3xl">$50</span>
-          <span className="text-black-70 line-through">$60</span>
+          <span className="font-bold [font-size:_clamp(30px,2.5vw,45px)]">
+            $50
+          </span>
+          <span className="text-black-70 line-through [font-size:_clamp(15px,2.5vw,20px)]">
+            $60
+          </span>
         </div>
         <div className="space-y-[clamp(15px,2.5vw,20px)] ">
           <div className="space-y-2.5">
-            <h1 className="font-bold text-3xl">Personal</h1>
+            <h1 className="font-semibold [font-size:_clamp(20px,2.5vw,27px)]">
+              Personal
+            </h1>
             <p className="[font-size:_clamp(12px,2.5vw,15px)] text-black-70">
               For most businesses that want to otpimize web queries
             </p>
@@ -71,20 +77,33 @@ const PersonalPricingCard = () => {
           </div>
         </div>
       </div>
-      {/* <button className=" outline-none hover:scale-105 transition-all duration-300 hover:bg-gradient-primary-reverse flex items-center justify-center gap-1.5 bg-gradient-primary rounded-full py-1.5 px-10 text-white text-base">
+      <button className=" outline-none hover:scale-105 transition-all duration-300 hover:bg-gradient-primary-reverse flex items-center justify-center gap-1.5 bg-gradient-primary rounded-full py-1.5 px-10 text-white text-base ">
         <IconShoppingBag />
         Purchase Now
-      </button> */}
-      <Button
-        mainClass="font-medium text-white border border-black-10 px-[10px] py-[5px] md:px-5 md:py-2 bg-gradient-primary"
+      </button>
+
+      {/* <Button
+        mainClass="font-medium  text-white bg-gradient-primary"
         stripHoverEffect={true}
-        animatationThree={true}
-        animatationThreeClss="bg-gradient-secondary"
-        iconFourTrue={true}
-        iconFour={<IconShoppingBag />}
-        buttonText="Purchase"
-        buttonTextClass="text-white text-[clamp(12px,3vw,16px)] group-hover:text-white"
-      />
+        iconOne={<IconArrowRight stroke={2} />}
+        iconTwo={<IconArrowRight stroke={2} />}
+        // animatationOne={true}
+        // animatationOneClass="bg-gradient-secondary"
+        // animatationTwo={true}
+        // animatationTwoClass=" bg-gradient-secondary"
+        // animatationThree={true}
+        // animatationThreeClss="bg-gradient-primary"
+        // animatationFour={true}
+        // animatationFourClass="bg-gradient-secondary"
+        // animatationFive={true}
+        // animatationFiveClass="bg-gradient-secondary"
+        // animatationSix={true}
+        // animatationSixClass="bg-gradient-secondary"
+        animationSeven={true}
+        animationSevenClass="bg-gradient-secondary"
+        buttonText="my name is nizam"
+        buttonTextClass="text-white text-[clamp(12px,3vw,16px)]"
+      /> */}
     </div>
   );
 };

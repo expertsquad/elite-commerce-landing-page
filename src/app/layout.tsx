@@ -4,6 +4,7 @@ import "./globals.css";
 import { Nunito } from "next/font/google";
 import RootLayout from "@/components/RootLayout";
 import ScrollToTopButton from "@/components/Shared/ScrollToTop";
+import BuyNow from "@/components/Shared/BuyNow";
 
 const nunito = Nunito({
   subsets: ["latin"],
@@ -21,7 +22,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <html lang="en" className="scroll-smooth">
       <body className={`${nunito.className} scroll-smooth`}>
         <RootLayout>
-          {children} <ScrollToTopButton />
+          <BuyNow /> {children} <ScrollToTopButton />
         </RootLayout>
       </body>
     </html>

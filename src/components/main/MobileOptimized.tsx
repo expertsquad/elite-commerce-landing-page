@@ -10,7 +10,7 @@ const MobileOptimized = () => {
   return (
     <section
       id="Mobile-optimized"
-      className="flex flex-col gap-10 main-container  my-10"
+      className="flex flex-col gap-10 main-container my-10"
     >
       <div className="space-y-[clamp(20px,2.5vw,30px)] items-center flex flex-col">
         <div className="h-[40px] w-[220px] relative rounded-l-full overflow-hidden mx-auto flex items-center justify-start pl-4">
@@ -29,7 +29,7 @@ const MobileOptimized = () => {
           Seamless Mobile Experience, Optimized for All Devices
         </span>
       </div>
-      <div className="overflow-hidden">
+      <div className="">
         <MobileView />
       </div>
     </section>
