@@ -2,9 +2,6 @@ import Image from "next/image";
 import React from "react";
 import sectionBg from "@/assets/images/sectionBgMobileOptimized.png";
 import MobileView from "../ui/MobileView/MobileView";
-import BehindContainer from "../ui/GetHelp/BehindContainer";
-import GetHelpForm from "../ui/GetHelp/GetHelpForm";
-import Circle from "../Shared/Circle";
 
 const MobileOptimized = () => {
   return (

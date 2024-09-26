@@ -1,10 +1,24 @@
+"use client";
 import Image from "next/image";
 import seoImg from "@/assets/images/seo.svg";
 import SeoCollapsibleItem from "../ui/SeoCollapsibleItem";
+import { useMultipleVisibleSection } from "../Shared/useMultipleVisibleSection";
 
 const SeoSection = () => {
+  const sectionCount = 2; // Adjust based on the number of sections
+  const { visibleSections, sectionRefs } =
+    useMultipleVisibleSection(sectionCount);
   return (
-    <section className="relative animate-slide-in-left ">
+    <section
+      ref={(el) => {
+        sectionRefs.current[13] = el; // Assign to ref
+      }}
+      className={`relative duration-500 md:duration-1000 transition-transform  ease-in-out ${
+        visibleSections[13]
+          ? "opacity-100 translate-y-0"
+          : " opacity-0  translate-y-[40px]"
+      }`}
+    >
       {/* blur ball */}
       <div className="h-[180px] w-[180px] bg-primary blur-[230px] absolute top-0 left-0"></div>
       <div className="main-container flex items-center md:justify-start justify-center flex-col-reverse lg:gap-12 md:gap-6 gap-10 md:flex-row">

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import InfinityLoopFour from "../infinityLoop/InfinityLoopFour";
 import InfinityLoopTwo from "../infinityLoop/InfinityLoopTwo";
@@ -6,10 +7,23 @@ import InfinityLoopOne from "../infinityLoop/InfinityLoopOne";
 import sectionBg from "@/assets/images/sectionBg.png";
 import Image from "next/image";
 import Glassmorphism from "../ui/Glassmorphism";
+import { useMultipleVisibleSection } from "../Shared/useMultipleVisibleSection";
 
 const ExploreSoftwareCarousel = () => {
+  const sectionCount = 2; // Adjust based on the number of sections
+  const { visibleSections, sectionRefs } =
+    useMultipleVisibleSection(sectionCount);
   return (
-    <div className="bg-black-80 pt-5 pb-60 md:pb-0 md:py-10  relative">
+    <div
+      ref={(el) => {
+        sectionRefs.current[18] = el; // Assign to ref
+      }}
+      className={`bg-black-80 pt-5 pb-60 md:pb-0 md:py-10  relative duration-500 md:duration-1000 transition-transform   ease-in-out ${
+        visibleSections[18]
+          ? "opacity-100 translate-y-0"
+          : " opacity-0  translate-y-[50px]"
+      }`}
+    >
       <div className="space-y-2.5 md:space-y-5 text-center w-full">
         <div className="h-[30px] w-[160px] relative rounded-l-full overflow-hidden mx-auto flex items-center justify-start pl-2 ">
           <span className="z-50  absolute text-sm text-white">Screenshot</span>

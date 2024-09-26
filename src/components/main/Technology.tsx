@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import sectionBg from "@/assets/images/sectionBg.png";
@@ -6,10 +7,24 @@ import SMSGatewayAndMailConfig from "../ui/Technolog/SMSGatewayAndMailConfig";
 import PaymentGateways from "../ui/Technolog/PaymentGateways";
 import TechnologiesAndPlatforms from "../ui/Technolog/TechnologiesAndPlatforms";
 import CustomEllipse from "../Shared/CustomEllipse";
+import { useMultipleVisibleSection } from "../Shared/useMultipleVisibleSection";
 
 const Technology = () => {
+  const sectionCount = 2; // Adjust based on the number of sections
+  const { visibleSections, sectionRefs } =
+    useMultipleVisibleSection(sectionCount);
   return (
-    <section id="technology" className="relative">
+    <section
+      ref={(el) => {
+        sectionRefs.current[11] = el; // Assign to ref
+      }}
+      id="technology"
+      className={`relative duration-500 md:duration-1000 transition-transform   ease-in-out ${
+        visibleSections[11]
+          ? "opacity-100 translate-y-0"
+          : " opacity-0  translate-y-[40px]"
+      }`}
+    >
       <CustomEllipse className="absolute top-[50%] left-0  bg-gradient-primary md:block hidden" />
       <CustomEllipse className="absolute top-[50%] right-0  bg-gradient-primary md:block hidden" />
       <div className="main-container my-10">
