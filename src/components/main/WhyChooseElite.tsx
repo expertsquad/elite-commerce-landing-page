@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import videoHover from "@/assets/images/videosHover.png";
 import Image from "next/image";
 import chooseOne from "@/assets/images/chooseOne.png";
@@ -8,7 +7,6 @@ import exloresvg from "@/assets/images/exploresvg.svg";
 import star from "@/assets/images/startSvg.svg";
 import enjoyOne from "@/assets/images/enjoyThesvgOne.svg";
 import enjoyTwo from "@/assets/images/enjoyThesvgTwo.svg";
-import { useVisibleSection } from "../Shared/useVisibleSection";
 import Button from "../Shared/Button";
 import { IconArrowUpRight } from "@tabler/icons-react";
 import { useMultipleVisibleSection } from "../Shared/useMultipleVisibleSection";
@@ -18,7 +16,7 @@ const WhyChooseElite = () => {
   const { visibleSections, sectionRefs } =
     useMultipleVisibleSection(sectionCount);
   return (
-    <div className="main-container space-y-10">
+    <div className="main-container space-y-10" id="demo">
       {/* Header Section */}
       <div className="flex items-start md:items-center justify-between gap-6 flex-col md:flex-row">
         <div

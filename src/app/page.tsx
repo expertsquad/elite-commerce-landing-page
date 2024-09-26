@@ -27,7 +27,7 @@ export default function Home() {
       <SeoSection />
       <Testimonial />
       <MobileOptimized />
-      {/* <GetHelp /> */}
+      <GetHelp />
       <ExploreSoftwareCarousel />
       <Footer />
     </main>
