@@ -20,7 +20,7 @@ const WhyChooseElite = () => {
   const { visibleSections, sectionRefs } =
     useMultipleVisibleSection(sectionCount);
   return (
-    <div className="main-container space-y-10" id="demo">
+    <div className={`main-container space-y-10 `} id="demo">
       {/* Header Section */}
       <div className="flex items-start md:items-center justify-between gap-6 flex-col md:flex-row">
         <div

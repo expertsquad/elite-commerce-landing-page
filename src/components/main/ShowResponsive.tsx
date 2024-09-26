@@ -5,13 +5,17 @@ import sectionBg from "@/assets/images/sectionBgForResponsive.png";
 import HighlightText from "../Shared/HighlightText";
 import { showResponsiveData } from "@/constants/showResponsiveData";
 import { useVisibleSection } from "../Shared/useVisibleSection";
+import { useMultipleVisibleSection } from "../Shared/useMultipleVisibleSection";
 
 const ShowResponsive = () => {
   const [selected, setSelected] = React.useState(showResponsiveData[0]);
   const [previousImage, setPreviousImage] = React.useState(selected?.image);
   const [visibleImage, setVisibleImage] = React.useState(true);
   const [transitioning, setTransitioning] = React.useState(false);
-  const { visibleSection, sectionRefs } = useVisibleSection(100, 110);
+  // const { visibleSection, sectionRefs } = useVisibleSection(100, 110);
+  const sectionCount = 5; // Adjust based on the number of sections
+  const { visibleSections, sectionRefs } =
+    useMultipleVisibleSection(sectionCount);
 
   const handleMenuClick = (item: any) => {
     if (item?.title !== selected?.title && !transitioning) {
@@ -35,7 +39,17 @@ const ShowResponsive = () => {
   };
 
   return (
-    <section id="desktop-mobile-optimized" className="main-container my-10">
+    <section
+      ref={(el) => {
+        sectionRefs.current[10] = el; // Assign to ref
+      }}
+      id="desktop-mobile-optimized"
+      className={`main-container my-10 duration-500 md:duration-1000 transition-transform   ease-in-out ${
+        visibleSections[10]
+          ? "opacity-100 translate-y-0"
+          : " opacity-0  translate-y-[70px]"
+      } `}
+    >
       <div className="space-y-[clamp(20px,2.5vw,30px)]">
         <div className="h-[30px] w-[300px] relative rounded-l-full overflow-hidden mx-auto flex items-center justify-start pl-2">
           <span className="z-20 absolute text-sm text-white">
@@ -94,11 +108,8 @@ const ShowResponsive = () => {
 
         <div className="md:bg-transparent bg-[#0CE47F0D] md:border-none border border-black-10 rounded-[20px] md:rounded-none overflow-hidden">
           <div
-            ref={(el) => {
-              sectionRefs.current[41] = el;
-            }}
             className={`relative w-full h-96 transition-transform duration-700 ease-in-out ${
-              visibleSection === 41
+              visibleSections[10]
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-[300px]"
             }`}

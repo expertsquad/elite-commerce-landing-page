@@ -1,10 +1,24 @@
+"use client";
 import React from "react";
 import TestimonialCarousel from "../ui/TestimonialCarousel";
 import Image from "next/image";
 import testimonialBtnBG from "@/assets/images/testimonialBtnBg.svg";
+import { useMultipleVisibleSection } from "../Shared/useMultipleVisibleSection";
 const Testimonial = () => {
+  const sectionCount = 1; // Adjust based on the number of sections
+  const { visibleSections, sectionRefs } =
+    useMultipleVisibleSection(sectionCount);
   return (
-    <section className="relative ">
+    <section
+      ref={(el) => {
+        sectionRefs.current[14] = el; // Assign to ref
+      }}
+      className={`relative duration-500 md:duration-1000 transition-transform   ease-in-out ${
+        visibleSections[14]
+          ? "opacity-100 translate-y-0"
+          : " opacity-0  translate-y-[40px]"
+      }`}
+    >
       <div className="h-[150px] w-[150px] bg-primary blur-[230px] absolute top-0 left-0"></div>
       <div className="main-container">
         {/* section heading and description */}

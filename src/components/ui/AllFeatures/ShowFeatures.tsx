@@ -3,8 +3,12 @@ import React, { useState } from "react";
 import CustomerPanel from "./CustomerPanel";
 import AdminPanel from "./AdminPanel";
 import Button3d from "@/components/Shared/Button3d";
+import { useMultipleVisibleSection } from "@/components/Shared/useMultipleVisibleSection";
 
 const ShowFeatures = () => {
+  const sectionCount = 1; // Adjust based on the number of sections
+  const { visibleSections, sectionRefs } =
+    useMultipleVisibleSection(sectionCount);
   const [showFeature, setShowFeture] = useState("Customer Panel");
   console.log(showFeature);
   const customerPanelBtnClass =
@@ -12,7 +16,16 @@ const ShowFeatures = () => {
   const adminPanelBtnClass =
     showFeature === "Admin Panel" && "bg-gradient-primary text-white";
   return (
-    <div className="space-y-10">
+    <div
+      ref={(el) => {
+        sectionRefs.current[7] = el; // Assign to ref
+      }}
+      className={`space-y-10 transition-transform duration-500 md:duration-1000 ease-in-out ${
+        visibleSections[7]
+          ? "opacity-100 translate-y-2"
+          : " opacity-10  translate-y-[40px]"
+      }`}
+    >
       <div className="flex items-center justify-center gap-5">
         <div onClick={() => setShowFeture("Customer Panel")}>
           <Button3d

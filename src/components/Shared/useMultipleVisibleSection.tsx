@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 
 export function useMultipleVisibleSection(
   sectionCount: number,
-  buffer: number = 200
+  buffer: number = 190
 ) {
   const [visibleSections, setVisibleSections] = useState<boolean[]>(
     new Array(sectionCount).fill(false)
