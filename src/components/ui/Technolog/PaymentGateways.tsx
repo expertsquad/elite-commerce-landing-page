@@ -7,7 +7,7 @@ import React from "react";
 
 const PaymentGateways = () => {
   return (
-    <div className="space-y-5 px-5 py-10 shadow-md rounded-[10px] ">
+    <div className="space-y-5 px-5 py-10 shadow-custom-technology rounded-[10px] ">
       <div className="text-center font-semibold [font-size:_clamp(14px,2.5vw,18px)]">
         <HighlightText>Payment Gateways</HighlightText>
       </div>

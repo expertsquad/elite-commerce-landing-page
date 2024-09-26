@@ -6,11 +6,7 @@ import { useVisibleSection } from "@/components/Shared/useVisibleSection";
 import Image from "next/image";
 import React from "react";
 import purchase from "@/assets/images/purchase.svg";
-import {
-  IconArrowRight,
-  IconArrowUpRight,
-  IconShoppingBagPlus,
-} from "@tabler/icons-react";
+import { IconArrowUpRight, IconShoppingBagPlus } from "@tabler/icons-react";
 
 const CommercialPricingCard = () => {
   const { visibleSection, sectionRefs } = useVisibleSection(100, 110);
@@ -91,22 +87,19 @@ const CommercialPricingCard = () => {
           </div>
         </div>
       </div>
-      <button className=" mt-5 outline-none hover:bg-gradient-secondary hover:text-white  hover:scale-105 transition-all duration-700  flex items-center justify-center gap-1.5 bg-white rounded-full py-1.5 px-10 text-primary text-base">
-        <IconShoppingBag />
-        Purchase Now
-      </button>
 
-      {/* <Button
-        mainClass="font-medium text-white bg-white border  px-5 py-2"
+      <Button
+        mainClass="font-medium text-white bg-white border  px-5 py-2 mt-3
+        "
         stripHoverEffect={true}
         animatationOne={true}
         animatationOneClass="bg-gradient-primary"
         iconThreeTrue={true}
         iconThree={<IconShoppingBagPlus stroke={1} />}
         iconThreeClass={` transition-all duration-300 ease-in-out pl-1 text-black-50 group-hover:text-white`}
-        buttonText="Support"
+        buttonText="Purchase Now"
         buttonTextClass="text-black-50 text-[clamp(12px,3vw,16px)] group-hover:text-white"
-      /> */}
+      />
     </div>
   );
 };
