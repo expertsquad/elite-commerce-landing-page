@@ -20,7 +20,7 @@ const WhyChooseElite = () => {
   const { visibleSections, sectionRefs } =
     useMultipleVisibleSection(sectionCount);
   return (
-    <div className={`main-container space-y-10 `} id="demo">
+    <div className="main-container space-y-10" id="demo">
       {/* Header Section */}
       <div className="flex items-start md:items-center justify-between gap-6 flex-col md:flex-row">
         <div
@@ -163,10 +163,10 @@ const WhyChooseElite = () => {
               ? "opacity-100 translate-x-0 "
               : "opacity-0 translate-x-[100%]  md:translate-x-[170px] "
           }`}
-          style={{
-            transitionDelay: "0.3s",
-            transition: "border-color 0.3s ease-in-out",
-          }}
+          // style={{
+          //   transitionDelay: "0.3s",
+          //   transition: "border-color 0.3s ease-in-out",
+          // }}
         >
           <div className="space-x-2">
             <span className="inline-block w-2 h-2 rounded-full bg-[#D9D9D9] group-hover/secondbox:bg-[#D70101]"></span>
@@ -214,10 +214,10 @@ const WhyChooseElite = () => {
               : "opacity-0 scale-75 md:translate-x-[150px] lg:translate-x-[100%]" // Change to a fixed value if necessary
           }`}
           // style={{ transitionDelay: "0.3s" }}
-          style={{
-            transitionDelay: "0.3s",
-            transition: "border-color 0.3s ease-in-out",
-          }}
+          // style={{
+          //   transitionDelay: "0.3s",
+          //   transition: "border-color 0.3s ease-in-out",
+          // }}
         >
           <div className="space-x-2">
             <span
