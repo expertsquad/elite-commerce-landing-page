@@ -13,7 +13,7 @@ const BehindContainer = () => {
         visibleSection === 60 ? "md:rotate-0" : "  md:-rotate-90 "
       }`}
     >
-      <div className="bg-gradient-primary rounded-[20px] md:w-[430px] w-[300px] md:h-[670px] h-[452px] inset-0 group-hover/form:rotate-0  transition-all duration-300 -rotate-6 relative "></div>
+      <div className="bg-gradient-primary rounded-[20px] md:w-[430px] w-[300px] md:h-[670px] h-[452px] inset-0 group-hover/form:rotate-0  transition-all duration-300 md:-rotate-6 relative "></div>
     </div>
   );
 };
