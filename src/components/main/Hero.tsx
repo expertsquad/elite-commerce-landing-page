@@ -5,7 +5,14 @@ import Videos from "../hero/Videos";
 import CursorHover from "../Shared/CursorHover";
 import videoHover from "@/assets/images/videosHover.png";
 import Image from "next/image";
-import heroAnimated from "@/assets/images/heroAnimatsvg.svg";
+import HeroLeftAnimation from "../ui/HeroLeftAnimation";
+import HeroSmallAnimation from "../ui/HeroSmallAnimation";
+import heroCircle from "@/assets/images/heroCircle.svg";
+import heroCross from "@/assets/images/heroCross.svg";
+import heroDashedRound from "@/assets/images/heroDashedRound.svg";
+import heroHeart from "@/assets/images/heroHeart.svg";
+import heroImoji from "@/assets/images/heroImoji.svg";
+import heroGittu from "@/assets/images/heroGittu.svg";
 
 const Hero: React.FC = () => {
   const heroRef = useRef<HTMLDivElement | null>(null);
@@ -78,23 +85,48 @@ const Hero: React.FC = () => {
       ref={heroRef}
       className="hero-container relative min-h-screen bg-white-15"
     >
-      <div className="relative inset-0 bg-grid-pattern ">
+      <div className="relative inset-0  ">
         {/* <span className="bg-primary absolute left-0 w-[100px] h-[120px] filter blur-[120px] top-11"></span> */}
-        {/* <div className="absolute top-0 left-0">
-          <Image
-            src={heroAnimated}
-            alt="Home Page design"
-            className="w-[100px] h-[100px] animate-moveAndSpin"
-          />
-        </div> */}
+
+        {/* left animation  */}
+        <HeroLeftAnimation />
+        <HeroSmallAnimation
+          className="animate-bounce absolute top-60 left-[10%] "
+          src={heroCircle}
+        />
+        <HeroSmallAnimation
+          className="custom-animation-360deg-opacity-right absolute top-10 left-[80%] "
+          src={heroGittu}
+        />
+        <HeroSmallAnimation
+          className="custom-animation-360deg-opacity-right absolute top-48 left-[26%] "
+          src={heroImoji}
+        />
+        <HeroSmallAnimation
+          className="animate-bounce absolute top-28 left-[60%] "
+          src={heroHeart}
+        />
+        <HeroSmallAnimation
+          className="custom-animation-360deg-opacity-right absolute top-20 left-[90%] "
+          src={heroDashedRound}
+        />
+        <HeroSmallAnimation
+          className="custom-animation-360deg-opacity-right absolute top-36 left-[10%] "
+          src={heroCross}
+        />
+
+        <HeroSmallAnimation
+          className="custom-animation-360deg-opacity-right absolute top-48 left-[90%] "
+          src={heroHeart}
+        />
         <div className="space-y-6 md:space-y-14 pt-11 ">
           <div className="flex items-center justify-center w-full h-full flex-col gap-8">
-            <h1 className="text-center mx-auto text-[clamp(18px,3vw,50px)] font-semibold text-black-80 -z-1">
+            <h1 className="text-center mx-auto text-[clamp(22px,3vw,50px)] font-semibold text-black-80 z-20 ">
               Innovative Solutions For Your <br /> E-Commerce{" "}
               <span className="text-primary">Success.</span>
             </h1>
 
-            <p className="[letter-spacing:0.4px] text-center text-black-70 text-[clamp(12px,3vw,17px)]">
+            <p className="[letter-spacing:0.4px] text-center text-black-70 text-[clamp(12px,3vw,17px)] z-20 w-8/12">
               The Best <i className="text-secondary">E-Commerce</i> Marketplace
               Solution. You Can Operate And{" "}
               <i className="text-primary">Control</i> Your <br /> Businesses In
@@ -102,7 +134,7 @@ const Hero: React.FC = () => {
               <i className="text-secondary font-bold">Elite Commerce.</i>
             </p>
             <Button3d
-              button3dMainClass="perspective-180"
+              button3dMainClass="perspective-180 z-20"
               buttonText="Buy Now"
               showHoverText={true}
               background3dclass={`rotate-y-20 bg-white border border-[#ff1810] group-hover:rotate-y-23 rounded-[5px]`}

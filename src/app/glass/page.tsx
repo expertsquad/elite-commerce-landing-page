@@ -11,7 +11,7 @@ const page = () => {
       <div className="relative ">
         <div className="w-fit absolute">
           <Image
-            alt="akdfjaskdf"
+            alt="Hero amination"
             src={earthLineLeft}
             height={190}
             width={190}
@@ -20,7 +20,7 @@ const page = () => {
         </div>
         <div className="w-fit absolute top-0 left-12 ">
           <Image
-            alt="akdfjaskdf"
+            alt="Hero amination"
             src={eartLeft}
             height={80}
             width={80}
@@ -33,7 +33,7 @@ const page = () => {
       <div className="relative ">
         <div className="w-fit absolute top-0 right-0">
           <Image
-            alt="akdfjaskdf"
+            alt="Hero amination"
             src={earthLineRight}
             height={190}
             width={190}
@@ -42,7 +42,7 @@ const page = () => {
         </div>
         <div className="w-fit absolute top-0 right-12 ">
           <Image
-            alt="akdfjaskdf"
+            alt="Hero amination"
             src={earthRight}
             height={80}
             width={80}

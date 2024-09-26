@@ -15,7 +15,7 @@ import WhyChooseElite from "@/components/main/WhyChooseElite";
 
 export default function Home() {
   return (
-    <main className="space-y-32">
+    <main className="space-y-32 overflow-hidden">
       <Hero />
       <WhyChooseElite />
       <AllFeature />
@@ -27,7 +27,7 @@ export default function Home() {
       <SeoSection />
       <Testimonial />
       <MobileOptimized />
-      <GetHelp />
+      {/* <GetHelp /> */}
       <ExploreSoftwareCarousel />
       <Footer />
     </main>
