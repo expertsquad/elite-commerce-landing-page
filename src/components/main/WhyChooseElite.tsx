@@ -12,6 +12,10 @@ import { useVisibleSection } from "../Shared/useVisibleSection";
 import Button from "../Shared/Button";
 import { IconArrowUpRight } from "@tabler/icons-react";
 import { useMultipleVisibleSection } from "../Shared/useMultipleVisibleSection";
+import SpinCircle from "../Shared/SpinCircle";
+import ElitMiniIcon from "@/assets/elitminiIcon.svg";
+import exploreBg from "@/assets/images/exploreBg.svg";
+
 const WhyChooseElite = () => {
   // const { visibleSection, sectionRefs } = useVisibleSection(100, 110);
   const sectionCount = 1; // Adjust based on the number of sections
@@ -39,7 +43,7 @@ const WhyChooseElite = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-            <span className="text-secondary italic text-[clamp(20px,3vw,32px)]">
+            <span className="text-secondary italic text-[clamp(20px,3vw,27px)]">
               Why Choose Elite Commerce?
             </span>
           </div>
@@ -59,7 +63,7 @@ const WhyChooseElite = () => {
               transition-all duration-500 md:duration-700 ease-in-out
               ${
                 visibleSections[4]
-                  ? "translate-x-0 translate-y-0 rotate-[75deg] opacity-100 md:right-40 md:top-14" // Final position
+                  ? "translate-x-0 translate-y-0 rotate-[76deg] opacity-100 right-[142px] top-[50px] sm:right-[154px] sm:top-[55px] md:right-40 md:top-14" // Final position
                   : "-translate-y-20 translate-x-10 rotate-0 opacity-0 md:-right-5 md:-top-5" // Starting position with rotation
               }`}
           >
@@ -99,7 +103,7 @@ const WhyChooseElite = () => {
           ref={(el) => {
             sectionRefs.current[0] = el; // Assign to ref
           }}
-          className={`col-span-2 flex items-center justify-between flex-row md:flex-col border border-black-10 rounded-[10px] py-5 md:py-2 px-5 overflow-hidden transition-transform duration-500 md:duration-700 ease-in-out
+          className={`relative col-span-2 flex items-center justify-between flex-row md:flex-col border border-black-10 rounded-[10px] py-5 md:py-5 px-5 overflow-hidden transition-transform duration-500 md:duration-700 ease-in-out
       ${
         visibleSections[0]
           ? "opacity-100 translate-x-0"
@@ -107,9 +111,9 @@ const WhyChooseElite = () => {
       }`}
           style={{ transitionDelay: "0.1s" }}
         >
-          <div className="bg-[#0CE47F] absolute -right-1 w-[100px] h-[120px] filter blur-[120px] "></div>
-          <div className="bg-[#FF1810] absolute -left-1 -bottom-1 w-[100px] h-[120px] filter blur-[120px] "></div>
-          <div className="absolute w-[22px] h-[23px] md:w-[26px] md:h-[29px] left-20 top-4 md:left-28 md:top-1.5">
+          <div className="bg-[#0CE47F] absolute -right-1 w-[100px] h-[120px] filter blur-[140px] z-10 shadow-xl "></div>
+          <div className="bg-[#FF1810] absolute -left-1 -bottom-1 w-[100px] h-[120px] filter blur-[140px] "></div>
+          <div className="absolute w-[22px] h-[23px] md:w-[26px] md:h-[29px] left-24 top-7 md:left-32 md:top-4">
             <Image
               src={exloresvg}
               alt="Hover Video Icon"
@@ -117,21 +121,36 @@ const WhyChooseElite = () => {
               className="object-contain w-full h-full top-0 left-0"
             />
           </div>
+
+          <div className="absolute -bottom-1 -right-1 -z-1">
+            <Image
+              src={exploreBg}
+              alt="Hover Video Icon"
+              className="w-full h-[250px] object-cover"
+            />
+          </div>
           <div className="text-start w-full space-y-3 md:space-y-3.5">
-            <h1 className="font-bold text-[clamp(16px,3vw,26px)] text-secondary pb-2">
+            <h1 className="font-bold text-[clamp(20px,3vw,30px)] text-gradient-secondary pb-2 z-20">
               Explore
             </h1>
 
-            <span className="text-[clamp(14px,3vw,17px)] text-black-70">
+            <span className="text-[clamp(15px,3vw,18px)] text-black-70 z-20">
               Our High-Quality <br /> Demos
             </span>
           </div>
-          <div className="relative w-20 h-20">
-            <Image
-              src={videoHover}
-              alt="Hover Video Icon"
-              fill
-              className="object-contain w-full h-full top-0 left-0"
+          <div className="md:pb-4">
+            <SpinCircle
+              spinText="  & ADMIN PANEL. CUSTOMER PANEL"
+              className="bg-gradient-secondary text-white "
+              icon={
+                <div className="">
+                  <Image
+                    src={ElitMiniIcon}
+                    alt="Hover Video Icon"
+                    className="w-[18px] h-[21pxl] object-cover "
+                  />
+                </div>
+              }
             />
           </div>
         </div>
@@ -141,47 +160,42 @@ const WhyChooseElite = () => {
           ref={(el) => {
             sectionRefs.current[1] = el; // Assign to ref
           }}
-          className={`group/secondbox flex justify-between flex-col gap-2.5 md:gap-0.5 lg:gap-0.5 col-span-3 border border-black-10 rounded-[10px] overflow-hidden py-2.5 px-[15px] transition-transform duration-500 md:duration-700 ease-in-out ${
+          className={`group/secondbox flex justify-between flex-col gap-2.5 md:gap-0.5 lg:gap-0.5 col-span-3 border border-black-10 hover:border-primary delay-150 rounded-[10px] overflow-hidden py-2.5 px-[15px] transition-transform duration-500 md:duration-700 ease-in-out ${
             visibleSections[1]
               ? "opacity-100 translate-x-0 "
-              : "opacity-0 translate-x-[100%]  md:translate-x-[170px] " // Change to a fixed value if necessary
+              : "opacity-0 translate-x-[100%]  md:translate-x-[170px] "
           }`}
-          style={{ transitionDelay: "0.3s" }}
+          style={{
+            transitionDelay: "0.3s",
+            transition: "border-color 0.3s ease-in-out",
+          }}
         >
           <div className="space-x-2">
-            <span
-              className="inline-block w-2 h-2 rounded-full  bg-[#D9D9D9] group-hover/secondbox:bg-[#D70101]"
-              // style={{ animationDelay: "0s" }}
-            ></span>
-            <span
-              className="inline-block w-2 h-2 rounded-full bg-[#D9D9D9] group-hover/secondbox:bg-[#FCC201]"
-              // style={{ animationDelay: "0.5s" }}
-            ></span>
-            <span
-              className="inline-block w-2 h-2 rounded-full bg-[#D9D9D9] group-hover/secondbox:bg-[#0DE37F]"
-              // style={{ animationDelay: "1s" }}
-            ></span>
+            <span className="inline-block w-2 h-2 rounded-full bg-[#D9D9D9] group-hover/secondbox:bg-[#D70101]"></span>
+            <span className="inline-block w-2 h-2 rounded-full bg-[#D9D9D9] group-hover/secondbox:bg-[#FCC201]"></span>
+            <span className="inline-block w-2 h-2 rounded-full bg-[#D9D9D9] group-hover/secondbox:bg-[#0DE37F]"></span>
           </div>
-          <div className="overflow-hidden relative">
-            <span className="group-hover/secondbox:absolute group-hover/secondbox:bottom-0 group-hover/secondbox:left-0 w-full h-[150px] group-hover/secondbox:bg-white/10 backdrop-blur-[2px] group-hover/secondbox:shadow-[2px] le"></span>
 
+          <div className="overflow-hidden relative">
+            <span className="group-hover/secondbox:absolute group-hover/secondbox:bottom-0 group-hover/secondbox:left-0 w-full h-[150px] group-hover/secondbox:bg-white/10 backdrop-blur-[2px]"></span>
             <button className="absolute text-primary bg-white border border-primary rounded-full text-[clamp(15px,3vw,12px)] px-2.5 py-1.5 hidden group-hover/secondbox:flex group-hover/secondbox:items-center group-hover/secondbox:justify-center group-hover/secondbox:gap-0.5 group-hover/secondbox:left-[40%] group-hover/secondbox:bottom-[40px] transition-all duration-300 ease-in-out hover:bg-gradient-secondary hover:text-white hover:border-none ">
               <IconArrowUpRight stroke={1} /> Demo
             </button>
-            <div className="">
+            <div>
               <Image
                 alt="Hover Video Icon"
                 src={chooseOne}
-                className=" w-full h-[295px] object-cover"
+                className="w-full h-[295px] object-cover"
               />
             </div>
           </div>
+
           <div className="flex items-center justify-between">
             <h5 className="text-[clamp(16px,3vw,12px)] font-semibold text-black-70">
               Elite Commerce
             </h5>
             <Button
-              mainClass="font-medium  text-white bg-white border border-black-15 rounded-full text-[clamp(15px,3vw,12px)] px-2.5 py-1.5"
+              mainClass="font-medium text-white bg-white border border-black-15 rounded-full text-[clamp(15px,3vw,12px)] px-2.5 py-1.5"
               stripHoverEffect={true}
               animatationFour={true}
               animatationFourClass="bg-gradient-secondary group-hover/secondbox:bg-gradient-secondary"
@@ -196,12 +210,16 @@ const WhyChooseElite = () => {
           ref={(el) => {
             sectionRefs.current[2] = el; // Assign to ref
           }}
-          className={`group/thardbox flex justify-between flex-col gap-2 md:gap-0.5 col-span-3 border border-black-10 rounded-[10px] overflow-hidden py-2.5 px-[15px] transition-transform duration-500 md:duration-700 ease-in-out ${
+          className={`group/thardbox flex justify-between flex-col gap-2 md:gap-0.5 col-span-3 border border-black-10 rounded-[10px] hover:border hover:border-secondary delay-150 overflow-hidden py-2.5 px-[15px] transition-transform duration-500 md:duration-700 ease-in-out ${
             visibleSections[2]
               ? "opacity-100 m:translate-x-0 scale-100"
               : "opacity-0 scale-75 md:translate-x-[150px] lg:translate-x-[100%]" // Change to a fixed value if necessary
           }`}
           // style={{ transitionDelay: "0.3s" }}
+          style={{
+            transitionDelay: "0.3s",
+            transition: "border-color 0.3s ease-in-out",
+          }}
         >
           <div className="space-x-2">
             <span
