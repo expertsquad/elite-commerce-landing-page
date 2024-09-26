@@ -1,10 +1,5 @@
 "use client";
 import React from "react";
-import ring from "@/assets/images/ring.png";
-import butterfly from "@/assets/images/butterfly.png";
-import Image from "next/image";
-import LoveIcon from "@/assets/icons/LoveIcon";
-import SatisfiedEmoji from "@/assets/icons/SatisfiedEmoji";
 import { useVisibleSection } from "@/components/Shared/useVisibleSection";
 
 const BehindContainer = () => {

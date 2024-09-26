@@ -2,7 +2,6 @@
 import CursorHover from "@/components/Shared/CursorHover";
 import HighlightText from "@/components/Shared/HighlightText";
 import { paymentGatewayData } from "@/constants/paymentGatewayData";
-import tooltip from "@/assets/images/tooltip.png";
 import Image from "next/image";
 import React from "react";
 
@@ -18,13 +17,13 @@ const PaymentGateways = () => {
             hoverScale={6} // Adjust scale as per your design
             // cursorSize="w-20 h-20 -mt-10 -ml-10 " // Example size for the custom cursor
             customClass={` ${
-              gate?.status === "inactive" && "px-5 w-[100px] h-[50px]"
+              gate?.status === "inactive" && "px-5 w-[100px] h-[30px] ml-3 mt-5"
             }  py-2 pointer-events-none !rounded-[5px] ${
               gate?.status === "inactive" && "bg-gradient-primary text-white"
             }`} // Custom style for the cursor
             customCursorContent={
               gate?.status === "inactive" && (
-                <div className="text-sm flex items-center justify-center mt-1.5 whitespace-nowrap">
+                <div className="text-sm flex items-center justify-center -mt-0.5 whitespace-nowrap">
                   Coming Soon..
                 </div>
               )
