@@ -96,14 +96,8 @@ const GetHelpForm = () => {
           <Button
             mainClass="font-medium text-white border border-black-10 w-full py-2"
             stripHoverEffect={true}
-            // animatationOne={true}
-            // animatationFive
-            animatationSix
-            animatationSixClass="bg-gradient-primary"
-            // animatationFiveClass="bg-gradient-secondary"
-            // animatationOneClass="bg-gradient-secondary"
-            // iconThreeTrue={true}
-            // iconThree={<IconArrowUpRight stroke={1} />}
+            animatationOne
+            animatationOneClass="bg-gradient-primary"
             iconThreeClass={`group-hover:rotate-45 transition-all duration-300 ease-in-out pl-1 text-black-50 group-hover:text-white`}
             buttonText="Send Message"
             buttonTextClass="text-black-50 text-[clamp(12px,3vw,16px)] group-hover:text-white"
