@@ -91,22 +91,18 @@ const CommercialPricingCard = () => {
           </div>
         </div>
       </div>
-      <button className=" mt-5 outline-none hover:bg-gradient-secondary hover:text-white  hover:scale-105 transition-all duration-700  flex items-center justify-center gap-1.5 bg-white rounded-full py-1.5 px-10 text-primary text-base">
-        <IconShoppingBag />
-        Purchase Now
+      <button className="relative inline-flex items-center justify-center px-10 py-2 overflow-hidden    bg-white rounded-full group">
+        <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-gradient-primary rounded-full group-hover:w-56 group-hover:h-56"></span>
+        <span className="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-white"></span>
+        <span className="relative flex items-center gap-1.5 text-gradient-primary group-hover:text-white text-base">
+          <IconShoppingBagPlus
+            size={18}
+            stroke={1.5}
+            className="text-primary group-hover:text-white"
+          />
+          Purchase Now
+        </span>
       </button>
-
-      {/* <Button
-        mainClass="font-medium text-white bg-white border  px-5 py-2"
-        stripHoverEffect={true}
-        animatationOne={true}
-        animatationOneClass="bg-gradient-primary"
-        iconThreeTrue={true}
-        iconThree={<IconShoppingBagPlus stroke={1} />}
-        iconThreeClass={` transition-all duration-300 ease-in-out pl-1 text-black-50 group-hover:text-white`}
-        buttonText="Support"
-        buttonTextClass="text-black-50 text-[clamp(12px,3vw,16px)] group-hover:text-white"
-      /> */}
     </div>
   );
 };
