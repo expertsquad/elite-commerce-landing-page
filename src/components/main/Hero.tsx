@@ -11,7 +11,7 @@ import heroCircle from "@/assets/images/heroCircle.svg";
 import heroCross from "@/assets/images/heroCross.svg";
 import heroDashedRound from "@/assets/images/heroDashedRound.svg";
 import heroHeart from "@/assets/images/heroHeart.svg";
-import heroImoji from "@/assets/images/heroImoji.svg";
+import heroImoji from "@/assets/images/heroline.svg";
 import heroGittu from "@/assets/images/heroGittu.svg";
 
 const Hero: React.FC = () => {
@@ -99,7 +99,7 @@ const Hero: React.FC = () => {
           src={heroGittu}
         />
         <HeroSmallAnimation
-          className="custom-animation-360deg-opacity-right absolute top-48 left-[26%] "
+          className="custom-animation-rotate absolute top-48 left-[26%] "
           src={heroImoji}
         />
         <HeroSmallAnimation
