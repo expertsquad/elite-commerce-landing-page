@@ -5,7 +5,7 @@ interface CursorHoverProps {
   cursorSize?: string; // Tailwind width and height classes
   customClass?: string; // Additional CSS classes
   customCursorContent?: React.ReactNode; // Optional custom content for the cursor
-  children: ReactNode; // Elements inside the CursorHover wrapper
+  children?: ReactNode; // Elements inside the CursorHover wrapper
 }
 
 const CursorHover: React.FC<CursorHoverProps> = ({

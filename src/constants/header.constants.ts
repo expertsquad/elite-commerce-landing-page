@@ -7,26 +7,26 @@ export const header: IHeader[] = [
   {
     id: 1,
     title: "Home",
-    path: "home",
+    path: "",
   },
   {
     id: 2,
     title: "Demo",
-    path: "demo",
+    path: "#demo",
   },
   {
     id: 3,
     title: "Features",
-    path: "features",
+    path: "#features",
   },
   {
     id: 4,
     title: "Pricing",
-    path: "pricing",
+    path: "#pricing",
   },
   {
     id: 5,
     title: "Get Help",
-    path: "getHelp",
+    path: "#get-help",
   },
 ];

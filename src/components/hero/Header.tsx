@@ -6,11 +6,8 @@ import { header } from "@/constants/header.constants";
 import CustomLink from "./CustomLink";
 import Button from "../Shared/Button";
 import purchase from "@/assets/images/purchase.svg";
-import {
-  IconArrowRight,
-  IconArrowUpRight,
-  IconMenu2,
-} from "@tabler/icons-react";
+import { IconArrowUpRight, IconMenu2 } from "@tabler/icons-react";
+import Link from "next/link";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -30,14 +27,14 @@ const Header = () => {
             <IconMenu2 size={20} />
           </button>
 
-          <div className="relative w-24 h-7 md:h-11 md:w-40">
+          <Link href="/" className="relative w-24 h-7 md:h-11 md:w-40">
             <Image
               src={mainLogo}
               alt="Home Page design"
               fill
               className="object-contain w-full h-full top-0 left-0"
             />
-          </div>
+          </Link>
         </div>
 
         <div

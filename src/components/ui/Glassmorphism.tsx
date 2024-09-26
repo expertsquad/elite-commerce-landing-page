@@ -3,7 +3,6 @@ import {
   IconCheck,
   IconShoppingBag,
 } from "@tabler/icons-react";
-import React from "react";
 import Button from "../Shared/Button";
 import SpinCircle from "../Shared/SpinCircle";
 import { commitment, commitmentsm } from "@/ulits/commitment";

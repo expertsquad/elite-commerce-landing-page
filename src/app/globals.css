@@ -178,10 +178,10 @@
 .neon-drop {
   position: absolute;
   width: 1.5px;
-  height: 50px; /* Match the grid size for better alignment */
+  height: 50px;
   background: linear-gradient(to bottom, transparent, #ff9153, transparent);
   animation: fall linear infinite;
-  top: -100px; /* Start above the visible area */
+  top: -100px;
 }
 
 .neon-drop-horizontal {
