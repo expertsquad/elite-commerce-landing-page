@@ -4,7 +4,6 @@ import "./globals.css";
 import { Nunito } from "next/font/google";
 import RootLayout from "@/components/RootLayout";
 import ScrollToTopButton from "@/components/Shared/ScrollToTop";
-import BuyNow from "@/components/Shared/BuyNow";
 
 const nunito = Nunito({
   subsets: ["latin"],

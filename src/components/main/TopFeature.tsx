@@ -3,7 +3,6 @@ import Image from "next/image";
 import React from "react";
 import sectionBg from "@/assets/images/sectionBg.png";
 import topFeaturesGif from "@/assets/images/featuresTop.svg";
-import HighlightText from "../Shared/HighlightText";
 import { topFeatureCardData } from "@/constants/topFeaturesData";
 import TopFeatureCard from "../Shared/TopFeatureCard";
 import { useVisibleSection } from "../Shared/useVisibleSection";

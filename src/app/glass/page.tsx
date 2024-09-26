@@ -1,4 +1,3 @@
-import Glassmorphism from "@/components/ui/Glassmorphism";
 import Image from "next/image";
 import earthLineLeft from "@/assets/images/earthLineLeft.svg";
 import eartLeft from "@/assets/images/earthLeft.svg";

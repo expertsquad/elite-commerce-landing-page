@@ -3,7 +3,6 @@ import ExploreSoftwareCarousel from "@/components/main/ExploreSoftwareCarousel";
 import Footer from "@/components/main/Footer";
 import GetHelp from "@/components/main/GetHelp";
 import Hero from "@/components/main/Hero";
-import InfinityCarouse from "@/components/main/InfinityCarouse";
 import MobileOptimized from "@/components/main/MobileOptimized";
 import PricingTable from "@/components/main/PricingTable";
 import SeoSection from "@/components/main/SeoSection";
@@ -28,7 +27,7 @@ export default function Home() {
       <SeoSection />
       <Testimonial />
       <MobileOptimized />
-      {/* <GetHelp /> */}
+      <GetHelp />
       <ExploreSoftwareCarousel />
       <Footer />
     </main>
