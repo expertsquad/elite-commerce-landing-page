@@ -1,7 +1,9 @@
 "use client";
 import IconShoppingBag from "@/assets/icons/IconShoppingBag";
 import WhiteCheckMarkIcon from "@/assets/icons/WhiteCheckMarkIcon";
+import Button from "@/components/Shared/Button";
 import { useVisibleSection } from "@/components/Shared/useVisibleSection";
+import { IconArrowUpRight } from "@tabler/icons-react";
 import React from "react";
 
 const PersonalPricingCard = () => {
@@ -69,10 +71,20 @@ const PersonalPricingCard = () => {
           </div>
         </div>
       </div>
-      <button className=" outline-none hover:scale-105 transition-all duration-300 hover:bg-gradient-primary-reverse flex items-center justify-center gap-1.5 bg-gradient-primary rounded-full py-1.5 px-10 text-white text-base">
+      {/* <button className=" outline-none hover:scale-105 transition-all duration-300 hover:bg-gradient-primary-reverse flex items-center justify-center gap-1.5 bg-gradient-primary rounded-full py-1.5 px-10 text-white text-base">
         <IconShoppingBag />
         Purchase Now
-      </button>
+      </button> */}
+      <Button
+        mainClass="font-medium text-white border border-black-10 px-[10px] py-[5px] md:px-5 md:py-2 bg-gradient-primary"
+        stripHoverEffect={true}
+        animatationThree={true}
+        animatationThreeClss="bg-gradient-secondary"
+        iconFourTrue={true}
+        iconFour={<IconShoppingBag />}
+        buttonText="Purchase"
+        buttonTextClass="text-white text-[clamp(12px,3vw,16px)] group-hover:text-white"
+      />
     </div>
   );
 };

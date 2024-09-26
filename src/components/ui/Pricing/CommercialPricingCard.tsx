@@ -85,7 +85,7 @@ const CommercialPricingCard = () => {
         Purchase Now
       </button> */}
       <Button
-        mainClass="font-medium text-white border border-black-10 px-[10px] py-[5px] md:px-5 md:py-2 bg-gradient-primary"
+        mainClass="font-medium text-white border border-black-10 px-[10px] py-[5px] md:px-5  bg-gradient-primary mt-5"
         stripHoverEffect={true}
         animatationThree={true}
         animatationThreeClss="bg-gradient-secondary"
