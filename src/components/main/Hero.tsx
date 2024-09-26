@@ -5,9 +5,8 @@ import Videos from "../hero/Videos";
 import CursorHover from "../Shared/CursorHover";
 import videoHover from "@/assets/images/videosHover.png";
 import Image from "next/image";
-import HeroLeftAnimation from "../ui/HeroLeftAnimation";
 import HeroSmallAnimation from "../ui/HeroSmallAnimation";
-import heroCircle from "@/assets/images/heroCircle.svg";
+import heroPizza from "@/assets/images/heroPizzaSlice.svg";
 import heroCross from "@/assets/images/heroCross.svg";
 import heroDashedRound from "@/assets/images/heroDashedRound.svg";
 import heroHeart from "@/assets/images/heroHeart.svg";
@@ -85,14 +84,15 @@ const Hero: React.FC = () => {
       ref={heroRef}
       className="hero-container relative min-h-screen bg-white-15"
     >
-      <div className="relative inset-0  ">
-        {/* <span className="bg-primary absolute left-0 w-[100px] h-[120px] filter blur-[120px] top-11"></span> */}
+      <div className="relative inset-0">
+        <span className="bg-primary absolute left-0 w-[100px] h-[120px] filter blur-[124px] top-48"></span>
+        <span className="bg-primary absolute right-0 w-[100px] h-[120px] filter blur-[140px] top-[70%]"></span>
 
         {/* left animation  */}
-        <HeroLeftAnimation />
+        {/* <HeroLeftAnimation /> */}
         <HeroSmallAnimation
-          className="animate-bounce absolute top-60 left-[10%] "
-          src={heroCircle}
+          className="custom-animation-rotate absolute top-[40%] left-[16%] delay-150 "
+          src={heroPizza}
         />
         <HeroSmallAnimation
           className="custom-animation-360deg-opacity-right absolute top-10 left-[80%] "
@@ -116,7 +116,7 @@ const Hero: React.FC = () => {
         />
 
         <HeroSmallAnimation
-          className="custom-animation-360deg-opacity-right absolute top-48 left-[90%] "
+          className="custom-animation-360deg-opacity-right absolute top-[45%] left-[80%] "
           src={heroHeart}
         />
         <div className="space-y-6 md:space-y-14 pt-11 ">
