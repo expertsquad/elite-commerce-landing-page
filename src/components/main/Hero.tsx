@@ -86,12 +86,13 @@ const Hero: React.FC = () => {
       className="hero-container relative min-h-screen bg-white-15"
     >
       <div className="relative inset-0  ">
-        {/* <span className="bg-primary absolute left-0 w-[100px] h-[120px] filter blur-[120px] top-11"></span> */}
+        <span className="bg-primary absolute left-0 w-[100px] h-[120px] filter blur-[124px] top-48"></span>
+        <span className="bg-primary absolute right-0 w-[100px] h-[120px] filter blur-[140px] top-[70%]"></span>
 
         {/* left animation  */}
-        <HeroLeftAnimation />
+        {/* <HeroLeftAnimation /> */}
         <HeroSmallAnimation
-          className="animate-bounce absolute top-60 left-[10%] "
+          className="animate-bounce absolute top-80 left-[16%] "
           src={heroCircle}
         />
         <HeroSmallAnimation
