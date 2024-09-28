@@ -125,7 +125,7 @@ const Hero: React.FC = () => {
         />
         <div className="space-y-6 md:space-y-14 pt-11 ">
           <div className="flex items-center justify-center w-full h-[max(350px,calc(100vh-430px))] flex-col gap-8">
-            <h1 className="text-center mx-auto text-[clamp(22px,3vw,50px)] font-semibold text-black-80 z-20 ">
+            <h1 className="uppercase font-[1000] text-center mx-auto text-[clamp(22px,3vw,50px)] text-black-80 z-20 ">
               Innovative Solutions For Your <br /> E-Commerce{" "}
               <span className="text-primary">Success.</span>
             </h1>

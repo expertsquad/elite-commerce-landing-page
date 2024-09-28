@@ -83,16 +83,24 @@ const PersonalPricingCard = () => {
         </div>
       </div>
 
-      <button className="relative px-5 py-[10px] overflow-hidden font-medium  bg-white border border-black-10 rounded-full shadow-inner group w-full">
-        <span className="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-secondary-light group-hover:w-full ease"></span>
-        <span className="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-secondary-light group-hover:w-full ease"></span>
-        <span className="absolute top-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gradient-secondary group-hover:h-full ease"></span>
-        <span className="absolute bottom-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gradient-secondary group-hover:h-full ease"></span>
-        <span className="absolute inset-0 w-full h-full duration-300 delay-300 bg-gradient-secondary opacity-0 group-hover:opacity-100"></span>
-        <span className="flex items-center justify-center gap-1.5 relative transition-colors duration-300 delay-200 group-hover:text-white ease text-black-80 font-medium [font-size:_clamp(12px,2.5vw,14px)]">
-          <IconShoppingBagPlus stroke={1.5} size={18} /> Purchase Now
-        </span>
-      </button>
+      <Button
+        mainClass="font-medium mt-5 text-white px-[10px] py-[5px] md:px-5 md:py-2 bg-white"
+        stripHoverEffect={true}
+        animatationOne
+        animatationOneClass="bg-gradient-secondary"
+        iconFourTrue={true}
+        iconFour={
+          <div className="mr-1.5">
+            <IconShoppingBagPlus
+              stroke={1.5}
+              size={18}
+              className="text-primary group-hover:text-white"
+            />
+          </div>
+        }
+        buttonText="Purchase Now"
+        buttonTextClass="text-primary text-[clamp(12px,2.5vw,16px)] group-hover:text-white"
+      />
     </div>
   );
 };
