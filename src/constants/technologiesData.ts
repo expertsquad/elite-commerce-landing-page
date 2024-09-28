@@ -43,10 +43,4 @@ export const technologiesData = [
     description: "Javascript is widely used for server-side web development.",
     image: javascript,
   },
-  // {
-  //   _id: "6507f80d9e823e2f63f9e01c",
-  //   title: "TypeScript",
-  //   description: "TypeScript is a superset of JavaScript.",
-  //   image: javascriptPhoto,
-  // }
 ];
