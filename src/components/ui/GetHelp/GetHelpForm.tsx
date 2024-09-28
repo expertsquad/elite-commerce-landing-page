@@ -23,7 +23,7 @@ const GetHelpForm = () => {
         visibleSection === 53 ? " opacity-100 scale-100" : " opacity-0 scale-0"
       }`}
     >
-      <div className="bg-white md:w-[430px] w-[300px] md:h-[670px] h-min rounded-2xl p-[clamp(10px,2.5vw,20px)]   shadow-lg space-y-[clamp(15px,2.5vw,28px)]  ">
+      <div className="bg-white shadow-get-help-form-shadow md:w-[430px] w-[300px] md:h-[670px] h-min rounded-2xl p-[clamp(15px,2.5vw,25px)]   shadow-lg space-y-[clamp(15px,2.5vw,28px)]  ">
         <div className="absolute lg:-top-5 md:-top-2 md:-left-20 lg:-left-20 -left-10 -top-0 -z-1 animate-[spin: 10s_linear_infinite]">
           <Image
             src={ring}
@@ -63,51 +63,48 @@ const GetHelpForm = () => {
             <span className="font-bold [font-size:_clamp(20px,2.5vw,26px)] ">
               <HighlightText>Get Help?</HighlightText>
             </span>{" "}
-            Please Write Your Subject, Massage & Notify Your Email.
+            Please Write Your Subject, Message & Notify Your Email.
           </p>
         </div>
-        <form className="space-y-4">
+        <form className="md:space-y-[clamp(10px,2.5vh,16px)] space-y-[clamp(12px,2.5vw,16px)]">
           <CustomGlobalInput
             type="text"
             label="Full Name*"
-            placeholder="Enter Your Name"
+            placeholder="Type Name"
             name="fullName"
           />
           <CustomGlobalInput
             type="email"
             label="Email*"
-            placeholder="Enter Your Email"
+            placeholder="Type Your Email"
             name="email"
           />
           <CustomGlobalInput
             type="text"
             label="Subject*"
-            placeholder="write your subject"
+            placeholder="Type Here"
             name="subject"
           />
           <CustomGlobalInput
             type="textarea"
             label="Your message*"
-            placeholder="Type your message here"
+            placeholder="Type Here"
             name="subject"
             className="max-h-20"
           />
 
-          <Button
-            mainClass="font-medium text-white border border-black-10 w-full py-2"
-            stripHoverEffect={true}
-            // animatationOne={true}
-            // animatationFive
-            animatationSix
-            animatationSixClass="bg-gradient-primary"
-            // animatationFiveClass="bg-gradient-secondary"
-            // animatationOneClass="bg-gradient-secondary"
-            // iconThreeTrue={true}
-            // iconThree={<IconArrowUpRight stroke={1} />}
-            iconThreeClass={`group-hover:rotate-45 transition-all duration-300 ease-in-out pl-1 text-black-50 group-hover:text-white`}
-            buttonText="Send Message"
-            buttonTextClass="text-black-50 text-[clamp(12px,3vw,16px)] group-hover:text-white"
-          />
+          <div className="py-[clamp(15px,2.5vh,20px)] w-full">
+            <button className="relative px-5 py-[10px] overflow-hidden font-medium  bg-white border border-black-10 rounded-full shadow-inner group w-full">
+              <span className="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-primary-light group-hover:w-full ease"></span>
+              <span className="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-primary-light group-hover:w-full ease"></span>
+              <span className="absolute top-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gradient-primary group-hover:h-full ease"></span>
+              <span className="absolute bottom-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gradient-primary group-hover:h-full ease"></span>
+              <span className="absolute inset-0 w-full h-full duration-300 delay-300 bg-gradient-primary opacity-0 group-hover:opacity-100"></span>
+              <span className="relative transition-colors duration-300 delay-200 group-hover:text-white ease text-black-80 [font-size:_clamp(12px,2.5vw,14px)]">
+                Send Message
+              </span>
+            </button>
+          </div>
         </form>
       </div>
     </div>

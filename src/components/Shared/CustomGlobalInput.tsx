@@ -41,7 +41,10 @@ const CustomGlobalInput = ({
   return (
     <div className={`flex flex-col gap-2.5 w-full ${containerStyle}`}>
       {/* <== Custom Input Label ==> */}
-      <label htmlFor={label?.toLowerCase()} className=" text-black-70">
+      <label
+        htmlFor={label?.toLowerCase()}
+        className="text-black-70 [font-size:_clamp(12px,2.5vw,14px)]"
+      >
         {label}
       </label>
       {/* <== Custom Input Textarea ==> */}
@@ -52,7 +55,7 @@ const CustomGlobalInput = ({
           rows={4}
           name={name}
           maxLength={textareaLength}
-          className={`${className} resize-none border py-2.5  pl-5 outline-none rounded-[10px] border-black-10 active:border-primary focus:border-primary`}
+          className={`${className} resize-none border py-[clamp(10px,2.5vw,15px)] px-[clamp(10px,2.5vw,20px)] outline-none rounded-[5px] md:rounded-[10px] border-black-10 active:border-primary focus:border-primary placeholder:[font-size:_clamp(12px,2.5vw,14px)] placeholder:text-black-50 [font-size:_clamp(12px,2.5vw,14px)]`}
           disabled={disabled}
           onChange={onChange}
           defaultValue={defaultValue}
@@ -64,7 +67,7 @@ const CustomGlobalInput = ({
           id={label?.toLowerCase()}
           type={type}
           placeholder={placeholder}
-          className={`${className} border py-3 px-3.5 bg-transparent outline-none rounded-[10px] border-black-10 active:border-primary focus:border-primary`}
+          className={`${className} border py-[clamp(10px,2.5vw,15px)] px-[clamp(10px,2.5vw,20px)] bg-transparent outline-none rounded-[5px] md:rounded-[10px] border-black-10 active:border-primary focus:border-primary placeholder:[font-size:_clamp(12px,2.5vw,14px)] placeholder:text-black-50 [font-size:_clamp(12px,2.5vw,14px)]`}
           disabled={disabled}
           name={name}
           value={value}

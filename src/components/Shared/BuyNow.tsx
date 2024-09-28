@@ -5,7 +5,7 @@ import purchase from "@/assets/images/purchase.svg";
 
 const BuyNow = () => {
   return (
-    <div className="fixed md:bottom-10 bottom-0 md:left-10 z-20 md:w-auto w-full">
+    <div className="fixed md:bottom-10 bottom-1 md:left-10 z-50 md:w-auto w-full">
       {" "}
       <Button
         mainClass="font-medium text-white border border-black-10  px-[10px] py-[10px] md:px-5 md:py-2 bg-gradient-primary w-full md:w-auto"
