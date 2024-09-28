@@ -1,6 +1,7 @@
 "use client";
 import { IconChevronUp } from "@tabler/icons-react";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Fragment } from "react";
+import Button from "./Button";
 
 const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -31,16 +32,24 @@ const ScrollToTopButton = () => {
   }, []);
 
   return (
-    <>
+    <Fragment>
       {isVisible && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-10 right-10 bg-gradient-primary text-white p-3 rounded-full shadow-lg border border-black-10 transition duration-300  md:block hidden"
-        >
-          <IconChevronUp size={24} />
-        </button>
+        <div onClick={scrollToTop} className="fixed bottom-10 right-10">
+          <Button
+            mainClass="font-medium text-white border border-black-10  p-3 bg-gradient-primary w-full md:w-auto"
+            stripHoverEffect={true}
+            animatationThree={true}
+            animatationThreeClss="bg-gradient-secondary"
+            iconFourTrue={true}
+            iconFour={
+              <div className="">
+                <IconChevronUp />
+              </div>
+            }
+          />
+        </div>
       )}
-    </>
+    </Fragment>
   );
 };
 
