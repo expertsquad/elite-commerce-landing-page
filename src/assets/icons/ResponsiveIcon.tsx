@@ -6,7 +6,7 @@ const ResponsiveIcon = () => {
   return (
     <Image
       src={ResponsiveIconImage}
-      alt="responsiveIcon"
+      alt="responsive Icon"
       width={30}
       height={30}
     />

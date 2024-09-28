@@ -22,7 +22,7 @@ const Infinity = () => {
           <div key={index} className="relative h-11 w-40">
             <Image
               src={imgSrc}
-              alt=""
+              alt="Carousel Image"
               className="object-contain w-full h-full top-0 left-0"
             />
           </div>
@@ -38,7 +38,7 @@ const Infinity = () => {
           <div key={index} className="relative h-11 w-40">
             <Image
               src={imgSrc}
-              alt=""
+              alt="Carousel Image"
               className="object-contain w-full h-full top-0 left-0"
             />
           </div>

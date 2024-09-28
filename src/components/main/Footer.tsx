@@ -84,7 +84,7 @@ const Footer = () => {
               target="_blank"
               href={`www.expertsquad.net`}
             >
-              <Image src={singleLogo} alt="single-logo" />
+              <Image src={singleLogo} alt="single logo" />
               Visit Expert Squad.net
               <ArrowUpRight color="#fff" height={20} width={20} />
             </Link>
@@ -93,7 +93,7 @@ const Footer = () => {
             <div className="relative md:w-[150px] md:h-[150px] w-[80px] h-[80px] ">
               <Image
                 src={footerCircle}
-                alt=""
+                alt="Footer Circle"
                 fill
                 className="object-contain w-full h-full top-0 left-0 image-select-none"
               />

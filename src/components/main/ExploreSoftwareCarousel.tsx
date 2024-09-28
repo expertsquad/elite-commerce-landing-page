@@ -29,7 +29,7 @@ const ExploreSoftwareCarousel = () => {
           <span className="z-50  absolute text-sm text-white">Screenshot</span>
           <Image
             src={sectionBg}
-            alt=""
+            alt="Screen Shot"
             fill
             className="object-cover top-0 left-0 w-full h-full"
           />

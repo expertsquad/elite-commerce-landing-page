@@ -29,7 +29,7 @@ const Testimonial = () => {
             </span>
             <Image
               src={testimonialBtnBG}
-              alt=""
+              alt="Testimonial Button Background"
               fill
               className="object-cover top-0 left-0 w-full h-full"
             />

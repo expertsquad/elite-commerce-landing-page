@@ -6,7 +6,7 @@ const KnowledgePowerIcon = () => {
   return (
     <Image
       src={KnowledgePowerIconImage}
-      alt="knowledgePowerIcon"
+      alt="knowledge Power Icon"
       width={30}
       height={30}
     />

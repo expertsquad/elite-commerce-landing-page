@@ -6,7 +6,7 @@ const ComputerIcon = () => {
   return (
     <Image
       src={ComputerIconImage}
-      alt="ComputerIcon"
+      alt="Computer Icon"
       width={30}
       height={30}
       className="object-cover"

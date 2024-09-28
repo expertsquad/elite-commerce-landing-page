@@ -18,7 +18,7 @@ const TopFeature = () => {
           </span>
           <Image
             src={sectionBg}
-            alt=""
+            alt="Section Background"
             fill
             className="object-cover top-0 left-0 w-full h-full"
           />

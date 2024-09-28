@@ -16,7 +16,7 @@ const InfinityLoopThree = () => {
           <div key={index}>
             <Image
               src={imgSrc}
-              alt=""
+              alt="carousel Image"
               quality={80}
               // className="w-[400px] h-[90px] sm:w-[450px] sm:h-[100px] md:w-[450px] md:h-[180px] lg:w-[450px] lg:h-[180px] xl:w-[500px] xl:h-[190px] 2xl:w-[500px] 2xl:h-[250px] "
               className="w-full h-full shrink-0"
@@ -34,7 +34,7 @@ const InfinityLoopThree = () => {
           <div key={index} className="">
             <Image
               src={imgSrc}
-              alt=""
+              alt="Carousel Image"
               quality={80}
               // className="w-[400px] h-[90px] sm:w-[450px] sm:h-[100px] md:w-[450px] md:h-[180px] lg:w-[450px] lg:h-[180px] xl:w-[500px] xl:h-[190px] 2xl:w-[500px] 2xl:h-[250px] "
               className="w-full h-full shrink-0"

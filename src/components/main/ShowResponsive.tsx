@@ -57,7 +57,7 @@ const ShowResponsive = () => {
           </span>
           <Image
             src={sectionBg}
-            alt=""
+            alt="Section Background"
             fill
             className="object-cover top-0 left-0 w-full h-full"
           />
@@ -125,7 +125,7 @@ const ShowResponsive = () => {
               <Image
                 key={previousImage as any}
                 src={previousImage}
-                alt="Previous"
+                alt="Previous Image"
                 fill
                 className="object-contain w-full h-full top-0 left-0"
               />

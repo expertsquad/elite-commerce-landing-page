@@ -55,7 +55,7 @@ const FeaturesCard = ({
 
       <div className="bg-white p-5  relative  shadow-sm rounded-[20px] overflow-hidden  flex flex-col gap-5">
         <div className="absolute -left-2 -top-2">
-          <Image src={primaryEllipse} alt="primaryEllipse" />
+          <Image src={primaryEllipse} alt="primary Ellipse" />
         </div>
         <div className="absolute -right-2 -top-2">
           <Image src={secondaryEllipse} alt="primaryEllipse" />
@@ -63,7 +63,7 @@ const FeaturesCard = ({
         <div className="relative   w-full h-[260px] rounded-md overflow-hidden">
           <Image
             src={second ? data?.images?.[0] : data?.images?.[1]}
-            alt="feature-image"
+            alt="feature image"
             fill
             className="w-full h-full object-contain top-0 left-0"
           />
