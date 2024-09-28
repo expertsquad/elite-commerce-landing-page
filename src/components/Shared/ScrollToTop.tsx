@@ -34,7 +34,7 @@ const ScrollToTopButton = () => {
   return (
     <Fragment>
       {isVisible && (
-        <div onClick={scrollToTop} className="fixed bottom-10 right-10">
+        <div onClick={scrollToTop} className="fixed bottom-10 right-10 z-50">
           <Button
             mainClass="font-medium text-white border border-black-10  p-3 bg-gradient-primary w-full md:w-auto"
             stripHoverEffect={true}
