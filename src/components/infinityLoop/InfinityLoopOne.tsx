@@ -10,16 +10,17 @@ const InfinityLoopOne = () => {
   const images = [infinity01, infinity02, infinity03, infinity04];
 
   return (
-    <div className="relative overflow-hidden w-full space-x-1">
+    <div className="relative overflow-hidden w-[150%] sm:w-[110%] md:w-full space-x-1">
       {/* First scrolling container */}
-      <div className="flex space-x-0.5 animate-left-scroll w-[100%]">
+      <div className="flex space-x-0.5 animate-left-scroll sm:w-[110%] w-[150%] md:w-[100%]">
         {images.map((imgSrc, index) => (
           <div key={index}>
             <Image
               src={imgSrc}
               alt=""
               quality={80}
-              className="w-[400px] h-[90px] sm:w-[450px] sm:h-[100px] md:w-[450px] md:h-[180px] lg:w-[450px] lg:h-[180px] xl:w-[500px] xl:h-[190px] 2xl:w-[500px] 2xl:h-[250px] "
+              // className="w-[400px] h-[90px] sm:w-[450px] sm:h-[100px] md:w-[450px] md:h-[180px] lg:w-[450px] lg:h-[180px] xl:w-[500px] xl:h-[190px] 2xl:w-[500px] 2xl:h-[250px] "
+              className="w-full h-full shrink-0"
             />
           </div>
         ))}
@@ -27,8 +28,8 @@ const InfinityLoopOne = () => {
 
       {/* Duplicate for infinite scroll effect */}
       <div
-        className="absolute top-0 flex  space-x-0.5 animate-left-scroll w-[100%]"
-        style={{ left: "100%" }} // Start from the right for left scroll
+        className="absolute top-0 flex  space-x-0.5 animate-left-scroll sm:w-[110%] w-[150%] md:w-[100%] left-[150%] sm:left-[110%] md:left-[100%]"
+        // style={{ left: "100%" }} // Start from the right for left scroll
       >
         {images.map((imgSrc, index) => (
           <div key={index} className="">
@@ -36,7 +37,7 @@ const InfinityLoopOne = () => {
               src={imgSrc}
               alt=""
               quality={80}
-              className="w-[400px] h-[90px] sm:w-[450px] sm:h-[100px] md:w-[450px] md:h-[180px] lg:w-[450px] lg:h-[180px] xl:w-[500px] xl:h-[190px] 2xl:w-[500px] 2xl:h-[250px] "
+              className="w-full h-full shrink-0"
             />
           </div>
         ))}
