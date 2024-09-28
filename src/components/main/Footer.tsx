@@ -179,10 +179,10 @@ const Footer = () => {
             </Link>
           </div>
           <div className=" gap-5  w-full flex md:items-end md:justify-end items-center justify-center  md:py-4  [font-size:_clamp(12px,2.5vw,16px)] md:order-none order-2 lg:col-span-2 ">
-            <Link href={`*`} className="underline text-white">
+            <Link href={`/privacy-policy`} className="underline text-white">
               Privacy Policy{""}
             </Link>
-            <Link href={`*`} className="underline text-white">
+            <Link href={`/refund-policy`} className="underline text-white">
               Refund Policy
             </Link>
           </div>
