@@ -1,5 +1,4 @@
 "use client";
-import videoHover from "@/assets/images/videosHover.png";
 import Image from "next/image";
 import chooseOne from "@/assets/images/chooseOne.png";
 import chooseTwo from "@/assets/images/chooseTwo.png";
@@ -195,8 +194,8 @@ const WhyChooseElite = () => {
             <Button
               mainClass="font-medium text-white bg-white border border-black-15 rounded-full text-[clamp(15px,3vw,12px)] px-2.5 py-1.5"
               stripHoverEffect={true}
-              animatationFour={true}
-              animatationFourClass="bg-gradient-secondary group-hover/secondbox:bg-gradient-secondary"
+              animatationOne
+              animatationOneClass="bg-gradient-secondary group-hover/secondbox:bg-gradient-secondary"
               buttonText="Customer Panel"
               buttonTextClass="text-black-70 text-[clamp(12px,3vw,16px)] group-hover:text-white"
             />
@@ -254,8 +253,8 @@ const WhyChooseElite = () => {
             <Button
               mainClass="font-medium  text-white bg-white border border-black-15 rounded-full text-[clamp(15px,3vw,12px)] px-2.5 py-1.5"
               stripHoverEffect={true}
-              animatationSix={true}
-              animatationSixClass="bg-gradient-secondary group-hover/thardbox:bg-gradient-secondary"
+              animatationThree
+              animatationThreeClss="bg-gradient-secondary group-hover/thardbox:bg-gradient-secondary"
               buttonText="Admin Panel"
               buttonTextClass="text-black-70 text-[clamp(12px,3vw,16px)] group-hover:text-white"
             />

@@ -18,7 +18,7 @@ const ExploreSoftwareCarousel = () => {
       ref={(el) => {
         sectionRefs.current[18] = el; // Assign to ref
       }}
-      className={`bg-black-80 pt-5 pb-60 md:pb-0 md:py-10  relative duration-500 md:duration-1000 transition-transform   ease-in-out ${
+      className={`bg-black-80 pt-5 pb-4  md:pb-3 md:py-10  relative duration-500 md:duration-1000 transition-transform   ease-in-out ${
         visibleSections[18]
           ? "opacity-100 translate-y-0"
           : " opacity-0  translate-y-[50px]"
@@ -50,7 +50,7 @@ const ExploreSoftwareCarousel = () => {
         <InfinityLoopFour />
       </div>
       {/* glassmorphism  */}
-      <div className="absolute left-0 right-0 bottom-[-100px]">
+      <div className="absolute left-0 right-0  md:bottom-[-100px]">
         <Glassmorphism />
       </div>
     </div>

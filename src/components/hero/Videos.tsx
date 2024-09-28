@@ -22,16 +22,16 @@ const Videos = () => {
         height = Math.min(windowHeight * 0.45, 250); // Fixed height
         scrollWidthFactor = 200; // Adjust scroll effect for small screen height
       } else if (windowWidth >= 1536) {
-        width = windowWidth * 0.85;
-        height = Math.max(windowHeight * 0.6 * 1.1, 600);
+        width = windowWidth - 400;
+        height = windowHeight - 300;
         // 2xl screens and above
         // width = windowWidth * 0.85;
         // height = Math.min(windowHeight * 0.6 * 1.1, 600); // 10% increase in height
-        scrollWidthFactor = 500;
+        scrollWidthFactor = 700;
       } else if (windowWidth >= 1280) {
         // xl screens
         width = windowWidth * 0.9;
-        height = Math.min(windowHeight * 0.6, 550); // Fixed height
+        height = Math.min(windowHeight * 0.6, 600); // Fixed height
         scrollWidthFactor = 450;
       } else if (windowWidth >= 1024) {
         // lg screens
@@ -113,7 +113,7 @@ const Videos = () => {
     <div className="relative w-full overflow-hidden z-10">
       <div
         ref={videoRef}
-        className="rounded-md mx-auto transition-all duration-300 ease-in-out"
+        className="rounded-md mx-auto transition-all duration-300 ease-in-out "
         style={{
           width: `${videoSize.width}px`,
           height: `${videoSize.height}px`, // Keep the height constant
@@ -124,16 +124,20 @@ const Videos = () => {
           className="rounded-md w-full h-full"
           controls
           autoPlay
+          width={300}
+          height={300}
+          loop
           muted
           preload="auto"
           style={{
             width: "100%",
             height: "100%",
-            objectFit: "cover",
+            objectFit: "contain",
           }}
         >
-          {/* <source src="/videos/EliteCommerce.mp4" type="video/mp4" /> */}
-          <source src="/videos/EliteCommerc" type="video/mp4" />
+          {/* <source src="/videos/videoplayback.mp4" type="video/mp4" /> */}
+          {/* <source src="/public/videos/videoplayback.mp4" type="video/mp4" /> */}
+          <source src="https://framerusercontent.com/modules/assets/BcIElVBzSD9P1ht5PhehnVyzTA~0iRDOKjSaNyoXJfsXAcSsdeEYSbJ8aAp3MvS5ts7LL0.mp4" />
           Your browser does not support the video tag.
         </video>
       </div>

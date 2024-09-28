@@ -12,7 +12,11 @@ import heroDashedRound from "@/assets/images/heroDashedRound.svg";
 import heroHeart from "@/assets/images/heroHeart.svg";
 import heroImoji from "@/assets/images/heroline.svg";
 import heroGittu from "@/assets/images/heroGittu.svg";
-
+import SpinCircle from "../Shared/SpinCircle";
+import ElitMiniIcon from "@/assets/elitminiIcon.svg";
+import { IconPlayerPlayFilled } from "@tabler/icons-react";
+import VideosSection from "../hero/VideosSection";
+// import VideosSection from "../hero/Videos";
 const Hero: React.FC = () => {
   const heroRef = useRef<HTMLDivElement | null>(null);
 
@@ -82,7 +86,7 @@ const Hero: React.FC = () => {
     <div
       // animate-[spin_linear_10s_infinite]
       ref={heroRef}
-      className="hero-container relative min-h-screen bg-white-15"
+      className="hero-container relative min-h-screen bg-white-15 bg-grid-pattern"
     >
       <div className="relative inset-0">
         <span className="bg-primary absolute left-0 w-[100px] h-[120px] filter blur-[124px] top-48"></span>
@@ -120,7 +124,7 @@ const Hero: React.FC = () => {
           src={heroHeart}
         />
         <div className="space-y-6 md:space-y-14 pt-11 ">
-          <div className="flex items-center justify-center w-full h-full flex-col gap-8">
+          <div className="flex items-center justify-center w-full h-[max(350px,calc(100vh-430px))] flex-col gap-8">
             <h1 className="text-center mx-auto text-[clamp(22px,3vw,50px)] font-semibold text-black-80 z-20 ">
               Innovative Solutions For Your <br /> E-Commerce{" "}
               <span className="text-primary">Success.</span>
@@ -145,24 +149,27 @@ const Hero: React.FC = () => {
             />
           </div>
 
-          <div className="flex items-center justify-center w-full rounded-md overflow-hidden ">
+          <div className="flex items-center justify-center w-full rounded-md overflow-hidden relative">
             <CursorHover
               hoverScale={1}
-              cursorSize="w-20 h-20 flex -ml-10 -mt-10 "
+              cursorSize="w-20 h-20 flex -ml-[79px] -mt-10 "
               customClass="bg-transparent"
               customCursorContent={
-                <div>
-                  <Image
-                    src={videoHover}
-                    loading="lazy"
-                    alt="Hover Video Icon"
-                    className="w-20 h-20"
-                  />
-                </div>
+                <SpinCircle
+                  spinText="  & ADMIN PANEL. CUSTOMER PANEL"
+                  className="bg-gradient-secondary text-white "
+                  icon={
+                    <div className="">
+                      <IconPlayerPlayFilled />
+                    </div>
+                  }
+                />
               }
             >
               <Videos />
             </CursorHover>
+
+            {/* <VideosSection /> */}
           </div>
         </div>
       </div>
