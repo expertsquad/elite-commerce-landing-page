@@ -1,8 +1,8 @@
 import mongodbPhoto from "@/assets/images/technologies/mongoDb.svg";
 import reactPhoto from "@/assets/images/technologies/react.svg";
 import nodeJsPhoto from "@/assets/images/technologies/nodeExpress.svg";
-import redux from "@/assets/images/technologies/redux.svg";
-import javascript from "@/assets/images/technologies/javascript.svg";
+import redux from "@/assets/images/technologies/reduxphoto.svg";
+import javascript from "@/assets/images/technologies/jsphoto.svg";
 import postgressPhoto from "@/assets/images/technologies/postgress.svg";
 
 export const technologiesData = [
