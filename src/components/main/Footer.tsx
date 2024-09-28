@@ -84,7 +84,7 @@ const Footer = () => {
               <ArrowUpRight color="#fff" height={20} width={20} />
             </Link>
           </div>
-          <div className=" flex items-center flex-col justify-center md:justify-end gap-[clamp(10px,2.5vw,40px)]">
+          <div className=" flex md:items-end items-center flex-col justify-center md:justify-end gap-[clamp(10px,2.5vw,40px)]">
             <div className="relative md:w-[150px] md:h-[150px] w-[80px] h-[80px] ">
               <Image
                 src={footerCircle}
@@ -99,7 +99,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="md:bg-[#242424] ">
+      <div className="md:bg-[#242424]">
         <div className="main-container mx-auto flex items-center justify-between flex-col md:flex-row gap-4 md:gap-0">
           <div className=" w-full md:rounded-tr-full flex items-center md:justify-start  justify-center   md:order-none order-3  lg:col-span-2">
             <span className="[font-size:_clamp(12px,2.5vw,16px)] text-white  ">
@@ -178,7 +178,7 @@ const Footer = () => {
               />
             </Link>
           </div>
-          <div className="md:bg-[#242424] gap-5  w-full md:rounded-tl-full flex items-center justify-center md:py-4 md:px-5 [font-size:_clamp(12px,2.5vw,16px)] md:order-none order-2 lg:col-span-2 ">
+          <div className=" gap-5  w-full flex md:items-end md:justify-end items-center justify-center  md:py-4  [font-size:_clamp(12px,2.5vw,16px)] md:order-none order-2 lg:col-span-2 ">
             <Link href={`*`} className="underline text-white">
               Privacy Policy{""}
             </Link>
