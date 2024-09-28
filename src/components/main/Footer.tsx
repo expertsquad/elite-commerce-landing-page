@@ -12,7 +12,12 @@ import FacebookIcon from "@/assets/icons/FacebookIcon";
 import LinkedInIcon from "@/assets/icons/LinkedInIcon";
 import TwitterXIcon from "@/assets/icons/TwitterXIcon";
 import Button from "../Shared/Button";
-import { IconArrowUpRight } from "@tabler/icons-react";
+import {
+  IconArrowUpRight,
+  IconBrandBehance,
+  IconBrandDribbble,
+  IconBrandPinterest,
+} from "@tabler/icons-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -106,10 +111,22 @@ const Footer = () => {
               © {currentYear} Elite Commerce Exertsquad.net
             </span>
           </div>
+          {/* social Links */}
           <div className="w-full flex items-center gap-3.5 justify-center md:order-none order-1">
+            <Link target="_blank" href={`https://dribbble.com/expertsquad`}>
+              <Button
+                mainClass=" text-white border-[1.5px] border-black-50 w-[34px] h-[34px] rounded-full flex items-center justify-center"
+                stripHoverEffect={true}
+                animatationOne={true}
+                animatationOneClass="bg-gradient-secondary"
+                iconThreeTrue={true}
+                iconThree={<IconBrandDribbble />}
+                iconThreeClass={`group-hover:rotate-[360deg] transition-all duration-700 ease-in-out`}
+              />
+            </Link>
             <Link
               target="_blank"
-              href={`https://www.youtube.com/expertsquad.com`}
+              href={`https://www.youtube.com/@expertsquadnet`}
             >
               <Button
                 mainClass=" text-white border-[1.5px] border-black-50 w-[34px] h-[34px] rounded-full flex items-center justify-center"
@@ -123,7 +140,7 @@ const Footer = () => {
             </Link>
             <Link
               target="_blank"
-              href={`https://www.instagram.com/expertsquad.com`}
+              href={`https://www.instagram.com/expertsquadnet/`}
             >
               <Button
                 mainClass=" text-white border-[1.5px] border-black-50 w-[34px] h-[34px] rounded-full flex items-center justify-center"
@@ -151,7 +168,7 @@ const Footer = () => {
             </Link>
             <Link
               target="_blank"
-              href={`https://www.linkedin.com/expertsquads`}
+              href={`https://www.linkedin.com/in/expert-squad-1ab511326`}
             >
               <Button
                 mainClass=" text-white border-[1.5px] border-black-50 w-[34px] h-[34px] rounded-full flex items-center justify-center"
@@ -163,10 +180,7 @@ const Footer = () => {
                 iconThreeClass={`group-hover:rotate-[360deg] transition-all duration-700 ease-in-out`}
               />
             </Link>
-            <Link
-              target="_blank"
-              href={`https://www.twitter.com/expertsquad.com`}
-            >
+            <Link target="_blank" href={`https://x.com/expertsquadnet`}>
               <Button
                 mainClass=" text-white border-[1.5px] border-black-50 w-[34px] h-[34px] rounded-full flex items-center justify-center"
                 stripHoverEffect={true}
@@ -177,7 +191,33 @@ const Footer = () => {
                 iconThreeClass={`group-hover:rotate-[360deg] transition-all duration-700 ease-in-out`}
               />
             </Link>
+            <Link target="_blank" href={`https://www.behance.net/expertsquad`}>
+              <Button
+                mainClass=" text-white border-[1.5px] border-black-50 w-[34px] h-[34px] rounded-full flex items-center justify-center"
+                stripHoverEffect={true}
+                animatationOne={true}
+                animatationOneClass="bg-gradient-secondary"
+                iconThreeTrue={true}
+                iconThree={<IconBrandBehance />}
+                iconThreeClass={`group-hover:rotate-[360deg] transition-all duration-700 ease-in-out`}
+              />
+            </Link>
+            <Link
+              target="_blank"
+              href={`https://www.pinterest.com/expertsquadnet/`}
+            >
+              <Button
+                mainClass=" text-white border-[1.5px] border-black-50 w-[34px] h-[34px] rounded-full flex items-center justify-center"
+                stripHoverEffect={true}
+                animatationOne={true}
+                animatationOneClass="bg-gradient-secondary"
+                iconThreeTrue={true}
+                iconThree={<IconBrandPinterest />}
+                iconThreeClass={`group-hover:rotate-[360deg] transition-all duration-700 ease-in-out`}
+              />
+            </Link>
           </div>
+          {/* social links */}
           <div className=" gap-5  w-full flex md:items-end md:justify-end items-center justify-center  md:py-4  [font-size:_clamp(12px,2.5vw,16px)] md:order-none order-2 lg:col-span-2 ">
             <Link href={`/privacy-policy`} className="underline text-white">
               Privacy Policy{""}
