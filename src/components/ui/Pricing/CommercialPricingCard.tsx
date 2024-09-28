@@ -17,14 +17,14 @@ const CommercialPricingCard = () => {
       ref={(el) => {
         sectionRefs.current[8] = el;
       }}
-      className={`md:-ml-5 border border-black-10 rounded-[20px] p-[clamp(20px,2.5vw,30px)] flex justify-between flex-col  w-[310px]  bg-white transition-transform ease-in-out duration-700 delay-200 ${
+      className={` border border-black-10 rounded-[20px] p-[clamp(20px,2.5vw,30px)] flex justify-between flex-col  w-[310px]  bg-white transition-transform ease-in-out duration-700 delay-200 ${
         visibleSection === 8
           ? "opacity-100 translate-x-0"
           : "opacity-0 translate-x-[-300px]"
       }`}
     >
-      <div className="space-y-[clamp(15px,2.5vw,20px)]">
-        <div className="flex gap-2 items-end ">
+      <div className="space-y-[clamp(8px,2.5vw,10px)]">
+        <div className="flex gap-2 items-center ">
           <span className="font-bold [font-size:_clamp(30px,2.5vw,45px)] text-black">
             $95
           </span>
