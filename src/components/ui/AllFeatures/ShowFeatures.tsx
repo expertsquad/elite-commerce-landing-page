@@ -10,7 +10,6 @@ const ShowFeatures = () => {
   const { visibleSections, sectionRefs } =
     useMultipleVisibleSection(sectionCount);
   const [showFeature, setShowFeture] = useState("Customer Panel");
-  console.log(showFeature);
   const customerPanelBtnClass =
     showFeature === "Customer Panel" && "bg-gradient-primary text-white";
   const adminPanelBtnClass =
