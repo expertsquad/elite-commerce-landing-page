@@ -1,8 +1,8 @@
 import mongodbPhoto from "@/assets/images/technologies/mongoDb.svg";
 import reactPhoto from "@/assets/images/technologies/react.svg";
 import nodeJsPhoto from "@/assets/images/technologies/nodeExpress.svg";
-import reduxPhoto from "@/assets/images/technologies/redux.svg";
-import javascriptPhoto from "@/assets/images/technologies/javascript.svg";
+import redux from "@/assets/images/technologies/redux.svg";
+import javascript from "@/assets/images/technologies/javascript.svg";
 import postgressPhoto from "@/assets/images/technologies/postgress.svg";
 
 export const technologiesData = [
@@ -35,13 +35,13 @@ export const technologiesData = [
     _id: "6507f80d9e823e2f63f9e01a",
     title: "Redux",
     description: "Redux is a state management tool for JavaScript apps.",
-    image: reduxPhoto,
+    image: redux,
   },
   {
     _id: "6507f80d9e823e2f63f9e01b",
     title: "JavaScript",
     description: "Javascript is widely used for server-side web development.",
-    image: javascriptPhoto,
+    image: javascript,
   },
   // {
   //   _id: "6507f80d9e823e2f63f9e01c",
