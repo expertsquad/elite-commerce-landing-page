@@ -10,16 +10,16 @@ const MobileView = () => {
   return (
     <div
       ref={(el) => {
-        sectionRefs.current[91] = el;
+        sectionRefs.current[58] = el;
       }}
-      className={` overflow-x-auto transition-transform ease-in-out duration-700 scrollbar-x-remove flex items-center justify-center gap-10 w-full  ${
-        visibleSection
-          ? "opacity-100 translate-x-0"
-          : "opacity-0 md:-translate-y-0 md:translate-x-[500px] -translate-y-[500px]"
+      className={`flex items-center gap-5 overflow-x-auto scrollbar-x-remove transition-transform ease-in-out duration-700 ${
+        visibleSection === 58
+          ? "opacity-100 md:translate-x-0 translate-y-0"
+          : "md:translate-x-[500px] translate-x-0 translate-y-[500px] md:translate-y-0 opacity-0"
       }`}
     >
-      {mobileOptimizedData?.map((data) => (
-        <div key={data?.id} className="flex flex-col items-center gap-3">
+      {mobileOptimizedData?.map((data, i) => (
+        <div key={i} className="flex flex-col items-center gap-3 shrink-0">
           <div className="relative w-[200px] h-[420px]">
             <Image
               src={data?.image}
