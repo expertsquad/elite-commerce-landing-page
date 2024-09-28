@@ -4,7 +4,11 @@ import PrimaryCheckMarkIcon from "@/assets/icons/PrimaryCheckMarkIcon";
 import WhiteCheckMarkIcon from "@/assets/icons/WhiteCheckMarkIcon";
 import Button from "@/components/Shared/Button";
 import { useVisibleSection } from "@/components/Shared/useVisibleSection";
-import { IconArrowRight, IconArrowUpRight } from "@tabler/icons-react";
+import {
+  IconArrowRight,
+  IconArrowUpRight,
+  IconShoppingBagPlus,
+} from "@tabler/icons-react";
 import React from "react";
 
 const PersonalPricingCard = () => {
@@ -85,8 +89,8 @@ const PersonalPricingCard = () => {
         <span className="absolute top-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gradient-secondary group-hover:h-full ease"></span>
         <span className="absolute bottom-0 left-0 w-full h-0 transition-all duration-300 delay-200 bg-gradient-secondary group-hover:h-full ease"></span>
         <span className="absolute inset-0 w-full h-full duration-300 delay-300 bg-gradient-secondary opacity-0 group-hover:opacity-100"></span>
-        <span className="relative transition-colors duration-300 delay-200 group-hover:text-white ease text-black-80 font-medium [font-size:_clamp(12px,2.5vw,14px)]">
-          Purchase Now
+        <span className="flex items-center justify-center gap-1.5 relative transition-colors duration-300 delay-200 group-hover:text-white ease text-black-80 font-medium [font-size:_clamp(12px,2.5vw,14px)]">
+          <IconShoppingBagPlus stroke={1.5} size={18} /> Purchase Now
         </span>
       </button>
     </div>
