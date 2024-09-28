@@ -6,7 +6,7 @@ import { header } from "@/constants/header.constants";
 import CustomLink from "./CustomLink";
 import Button from "../Shared/Button";
 import purchase from "@/assets/images/purchase.svg";
-import { IconArrowUpRight, IconMenu2 } from "@tabler/icons-react";
+import { IconArrowUpRight, IconMenu2, IconX } from "@tabler/icons-react";
 import Link from "next/link";
 
 const Header = () => {
@@ -35,7 +35,7 @@ const Header = () => {
   }, [open]);
 
   return (
-    <div>
+    <div className="">
       <div className="main-container flex items-center justify-between py-4">
         <div className="flex items-center justify-center gap-5">
           <button onClick={handleToggle} className="md:hidden block">
@@ -54,9 +54,9 @@ const Header = () => {
 
         <div
           ref={menuRef}
-          className={`bg-white md:bg-transparent md:bg-gradient-to-r md:from-[#ffff] md:via-[#dddcdcaa] md:to-[#ffffff88] md:backdrop-blur-lg h-[190vh] md:h-auto overflow-hidden flex-col md:flex-row flex items-center mt-32 md:mt-0 justify-center md:justify-between gap-3 md:gap-6 z-50 md:shadow-none shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] transition-all duration-300 ease-in-out ${
+          className={`bg-white md:bg-transparent md:bg-gradient-to-r md:from-[#ffff] md:via-[#dddcdcaa] md:to-[#ffffff88] md:backdrop-blur-lg h-[190vh] md:h-auto overflow-hidden flex-col md:flex-row flex items-center mt-32 md:mt-0 justify-center md:justify-between gap-3 md:gap-6 transition-all duration-300 ease-in-out ${
             open
-              ? "w-[250px]  md:w-auto -translate-x-[15%] fixed md:relative pt-7"
+              ? "w-[250px]  md:w-auto -translate-x-[15%] fixed md:relative pt-7 md:shadow-none shadow-[rgba(0,_0,_0,_0.4)_0px_30px_90px] "
               : "-translate-x-[150%] md:w-auto overflow-hidden fixed md:relative"
           } md:translate-x-0`}
         >
@@ -73,9 +73,9 @@ const Header = () => {
 
           <button
             onClick={handleToggle}
-            className="block md:hidden fixed top-3/4 rounded-full px-4 py-2 border border-black-70 z-[51]"
+            className="block md:hidden fixed top-3/4 rounded-full p-3 text-black-70 border border-black-70 z-[51]"
           >
-            X
+            <IconX strokeOpacity={1.5} size={24} />
           </button>
 
           {header?.map((menu) => (

@@ -94,8 +94,8 @@ const CommercialPricingCard = () => {
       <Button
         mainClass="font-medium mt-5 text-white border border-black-10 px-[10px] py-[5px] md:px-5 md:py-2 bg-gradient-primary"
         stripHoverEffect={true}
-        animatationThree={true}
-        animatationThreeClss="bg-gradient-secondary"
+        animatationOne
+        animatationOneClass="bg-gradient-secondary"
         iconFourTrue={true}
         iconFour={
           <div className="mr-1.5">
