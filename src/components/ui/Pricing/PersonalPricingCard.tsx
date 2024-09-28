@@ -15,15 +15,15 @@ const PersonalPricingCard = () => {
       ref={(el) => {
         sectionRefs.current[2] = el; // Assign to ref
       }}
-      className={`border border-black-10 rounded-[20px] p-[clamp(20px,2.5vw,30px)] flex justify-between flex-col  w-[310px] h-[580px] transition-transform duration-700 ease-in-out delay-200 bg-gradient-primary 
+      className={`md:-ml-5 border border-black-10 rounded-[20px] p-[clamp(20px,2.5vw,30px)] flex justify-between flex-col  w-[310px] h-[580px] transition-transform duration-700 ease-in-out delay-200 bg-gradient-primary 
       ${
         visibleSection === 2
           ? "opacity-100 translate-x-0"
           : "opacity-0 translate-x-[300px]  "
       }`}
     >
-      <div className="space-y-[clamp(15px,2.5vw,20px)] text-white">
-        <div className="flex gap-2 items-end">
+      <div className="space-y-[clamp(8px,2.5vw,10px)] text-white">
+        <div className="flex gap-2 items-center">
           <span className="font-bold [font-size:_clamp(30px,2.5vw,45px)]">
             $50
           </span>

@@ -34,9 +34,9 @@ const PricingTable = () => {
           into the action right now. personal and Commercial packages Enjoy!
         </p>
       </div>
-      <div className="mt-10 flex md:flex-row-reverse flex-col md:items-end items-center md:gap-0 gap-5 justify-center ">
-        <PersonalPricingCard />
+      <div className="mt-10 flex md:flex-row flex-col  items-center md:gap-0 gap-5 justify-center ">
         <CommercialPricingCard />
+        <PersonalPricingCard />
       </div>
     </section>
   );
