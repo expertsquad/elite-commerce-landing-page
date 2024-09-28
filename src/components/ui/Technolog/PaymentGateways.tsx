@@ -19,7 +19,7 @@ const PaymentGateways = () => {
             customClass={` ${
               gate?.status === "inactive" && "px-5 w-[100px] h-[30px] ml-3 mt-5"
             }  py-2 pointer-events-none !rounded-[5px] ${
-              gate?.status === "inactive" && "bg-gradient-primary text-white"
+              gate?.status === "inactive" && "bg-gradient-secondary text-white"
             }`} // Custom style for the cursor
             customCursorContent={
               gate?.status === "inactive" && (
