@@ -1,8 +1,6 @@
-import javaPhoto from "@/assets/images/technologies/java.svg";
 import mongodbPhoto from "@/assets/images/technologies/mongoDb.svg";
 import reactPhoto from "@/assets/images/technologies/react.svg";
 import nodeJsPhoto from "@/assets/images/technologies/nodeExpress.svg";
-import phpPhoto from "@/assets/images/technologies/php.svg";
 import reduxPhoto from "@/assets/images/technologies/redux.svg";
 import javascriptPhoto from "@/assets/images/technologies/javascript.svg";
 import postgressPhoto from "@/assets/images/technologies/postgress.svg";
@@ -14,12 +12,7 @@ export const technologiesData = [
     description: "MongoDB is a general-purpose Database known for portability.",
     image: mongodbPhoto,
   },
-  // {
-  //   _id: "6507f80d9e823e2f63f9e01e",
-  //   title: "Java",
-  //   description: "Java is a general-purpose language known for portability.",
-  //   image: javaPhoto,
-  // },
+
   {
     _id: "6507f80d9e823e2f63f9e017",
     title: "React.Js",
@@ -38,12 +31,7 @@ export const technologiesData = [
     description: ".",
     image: postgressPhoto,
   },
-  // {
-  //   _id: "6507f80d9e823e2f63f9e019",
-  //   title: "Php",
-  //   description: "Php is a popular language for backend and data science.",
-  //   image: phpPhoto,
-  // },
+  ,
   {
     _id: "6507f80d9e823e2f63f9e01a",
     title: "Redux",
