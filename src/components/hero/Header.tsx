@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import React, { useState, useRef, useEffect } from "react";
-import mainLogo from "@/assets/images/mainLogo.png";
+import mainLogo from "@/assets/images/mainLogo.svg";
 import { header } from "@/constants/header.constants";
 import CustomLink from "./CustomLink";
 import Button from "../Shared/Button";

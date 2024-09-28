@@ -22,12 +22,12 @@ export function useTextReveal({
     const callback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const spans = entry.target.querySelectorAll("span, div");
+          const spans = entry.target.querySelectorAll("span");
           spans.forEach((span, idx) => {
             setTimeout(() => {
-              (span as HTMLElement).classList.remove("translate-y-full"); // Remove translate-y to move it back
-              (span as HTMLElement).classList.add("translate-y-0"); // Move it to the original position
-            }, (idx + 1) * 50); // Add stagger effect
+              (span as HTMLElement).classList.remove("translate-y-full"); // Move it to original position
+              (span as HTMLElement).classList.add("translate-y-0"); // Move it back
+            }, (idx + 1) * 50); // Staggered effect
           });
         }
       });
@@ -38,21 +38,18 @@ export function useTextReveal({
       threshold,
     });
 
-    // Get all inner spans or divs and apply initial transform and transition styles
-    const blocks = textElement.querySelectorAll("span, div");
-    blocks.forEach((block) => {
-      // Apply Tailwind CSS for animation
-      (block as HTMLElement).classList.add(
-        "transform", // Enable transform
-        "translate-y-full", // Initially move the element down
-        "transition-transform", // Enable smooth transitions
-        `duration-[${duration}ms]`, // Set the duration dynamically
-        "ease-out", // Use ease-out for transition
-        spanClassName // Additional Tailwind classes
-      );
-    });
+    // Wrap the text in spans
+    const originalText = textElement.innerText;
+    const wrappedText = originalText
+      .split("")
+      .map(
+        (char) =>
+          `<span class="inline-block transform translate-y-full transition-transform duration-[${duration}ms] ease-out ${spanClassName}">${char}</span>`
+      )
+      .join("");
+    textElement.innerHTML = wrappedText;
 
-    // Observe the text element for intersection
+    // Observe the text element
     observer.observe(textElement);
 
     return () => observer.disconnect();
