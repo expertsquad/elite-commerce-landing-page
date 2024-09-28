@@ -26,7 +26,7 @@ const MobileOptimized = () => {
           Seamless Mobile Experience, Optimized for All Devices
         </span>
       </div>
-      <div className="">
+      <div className="overflow-hidden">
         <MobileView />
       </div>
     </section>

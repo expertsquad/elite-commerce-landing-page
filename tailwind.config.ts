@@ -74,6 +74,11 @@ const config: Config = {
       20: "20",
       50: "50",
     },
+    boxShadow: {
+      "custom-technology": "0px 4px 15px rgba(0, 0, 0, 0.06)",
+      "get-help-form-shadow": "0px 4.29697px 21.4849px rgba(0, 0, 0, 0.1)",
+      "button-shadow": "0px 0px 20px rgba(0, 0, 0, 0.2)",
+    },
     extend: {
       animation: {
         pulseColor: "pulseColor 5s infinite",

@@ -7,7 +7,7 @@ import React from "react";
 
 const PaymentGateways = () => {
   return (
-    <div className="space-y-5 px-5 py-10 shadow-md rounded-[10px] ">
+    <div className="space-y-5 px-5 py-10 shadow-custom-technology rounded-[10px] ">
       <div className="text-center font-semibold [font-size:_clamp(14px,2.5vw,18px)]">
         <HighlightText>Payment Gateways</HighlightText>
       </div>
@@ -19,7 +19,7 @@ const PaymentGateways = () => {
             customClass={` ${
               gate?.status === "inactive" && "px-5 w-[100px] h-[30px] ml-3 mt-5"
             }  py-2 pointer-events-none !rounded-[5px] ${
-              gate?.status === "inactive" && "bg-gradient-primary text-white"
+              gate?.status === "inactive" && "bg-gradient-secondary text-white"
             }`} // Custom style for the cursor
             customCursorContent={
               gate?.status === "inactive" && (

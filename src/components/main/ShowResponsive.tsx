@@ -72,7 +72,7 @@ const ShowResponsive = () => {
         </p>
       </div>
 
-      <div className="md:border md:border-black-10 rounded-[20px] px-[clamp(10px,2.5vw,30px)] py-[clamp(25px,2.5vw,40px)] md:bg-[#0CE47F0D] grid grid-cols-1 md:grid-cols-2 items-center gap-5 mt-10">
+      <div className="md:border md:border-black-10 rounded-[20px] md:px-[30px] py-[clamp(25px,2.5vw,40px)] md:bg-[#0CE47F0D] grid grid-cols-1 md:grid-cols-2 items-center gap-5 mt-10">
         <div className="md:h-[510px] md:w-auto w-full md:overflow-y-auto overflow-x-auto scrollbar-x-remove flex md:flex-col flex-row gap-[clamp(10px,2.5vw,20px)] md:pr-4">
           {showResponsiveData?.map((item) => (
             <div

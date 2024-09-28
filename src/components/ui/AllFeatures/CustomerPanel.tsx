@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import HighlightText from "@/components/Shared/HighlightText";
 import { customerPanelFeatures } from "@/constants/featuresData";
 import FeaturesMenuItem from "./FeaturesMenuItem";
@@ -10,16 +10,42 @@ const CustomerPanel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [isInView, setIsInView] = useState(false); // Track if the section is in view
+  const sectionRef = useRef<HTMLDivElement>(null); // Ref for the section
 
   useEffect(() => {
-    if (!isHovered) {
+    // IntersectionObserver to detect if the section is in view
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      {
+        threshold: 0.5, // Trigger when 50% of the section is visible
+        rootMargin: "0px", // Ensure no margin around the observer's root (viewport)
+      }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    // Only run the auto-switch if the section is in view and not being hovered
+    if (!isHovered && isInView) {
       const interval = setInterval(() => {
         handleAutoSwitch();
       }, 5000);
 
       return () => clearInterval(interval);
     }
-  }, [isHovered, currentIndex]);
+  }, [isHovered, currentIndex, isInView]);
 
   const handleAutoSwitch = () => {
     setIsAnimating(true);
@@ -32,6 +58,7 @@ const CustomerPanel = () => {
   };
 
   useEffect(() => {
+    // Update the active feature whenever the currentIndex changes
     setActiveFeature(customerPanelFeatures[currentIndex]);
   }, [currentIndex]);
 
@@ -48,6 +75,7 @@ const CustomerPanel = () => {
 
   return (
     <div
+      ref={sectionRef} // Attach ref to the section
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className="grid md:grid-cols-3 grid-cols-1 md:gap-5"

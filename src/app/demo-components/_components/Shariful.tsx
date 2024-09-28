@@ -29,6 +29,7 @@ import MobileOptimized from "@/components/main/MobileOptimized";
 import Circle from "@/components/Shared/Circle";
 import HighlightText from "@/components/Shared/HighlightText";
 import TopFeatureCard from "@/components/Shared/TopFeatureCard";
+import { IconShoppingBagPlus } from "@tabler/icons-react";
 import React from "react";
 
 const Shariful = () => {
@@ -50,6 +51,19 @@ const Shariful = () => {
             data-rounded="rounded-lg"
           ></span>
         </a>
+
+        <button className="relative inline-flex items-center justify-center px-10 py-2 overflow-hidden    bg-white rounded-full group">
+          <span className="absolute w-0 h-0 transition-all duration-500 ease-out bg-gradient-primary rounded-full group-hover:w-56 group-hover:h-56"></span>
+          <span className="absolute inset-0 w-full h-full -mt-1 rounded-lg opacity-30 bg-gradient-to-b from-transparent via-transparent to-white"></span>
+          <span className="relative flex items-center gap-1.5 text-gradient-primary group-hover:text-white text-base">
+            <IconShoppingBagPlus
+              size={18}
+              stroke={1.5}
+              className="text-primary group-hover:text-white"
+            />
+            Purchase Now
+          </span>
+        </button>
       </div>
     </div>
   );

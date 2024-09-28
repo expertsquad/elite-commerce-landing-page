@@ -29,7 +29,6 @@ export default function Home() {
       <MobileOptimized />
       <GetHelp />
       <ExploreSoftwareCarousel />
-      <Footer />
     </main>
   );
 }

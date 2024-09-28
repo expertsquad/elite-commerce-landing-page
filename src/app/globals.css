@@ -470,11 +470,11 @@
 
 @keyframes custom-rotate {
   from {
-    rotate: 5deg;
+    rotate: 15deg;
   }
 
   to {
-    rotate: -5deg;
+    rotate: -15deg;
   }
 }
 
