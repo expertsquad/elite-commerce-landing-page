@@ -6,7 +6,7 @@ import purchase from "@/assets/images/purchase.svg";
 const BuyNow = () => {
   return (
     <div className="flex items-center justify-center ">
-      <div className="fixed md:bottom-10 bottom-3 md:left-10 z-[1000] md:w-auto w-[95%]">
+      <div className="fixed md:bottom-10 bottom-3 md:left-10 z-50 md:w-auto w-[95%]">
         {" "}
         <Button
           mainClass="font-medium text-white border border-black-10  px-[10px] py-[10px] md:px-5 md:py-2 bg-gradient-primary w-full md:w-auto"
