@@ -1,17 +1,19 @@
 import { useEffect, useRef } from "react";
 
-interface TextRevealOptions {
+export interface TextRevealOptions {
   threshold?: number;
   rootMargin?: string;
-  duration?: number; // Animation duration in milliseconds
-  spanClassName?: string; // Tailwind class for text styling
+  duration?: number;
+  spanClassName?: string;
+  textStyles?: { text: string; className: string }[];
 }
 
 export function useTextReveal({
   threshold = 1.0,
   rootMargin = "0px",
-  duration = 500,
-  spanClassName = "", // Default to empty if no classes are passed
+  duration = 100,
+  spanClassName = "",
+  textStyles = [], // Default to an empty array
 }: TextRevealOptions) {
   const textRef = useRef<HTMLDivElement | null>(null);
 
@@ -22,12 +24,12 @@ export function useTextReveal({
     const callback = (entries: IntersectionObserverEntry[]) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const spans = entry.target.querySelectorAll("span");
+          const spans = entry.target.querySelectorAll("span"); // Animate all spans
           spans.forEach((span, idx) => {
             setTimeout(() => {
-              (span as HTMLElement).classList.remove("translate-y-full"); // Move it to original position
-              (span as HTMLElement).classList.add("translate-y-0"); // Move it back
-            }, (idx + 1) * 50); // Staggered effect
+              (span as HTMLElement).style.transform = `translateY(0)`;
+              (span as HTMLElement).style.transitionDuration = `${duration}ms`;
+            }, (idx + 1) * 50);
           });
         }
       });
@@ -38,22 +40,36 @@ export function useTextReveal({
       threshold,
     });
 
-    // Wrap the text in spans
+    // Split the text into spans while preserving spaces and line breaks
     const originalText = textElement.innerText;
     const wrappedText = originalText
-      .split("")
-      .map(
-        (char) =>
-          `<span class="inline-block transform translate-y-full transition-transform duration-[${duration}ms] ease-out ${spanClassName}">${char}</span>`
-      )
+      .split(/(\s+)/) // Split by spaces while preserving spaces
+      .map((part) => {
+        if (part === "\n") {
+          return `<br />`; // Return <br /> for newlines
+        } else if (part.trim() === "") {
+          return part; // Return empty spaces as is
+        } else {
+          const styledSegment = textStyles.find((style) =>
+            part.includes(style.text)
+          );
+          if (styledSegment) {
+            return `<span class="${styledSegment.className} inline-block transform translate-y-full transition-transform">${part}</span>`; // Use dynamic color
+          } else {
+            return `<span class="inline-block transform translate-y-full transition-transform ${spanClassName}">${part}</span>`;
+          }
+        }
+      })
       .join("");
+
+    // Set the innerHTML to the wrapped text
     textElement.innerHTML = wrappedText;
 
     // Observe the text element
     observer.observe(textElement);
 
     return () => observer.disconnect();
-  }, [threshold, rootMargin, duration, spanClassName]);
+  }, [threshold, rootMargin, duration, spanClassName, textStyles]);
 
   return { textRef };
 }

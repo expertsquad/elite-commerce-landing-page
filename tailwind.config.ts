@@ -89,6 +89,9 @@ const config: Config = {
         "right-Slow-scroll": "right-Slow-scroll 30s linear infinite",
         "four-scroll": "four-scroll 30s linear infinite",
         moveAndSpin: "moveAndSpin 65s ease-in-out infinite",
+        "slide-out-top": "slide-out-top 2s ease-in-out forwards",
+        "slide-out-bottom": "slide-out-bottom 2s ease-in-out forwards",
+        "fade-in": "fade-in 1s ease-in-out 0.5s forwards",
       },
       keyframes: {
         moveAndSpin: {
@@ -130,6 +133,18 @@ const config: Config = {
         pulseColor: {
           "0%, 100%": { backgroundColor: "#D9D9D9" }, // Default color
           "50%": { backgroundColor: "#FF0000" }, // The color change in the middle of the animation
+        },
+        "slide-out-top": {
+          "0%": { height: "50%" },
+          "100%": { height: "0%" },
+        },
+        "slide-out-bottom": {
+          "0%": { height: "50%" },
+          "100%": { height: "0%" },
+        },
+        "fade-in": {
+          "0%": { opacity: "0", transform: "scale(0.5)" },
+          "100%": { opacity: "1", transform: "scale(1)" },
         },
       },
     },

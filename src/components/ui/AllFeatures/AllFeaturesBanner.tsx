@@ -40,7 +40,7 @@ const AllFeaturesBanner = () => {
       </div>
       <div className="absolute -bottom-14">
         <SpinCircle
-          className="bg-gradient-primary text-white"
+          className="bg-gradient-primary text-white z-[20]"
           icon={<IconArrowDown />}
           spinText="EXPERT SQUAD | ELITE COMMERCE."
         />

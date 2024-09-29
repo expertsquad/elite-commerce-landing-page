@@ -50,7 +50,16 @@ const ExploreSoftwareCarousel = () => {
         <InfinityLoopFour />
       </div>
       {/* glassmorphism  */}
-      <div className="absolute left-0 right-0  bottom-5">
+      <div
+        ref={(el) => {
+          sectionRefs.current[18] = el; // Assign to ref
+        }}
+        className={`absolute left-0 right-0  bottom-5 duration-500 md:duration-2000 transition-transform   ease-in-out ${
+          visibleSections[18]
+            ? "opacity-100 translate-y-0"
+            : " opacity-0  translate-y-[500px]"
+        }`}
+      >
         <Glassmorphism />
       </div>
     </div>
