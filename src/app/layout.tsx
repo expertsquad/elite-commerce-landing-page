@@ -1,4 +1,3 @@
-// app/layout.tsx or your Layout component file
 import type { Metadata } from "next";
 import "./globals.css";
 import { Nunito } from "next/font/google";
@@ -21,12 +20,12 @@ export const metadata: Metadata = {
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${nunito.className} scroll-smooth`}>
+    <html lang="en" className="">
+      <body className={`${nunito.className}  mainClass`}>
         <ClientLayout>
           <RootLayout>
             <BuyNow />
-            {children} {/* Render children within ClientLayout */}
+            {children}
             <ScrollToTopButton />
             <Footer />
           </RootLayout>

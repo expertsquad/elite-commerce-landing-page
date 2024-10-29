@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import Button3d from "../Shared/Button3d";
-import Videos from "../hero/Videos";
 import CursorHover from "../Shared/CursorHover";
 import HeroSmallAnimation from "../ui/HeroSmallAnimation";
 import heroPizza from "@/assets/images/heroPizzaSlice.svg";
@@ -13,8 +12,10 @@ import heroGittu from "@/assets/images/heroGittu.svg";
 import SpinCircle from "../Shared/SpinCircle";
 import { IconPlayerPlayFilled } from "@tabler/icons-react";
 import { useTextReveal } from "../Shared/useTextReveal";
+import VideoSection from "../hero/VideoSection";
 
 const Hero: React.FC = () => {
+  // Create a ref for the main element
   const { textRef } = useTextReveal({
     duration: 500,
     spanClassName: "text-black",
@@ -135,7 +136,7 @@ const Hero: React.FC = () => {
           className="custom-animation-360deg-opacity-right absolute top-[45%] left-[80%]"
           src={heroHeart}
         />
-        <div className="space-y-6 md:space-y-14 pt-11">
+        <div className="space-y-6 pt-11">
           <div className="flex items-center justify-center w-full h-[max(350px,calc(100vh-430px))] flex-col gap-8">
             {showText && textRef ? (
               <h1
@@ -169,7 +170,7 @@ const Hero: React.FC = () => {
             )}{" "}
           </div>
 
-          <div className="flex items-center justify-center w-full rounded-md overflow-hidden relative">
+          <div className="flex items-center justify-center w-full rounded-md  relative ">
             <CursorHover
               hoverScale={1}
               cursorSize="w-20 h-20 flex -ml-[79px] -mt-10"
@@ -182,15 +183,16 @@ const Hero: React.FC = () => {
                 />
               }
             >
-              <Videos />
+              {/* <Videos /> */}
+              {/* <VideoSection /> */}
             </CursorHover>
-
-            {/* <VideosSection /> */}
+          </div>
+          <div className="w-[90%] mx-auto">
+            <VideoSection />
           </div>
         </div>
       </div>
     </div>
   );
 };
-
 export default Hero;
